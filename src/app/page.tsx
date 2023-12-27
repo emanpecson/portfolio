@@ -15,9 +15,7 @@ export default function Home() {
 					</p>
 				)}
 				{!toggle && (
-					<p className="font-bold">
-						SIKE U SUCK ASSSSSS AT BOWLING GET GOOOOOOOOD
-					</p>
+					<p className="font-bold">SIKE U SUCK AT BOWLING GET GOOOOOOOOD</p>
 				)}
 				<button
 					className="rounded-lg bg-gray-700 hover:bg-gray-800 text-gray-200 px-3 py-2 mt-8 text-lg"
