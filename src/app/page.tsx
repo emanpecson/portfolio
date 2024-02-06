@@ -25,7 +25,7 @@ export default function Home() {
     <>
       <div className="xl:grid xl:grid-cols-12 h-screen pt-20">
         <div className="xl:col-span-5 bg-red-500 xl:h-full h-[24rem]">
-          <div className="mx-16 bg-blue-300 fixed">
+          <div className="mx-16 bg-blue-300 xl:fixed">
             <div>
               <h1 className="text-5xl font-bold">Emanuel Pecson</h1>
               <h2 className="text-2xl pt-2 font-semibold">Software Engineer Intern at JT4</h2>
