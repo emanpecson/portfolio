@@ -1,5 +1,7 @@
+import { ProjectType } from '@/types/ProjectType';
 import Experience from '../components/Experience';
 import { ExperienceType } from '../types/ExperienceType';
+import Project from '@/components/Project';
 
 export default function Home() {
   const experiences: ExperienceType[] = [
@@ -34,6 +36,30 @@ export default function Home() {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
       tags: ['C++', 'Visual Studio Code'],
+    },
+  ];
+
+  const projects: ProjectType[] = [
+    {
+      imageSrc: 'https://placekitten.com/200/120',
+      title: 'Gatekeeper',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
+      tags: ['React.js', 'Next', 'TypeScript', 'Prisma', 'Tailwind'],
+    },
+    {
+      imageSrc: 'https://placekitten.com/200/120',
+      title: 'NBA Fantasy Optimizer',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
+      tags: ['React.js', 'Next', 'TypeScript', 'Prisma', 'Tailwind'],
+    },
+    {
+      imageSrc: 'https://placekitten.com/200/120',
+      title: 'Portfolio',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
+      tags: ['React.js', 'Next', 'TypeScript', 'Tailwind'],
     },
   ];
 
@@ -83,10 +109,11 @@ export default function Home() {
               ))}
             </div>
 
-            {/* <div className="bg-orange-500 h-[20rem] my-2">block</div>
-            <div className="bg-orange-500 h-[20rem] my-2">block</div>
-            <div className="bg-orange-500 h-[20rem] my-2">block</div>
-            <div className="bg-orange-500 h-[20rem] my-2">block</div> */}
+            <div className="space-y-16">
+              {projects.map((proj: ProjectType, index: number) => (
+                <Project params={proj} key={index} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
