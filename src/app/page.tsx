@@ -59,22 +59,22 @@ export default function Home() {
 
   return (
     <>
-      <div className="xl:grid xl:grid-cols-12 h-full pt-20">
-        <div className="xl:col-span-5 xl:h-full h-[24rem] flex justify-center">
-          <div className="mx-6 sm:mx-16 xl:fixed h-full">
+      <div className="lg:grid lg:grid-cols-12 h-full pt-20">
+        <div className="lg:col-span-5 lg:h-full h-[24rem] flex justify-center">
+          <div className="mx-6 sm:mx-16 lg:fixed h-full">
             <div className="flex flex-col place-content-between h-4/5">
               {/* heading */}
               <div className="text-gray-200 space-y-4">
-                <h1 className="text-3xl sm:text-5xl font-bold flex justify-center xl:justify-start">Emanuel Pecson</h1>
-                <h2 className="text-lg sm:text-2xl font-light flex justify-center xl:justify-start pl-0.5">
+                <h1 className="text-3xl sm:text-5xl font-bold flex justify-center lg:justify-start">Emanuel Pecson</h1>
+                <h2 className="text-lg sm:text-2xl font-light flex justify-center lg:justify-start pl-0.5">
                   Software Engineer Intern at JT4
                 </h2>
-                <p className="flex justify-center xl:justify-start pl-0.5 text-center xl:text-left text-sm sm:text-lg font-light">
+                <p className="flex justify-center lg:justify-start pl-0.5 text-center lg:text-left text-sm sm:text-lg font-light">
                   Some person capable of this or that, pursuing this and that
                 </p>
 
                 {/* section labels */}
-                <div className="xl:block hidden pt-24 space-y-4">
+                <div className="lg:block hidden pt-24 space-y-4">
                   {sections.map((sec: Section, index: number) => (
                     <div key={index}>
                       <button onClick={() => scrollToSection(sec.getRef())}>
@@ -102,7 +102,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="xl:col-span-7 h-full">
+        <div className="lg:col-span-7 h-full">
           <div className="sm:mx-16 space-y-20">
             <div
               ref={aboutRef}
