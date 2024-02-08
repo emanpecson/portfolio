@@ -4,7 +4,7 @@ import Tag from './Tag';
 export default function Project({ params }: { params: ProjectType }) {
   return (
     <>
-      <div className="sm:flex w-full hover:bg-gray-400 hover:bg-opacity-10 rounded-md p-0 sm:p-5 transition-all duration-200 hover:shadow-sm hover:shadow-gray-600 hover:cursor-pointer">
+      <div className="sm:flex w-full hover:bg-gray-400 hover:bg-opacity-10 rounded-md p-2 sm:p-5 transition-all duration-200 hover:shadow-sm hover:shadow-gray-600 hover:cursor-pointer">
         <div className="sm:w-3/12 sm:pr-10">
           <div className="bg-gray-600 rounded-md bg-opacity-70 sm:block hidden w-fit">
             <img src={params.imageSrc} className="rounded-md p-1" />
