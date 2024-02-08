@@ -1,137 +1,129 @@
-import { ProjectType } from '@/types/ProjectType';
-import Experience from '../components/Experience';
-import { ExperienceType } from '../types/ExperienceType';
-import Project from '@/components/Project';
+'use client';
+
+import { Section } from '@/types/Section';
+import { Dispatch, MutableRefObject, SetStateAction, useEffect, useRef, useState } from 'react';
+import classNames from '@/lib/classNames';
+import AboutSection from '@/components/section/AboutSection';
+import ExperienceSection from '@/components/section/ExperienceSection';
+import ProjectSection from '@/components/section/ProjectSection';
+import SocialSection from '@/components/section/SocialSection';
 
 export default function Home() {
-  const experiences: ExperienceType[] = [
-    {
-      employer: 'JT4',
-      position: 'Software Engineer Intern',
-      timeline: 'MAY 2023 - PRESENT',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['TypeScript', 'JavaScript', 'Vue.js', 'Nuxt', 'React.js', 'Next', 'Node.js', 'Tailwind', 'Git', 'Prisma'],
-    },
-    {
-      employer: 'General Atomics',
-      position: 'Software Developer Intern',
-      timeline: 'JUN 2022 - AUG 2022',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['CMake', 'C++', 'Python', 'Apache Subversion'],
-    },
-    {
-      employer: 'Clark County Public Works',
-      position: 'Intern',
-      timeline: 'JAN 2022 - MAY 2022',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['Python', 'Selenium', 'ArcGIS'],
-    },
-    {
-      employer: 'University of Nevada, Las Vegas',
-      position: 'Computer Science Teaching Assistant',
-      timeline: 'JAN 2022 - MAY 2022',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['C++', 'Visual Studio Code'],
-    },
+  const [aboutIsVisible, setAboutIsVisible] = useState(true);
+  const [experienceIsVisible, setExperienceIsVisible] = useState(false);
+  const [projectIsVisible, setProjectIsVisible] = useState(false);
+
+  const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
+  const projectRef = useRef(null);
+
+  const sections: Section[] = [
+    new Section('About', aboutIsVisible, aboutRef),
+    new Section('Experiences', experienceIsVisible, experienceRef),
+    new Section('Projects', projectIsVisible, projectRef),
   ];
 
-  const projects: ProjectType[] = [
-    {
-      imageSrc: 'https://placekitten.com/200/120',
-      title: 'Gatekeeper',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['React.js', 'Next', 'TypeScript', 'Prisma', 'Tailwind'],
-    },
-    {
-      imageSrc: 'https://placekitten.com/200/120',
-      title: 'NBA Fantasy Optimizer',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['React.js', 'Next', 'TypeScript', 'Prisma', 'Tailwind'],
-    },
-    {
-      imageSrc: 'https://placekitten.com/200/120',
-      title: 'My Portfolio',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['React.js', 'Next', 'TypeScript', 'Tailwind'],
-    },
-    {
-      imageSrc: 'https://placekitten.com/200/120',
-      title: "Jessica's Portfolio",
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['React.js', 'Next', 'TypeScript', 'Tailwind'],
-    },
-  ];
+  function initObserver(setSomething: Dispatch<SetStateAction<boolean>>) {
+    return new IntersectionObserver(
+      ([entry]) => {
+        setSomething(entry.isIntersecting);
+      },
+      { threshold: 0.35 }
+    );
+  }
+
+  useEffect(() => {
+    // in useEffect to prevent it from being initialized too early (b/c of SSR)
+    const aboutObserver = initObserver(setAboutIsVisible);
+    const experienceObserver = initObserver(setExperienceIsVisible);
+    const projectObserver = initObserver(setProjectIsVisible);
+
+    // setup observers
+    if (aboutRef.current) aboutObserver.observe(aboutRef.current);
+    if (experienceRef.current) experienceObserver.observe(experienceRef.current);
+    if (projectRef.current) projectObserver.observe(projectRef.current);
+
+    // define cleanup (on unmount)
+    return () => {
+      if (aboutRef.current) aboutObserver.unobserve(aboutRef.current);
+      if (experienceRef.current) experienceObserver.unobserve(experienceRef.current);
+      if (projectRef.current) projectObserver.unobserve(projectRef.current);
+    };
+  }, []);
+
+  function scrollToSection(ref: MutableRefObject<any>) {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
   return (
     <>
-      <div className="xl:grid xl:grid-cols-12 h-screen pt-20">
+      <div className="xl:grid xl:grid-cols-12 h-full pt-20">
         <div className="xl:col-span-5 xl:h-full h-[24rem] flex justify-center">
-          <div className="mx-6 sm:mx-16 xl:fixed">
-            <div className="text-gray-200">
-              <h1 className="text-3xl sm:text-5xl font-bold">Emanuel Pecson</h1>
-              <h2 className="text-lg sm:text-2xl pt-4 font-light flex justify-center xl:justify-start pl-0.5">
-                Software Engineer Intern at JT4
-              </h2>
+          <div className="mx-6 sm:mx-16 xl:fixed h-full">
+            <div className="flex flex-col place-content-between h-4/5">
+              {/* heading */}
+              <div className="text-gray-200 space-y-4">
+                <h1 className="text-3xl sm:text-5xl font-bold flex justify-center xl:justify-start">Emanuel Pecson</h1>
+                <h2 className="text-lg sm:text-2xl font-light flex justify-center xl:justify-start pl-0.5">
+                  Software Engineer Intern at JT4
+                </h2>
+                <p className="flex justify-center xl:justify-start pl-0.5 text-center xl:text-left text-sm sm:text-lg font-light">
+                  Some person capable of this or that, pursuing this and that
+                </p>
+
+                {/* section labels */}
+                <div className="xl:block hidden pt-24 space-y-4">
+                  {sections.map((sec: Section, index: number) => (
+                    <div key={index}>
+                      <button onClick={() => scrollToSection(sec.getRef())}>
+                        <div
+                          className={classNames(
+                            sec.getIsVisible() ? 'opacity-100 text-sm' : 'opacity-30 text-sm',
+                            'transition-all duration-150 flex place-items-center space-x-2'
+                          )}>
+                          <div
+                            className={classNames(
+                              sec.getIsVisible() ? 'w-20 h-[0.12rem]' : 'w-10 h-[0.1rem]',
+                              'bg-gray-300 transition-all duration-150'
+                            )}
+                          />
+                          <p className="uppercase font-medium text-gray-300 tracking-[0.2rem]">{sec.getName()}</p>
+                        </div>
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <SocialSection />
             </div>
           </div>
         </div>
+
         <div className="xl:col-span-7 h-full">
-          <div className="sm:mx-16 space-y-16">
-            <div className="space-y-6 p-0 sm:p-5 text-gray-400 text-base sm:text-lg opacity-90 mx-6 sm:mx-0">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante.
-                Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate.
-                Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate
-                volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat
-                augue, ut auctor neque. Quisque at nunc orci. Aenean ut.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante.
-                Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate.
-                Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate
-                volutpat venenatis.
-              </p>
-              <p>
-                Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor
-                neque. Quisque at nunc orci. Aenean ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl.
-                Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci.
-                Aenean ut.
-              </p>
+          <div className="sm:mx-16 space-y-20">
+            <div
+              ref={aboutRef}
+              className="space-y-6 p-0 sm:p-5 text-gray-400 text-base sm:text-lg opacity-90 mx-6 sm:mx-0">
+              <AboutSection />
             </div>
 
-            <div>
+            <div ref={experienceRef}>
               <div className="sm:hidden block h-14 sticky top-0 w-full bg-gray-900 bg-opacity-10 backdrop-blur-sm">
                 <p className="flex place-items-center h-full text-gray-300 font-light px-6">EXPERIENCE</p>
               </div>
 
-              <div className="space-y-16 sm:mx-0 mx-6">
-                {experiences.map((exp: ExperienceType, index: number) => (
-                  <Experience params={exp} key={index} />
-                ))}
-              </div>
+              <ExperienceSection />
             </div>
 
-            <div>
+            <div ref={projectRef}>
               <div className="sm:hidden block h-14 sticky top-0 w-full bg-gray-900 bg-opacity-10 backdrop-blur-sm">
                 <p className="flex place-items-center h-full text-gray-300 font-light px-6">PROJECTS</p>
               </div>
 
-              <div className="space-y-16 sm:mx-0 mx-6">
-                {projects.map((proj: ProjectType, index: number) => (
-                  <Project params={proj} key={index} />
-                ))}
-              </div>
+              <ProjectSection />
             </div>
           </div>
         </div>

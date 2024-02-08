@@ -1,0 +1,28 @@
+import { MutableRefObject, useEffect } from 'react';
+
+export class Section {
+  private name: string;
+  private isVisible: boolean;
+  private ref: MutableRefObject<any>;
+
+  constructor(name: string, isVisible: boolean, ref: MutableRefObject<any>) {
+    this.name = name;
+    this.isVisible = isVisible;
+    this.ref = ref;
+
+    // subscribe to changes in passed variable refernece
+    useEffect(() => {
+      this.isVisible = isVisible;
+    }, [isVisible]);
+  }
+
+  public getName() {
+    return this.name;
+  }
+  public getRef() {
+    return this.ref;
+  }
+  public getIsVisible() {
+    return this.isVisible;
+  }
+}
