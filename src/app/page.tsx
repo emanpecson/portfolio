@@ -111,7 +111,7 @@ export default function Home() {
             </div>
 
             <div ref={experienceRef}>
-              <div className="sm:hidden block h-14 sticky top-0 w-full bg-gray-900 bg-opacity-10 backdrop-blur-sm">
+              <div className="sm:hidden block h-14 sticky top-0 w-full bg-app bg-opacity-50 backdrop-blur-sm">
                 <p className="flex place-items-center h-full text-gray-300 font-light px-6">EXPERIENCE</p>
               </div>
 
@@ -119,7 +119,7 @@ export default function Home() {
             </div>
 
             <div ref={projectRef}>
-              <div className="sm:hidden block h-14 sticky top-0 w-full bg-gray-900 bg-opacity-10 backdrop-blur-sm">
+              <div className="sm:hidden block h-14 sticky top-0 w-full bg-app bg-opacity-50 backdrop-blur-sm">
                 <p className="flex place-items-center h-full text-gray-300 font-light px-6">PROJECTS</p>
               </div>
 
