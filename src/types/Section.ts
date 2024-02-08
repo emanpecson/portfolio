@@ -19,10 +19,10 @@ export class Section {
   public getName() {
     return this.name;
   }
-  public getRef() {
-    return this.ref;
-  }
   public getIsVisible() {
     return this.isVisible;
+  }
+  public getRef() {
+    return this.ref;
   }
 }
