@@ -1,10 +1,10 @@
 'use client';
 
 import { Dispatch, MutableRefObject, SetStateAction, useEffect, useState } from 'react';
-import { SectionNavigation } from '@/types/SectionNavigation';
+import { Section } from '@/types/Section';
 import classNames from '@/lib/classNames';
 
-export default function Navigation({
+export default function SectionNavigation({
   params,
 }: {
   params: { aboutRef: MutableRefObject<any>; experienceRef: MutableRefObject<any>; projectRef: MutableRefObject<any> };
@@ -13,10 +13,10 @@ export default function Navigation({
   const [experienceIsVisible, setExperienceIsVisible] = useState(false);
   const [projectIsVisible, setProjectIsVisible] = useState(false);
 
-  const sectionPointers: SectionNavigation[] = [
-    new SectionNavigation('About', aboutIsVisible, params.aboutRef),
-    new SectionNavigation('Experiences', experienceIsVisible, params.experienceRef),
-    new SectionNavigation('Projects', projectIsVisible, params.projectRef),
+  const sections: Section[] = [
+    new Section('About', aboutIsVisible, params.aboutRef),
+    new Section('Experiences', experienceIsVisible, params.experienceRef),
+    new Section('Projects', projectIsVisible, params.projectRef),
   ];
 
   function initObserver(setSomething: Dispatch<SetStateAction<boolean>>) {
@@ -56,21 +56,21 @@ export default function Navigation({
   return (
     <>
       <div className="lg:block hidden pt-24 space-y-4">
-        {sectionPointers.map((secPtr: SectionNavigation, index: number) => (
+        {sections.map((sec: Section, index: number) => (
           <div key={index}>
-            <button onClick={() => scrollToSection(secPtr.getRef())}>
+            <button onClick={() => scrollToSection(sec.getRef())}>
               <div
                 className={classNames(
-                  secPtr.getIsVisible() ? 'opacity-100 text-sm' : 'opacity-30 text-sm',
+                  sec.getIsVisible() ? 'opacity-100 text-sm' : 'opacity-30 text-sm',
                   'transition-all duration-150 flex place-items-center space-x-2'
                 )}>
                 <div
                   className={classNames(
-                    secPtr.getIsVisible() ? 'w-20 h-[0.12rem]' : 'w-10 h-[0.1rem]',
+                    sec.getIsVisible() ? 'w-20 h-[0.12rem]' : 'w-10 h-[0.1rem]',
                     'bg-gray-300 transition-all duration-150'
                   )}
                 />
-                <p className="uppercase font-medium text-gray-300 tracking-[0.2rem]">{secPtr.getName()}</p>
+                <p className="uppercase font-medium text-gray-300 tracking-[0.2rem]">{sec.getName()}</p>
               </div>
             </button>
           </div>

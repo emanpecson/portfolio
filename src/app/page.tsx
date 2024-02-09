@@ -5,7 +5,7 @@ import AboutSection from '@/components/main/section/AboutSection';
 import ExperienceSection from '@/components/main/section/ExperienceSection';
 import ProjectSection from '@/components/main/section/ProjectSection';
 import ContactMe from '@/components/profile/ContactMe';
-import Navigation from '@/components/profile/Navigation';
+import SectionNavigation from '@/components/profile/SectionNavigation';
 import Heading from '@/components/profile/Heading';
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
               <div>
                 <Heading />
 
-                <Navigation params={{ aboutRef, experienceRef, projectRef }} />
+                <SectionNavigation params={{ aboutRef, experienceRef, projectRef }} />
               </div>
 
               <ContactMe />
