@@ -10,6 +10,7 @@ export default function ExperienceSection() {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
       tags: ['TypeScript', 'JavaScript', 'Vue.js', 'Nuxt', 'React.js', 'Next', 'Node.js', 'Tailwind', 'Git', 'Prisma'],
+      website: 'https://www.jt4llc.com',
     },
     {
       employer: 'General Atomics',
@@ -18,6 +19,7 @@ export default function ExperienceSection() {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
       tags: ['CMake', 'C++', 'Python', 'Apache Subversion'],
+      website: 'https://www.ga.com',
     },
     {
       employer: 'Clark County Public Works',
@@ -26,6 +28,7 @@ export default function ExperienceSection() {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
       tags: ['Python', 'Selenium', 'ArcGIS'],
+      website: 'https://www.clarkcountynv.gov/government/departments/public_works_department/development/index.php',
     },
     {
       employer: 'University of Nevada, Las Vegas',
@@ -34,6 +37,7 @@ export default function ExperienceSection() {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
       tags: ['C++', 'Visual Studio Code'],
+      website: 'https://www.unlv.edu/cs',
     },
   ];
 

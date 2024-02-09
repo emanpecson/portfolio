@@ -4,4 +4,5 @@ export type ExperienceType = {
   employer: string;
   description: string;
   tags: string[];
+  website: string;
 };
