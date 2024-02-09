@@ -61,8 +61,8 @@ export default function SectionNavigation({
             <button onClick={() => scrollToSection(sec.getRef())}>
               <div
                 className={classNames(
-                  sec.getIsVisible() ? 'opacity-100 text-sm' : 'opacity-30 text-sm',
-                  'transition-all duration-150 flex place-items-center space-x-2'
+                  sec.getIsVisible() ? 'opacity-100' : 'opacity-30 hover:opacity-90',
+                  'transition-all duration-150 flex place-items-center space-x-2 text-sm'
                 )}>
                 <div
                   className={classNames(
