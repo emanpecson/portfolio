@@ -1,6 +1,6 @@
 import { MutableRefObject, useEffect } from 'react';
 
-export class Section {
+export class SectionNavigation {
   private name: string;
   private isVisible: boolean;
   private ref: MutableRefObject<any>;

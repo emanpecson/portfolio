@@ -1,47 +1,43 @@
-import { ExperienceType } from '@/types/ExperienceType';
-import Experience from '../Experience';
+import { ProjectType } from '@/types/ProjectType';
+import Project from '../item/Project';
 
-export default function ExperienceSection() {
-  const experiences: ExperienceType[] = [
+export default function ProjectSection() {
+  const projects: ProjectType[] = [
     {
-      employer: 'JT4',
-      position: 'Software Engineer Intern',
-      timeline: 'MAY 2023 - PRESENT',
+      imageSrc: 'https://placekitten.com/200/120',
+      title: 'Gatekeeper',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['TypeScript', 'JavaScript', 'Vue.js', 'Nuxt', 'React.js', 'Next', 'Node.js', 'Tailwind', 'Git', 'Prisma'],
+      tags: ['React.js', 'Next', 'TypeScript', 'Prisma', 'Tailwind'],
     },
     {
-      employer: 'General Atomics',
-      position: 'Software Developer Intern',
-      timeline: 'JUN 2022 - AUG 2022',
+      imageSrc: 'https://placekitten.com/200/120',
+      title: 'NBA Fantasy Optimizer',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['CMake', 'C++', 'Python', 'Apache Subversion'],
+      tags: ['React.js', 'Next', 'TypeScript', 'Prisma', 'Tailwind'],
     },
     {
-      employer: 'Clark County Public Works',
-      position: 'Intern',
-      timeline: 'JAN 2022 - MAY 2022',
+      imageSrc: 'https://placekitten.com/200/120',
+      title: 'My Portfolio',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['Python', 'Selenium', 'ArcGIS'],
+      tags: ['React.js', 'Next', 'TypeScript', 'Tailwind'],
     },
     {
-      employer: 'University of Nevada, Las Vegas',
-      position: 'Computer Science Teaching Assistant',
-      timeline: 'JAN 2022 - MAY 2022',
+      imageSrc: 'https://placekitten.com/200/120',
+      title: "Jessica's Portfolio",
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['C++', 'Visual Studio Code'],
+      tags: ['React.js', 'Next', 'TypeScript', 'Tailwind'],
     },
   ];
 
   return (
     <>
       <div className="space-y-16 sm:mx-0 mx-6">
-        {experiences.map((exp: ExperienceType, index: number) => (
-          <Experience params={exp} key={index} />
+        {projects.map((proj: ProjectType, index: number) => (
+          <Project params={proj} key={index} />
         ))}
       </div>
     </>

@@ -1,8 +1,8 @@
 import { SocialType } from '@/types/SocialType';
 import { EnvelopeIcon } from '@heroicons/react/24/solid';
-import Social from '../Social';
+import Social from '../main/item/Social';
 
-export default function SocialSection() {
+export default function ContactMe() {
   const socials: SocialType[] = [
     {
       name: 'GitHub',

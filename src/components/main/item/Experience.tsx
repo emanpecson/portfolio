@@ -1,5 +1,5 @@
 import Tag from './Tag';
-import { ExperienceType } from '../types/ExperienceType';
+import { ExperienceType } from '../../../types/ExperienceType';
 
 export default function Experience({ params }: { params: ExperienceType }) {
   return (
