@@ -6,12 +6,12 @@ export default function ContactMe() {
   const socials: SocialType[] = [
     {
       name: 'GitHub',
-      link: 'github.com/emanpecson',
+      link: 'https://github.com/emanpecson',
       imageSrc: '/github_icon.png',
     },
     {
       name: 'LinkedIn',
-      link: '',
+      link: 'https://www.linkedin.com/in/emanuel-pecson/',
       imageSrc: '/linkedin_icon.png',
     },
     {
@@ -22,12 +22,10 @@ export default function ContactMe() {
   ];
 
   return (
-    <>
-      <div className="space-x-6 flex justify-center">
-        {socials.map((social: SocialType, index: number) => (
-          <Social params={social} key={index} />
-        ))}
-      </div>
-    </>
+    <div className="space-x-6 flex justify-center">
+      {socials.map((social: SocialType, index: number) => (
+        <Social params={social} key={index} />
+      ))}
+    </div>
   );
 }
