@@ -7,6 +7,7 @@ import ProjectSection from '@/components/main/section/ProjectSection';
 import ContactMe from '@/components/profile/ContactMe';
 import SectionNavigation from '@/components/profile/SectionNavigation';
 import Heading from '@/components/profile/Heading';
+import CursorEffect from '@/components/CursorEffect';
 
 export default function Home() {
   const aboutRef = useRef(null);
@@ -54,6 +55,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <CursorEffect />
     </>
   );
 }
