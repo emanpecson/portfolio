@@ -31,9 +31,7 @@ export default function Home() {
 
         <div className="lg:col-span-7 h-full">
           <div className="sm:mx-16 space-y-20">
-            <div
-              ref={backgroundRef}
-              className="space-y-6 p-0 sm:p-5 text-gray-400 text-base sm:text-lg opacity-90 mx-6 sm:mx-0">
+            <div ref={backgroundRef}>
               <BackgroundSection />
             </div>
 

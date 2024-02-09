@@ -20,7 +20,7 @@ export default function Project({ params }: { params: ProjectType }) {
           <h1 className="sm:text-xl text-base text-gray-300">{params.title}</h1>
         </div>
 
-        <p className="text-gray-400 sm:text-base text-sm">{params.description}</p>
+        <p className="text-gray-400 sm:text-base text-sm font-light">{params.description}</p>
 
         <div className="flex flex-wrap">
           {params.tags.map((tag: string, index: number) => (

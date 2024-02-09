@@ -10,11 +10,11 @@ export default function Social({ params }: { params: SocialType }) {
         className="hover:opacity-100 opacity-50 transition-all duration-400"
         onClick={() => router.push(params.name === 'Email' ? 'mailto:' + params.link : params.link)}>
         {params.HeroIcon ? (
-          <div className="w-[45px] h-[45px] rounded-full bg-white relative">
+          <div className="w-[35px] h-[35px] rounded-full bg-white relative">
             <params.HeroIcon className="absolute p-1.5 text-app" />
           </div>
         ) : (
-          <img src={params.imageSrc} width={45} height={45} />
+          <img src={params.imageSrc} width={35} height={35} />
         )}
       </button>
     </>

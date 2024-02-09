@@ -23,7 +23,7 @@ export default function Experience({ params }: { params: ExperienceType }) {
           <h2 className="text-sm sm:text-base text-gray-400">{params.position}</h2>
         </div>
 
-        <p className="text-gray-400 sm:text-base text-sm">{params.description}</p>
+        <p className="text-gray-400 sm:text-base text-sm font-light">{params.description}</p>
 
         <div className="flex flex-wrap">
           {params.tags.map((tag: string, index: number) => (
