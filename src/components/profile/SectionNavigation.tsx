@@ -7,14 +7,18 @@ import classNames from '@/lib/classNames';
 export default function SectionNavigation({
   params,
 }: {
-  params: { aboutRef: MutableRefObject<any>; experienceRef: MutableRefObject<any>; projectRef: MutableRefObject<any> };
+  params: {
+    backgroundRef: MutableRefObject<any>;
+    experienceRef: MutableRefObject<any>;
+    projectRef: MutableRefObject<any>;
+  };
 }) {
-  const [aboutIsVisible, setAboutIsVisible] = useState(true);
+  const [backgroundIsVisible, setBackgroundIsVisible] = useState(true);
   const [experienceIsVisible, setExperienceIsVisible] = useState(false);
   const [projectIsVisible, setProjectIsVisible] = useState(false);
 
   const sections: Section[] = [
-    new Section('About', aboutIsVisible, params.aboutRef),
+    new Section('Background', backgroundIsVisible, params.backgroundRef),
     new Section('Experiences', experienceIsVisible, params.experienceRef),
     new Section('Projects', projectIsVisible, params.projectRef),
   ];
@@ -30,18 +34,18 @@ export default function SectionNavigation({
 
   useEffect(() => {
     // in useEffect to prevent it from being initialized too early (b/c of SSR)
-    const aboutObserver = initObserver(setAboutIsVisible);
+    const backgroundObserver = initObserver(setBackgroundIsVisible);
     const experienceObserver = initObserver(setExperienceIsVisible);
     const projectObserver = initObserver(setProjectIsVisible);
 
     // setup observers
-    if (params.aboutRef.current) aboutObserver.observe(params.aboutRef.current);
+    if (params.backgroundRef.current) backgroundObserver.observe(params.backgroundRef.current);
     if (params.experienceRef.current) experienceObserver.observe(params.experienceRef.current);
     if (params.projectRef.current) projectObserver.observe(params.projectRef.current);
 
     // define cleanup (on unmount)
     return () => {
-      if (params.aboutRef.current) aboutObserver.unobserve(params.aboutRef.current);
+      if (params.backgroundRef.current) backgroundObserver.unobserve(params.backgroundRef.current);
       if (params.experienceRef.current) experienceObserver.unobserve(params.experienceRef.current);
       if (params.projectRef.current) projectObserver.unobserve(params.projectRef.current);
     };

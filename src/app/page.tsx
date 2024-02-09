@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import AboutSection from '@/components/main/section/AboutSection';
+import BackgroundSection from '@/components/main/section/BackgroundSection';
 import ExperienceSection from '@/components/main/section/ExperienceSection';
 import ProjectSection from '@/components/main/section/ProjectSection';
 import ContactMe from '@/components/profile/ContactMe';
@@ -10,7 +10,7 @@ import Heading from '@/components/profile/Heading';
 import CursorEffect from '@/components/CursorEffect';
 
 export default function Home() {
-  const aboutRef = useRef(null);
+  const backgroundRef = useRef(null);
   const experienceRef = useRef(null);
   const projectRef = useRef(null);
 
@@ -22,7 +22,7 @@ export default function Home() {
             <div className="flex flex-col place-content-between h-4/5">
               <div>
                 <Heading />
-                <SectionNavigation params={{ aboutRef, experienceRef, projectRef }} />
+                <SectionNavigation params={{ backgroundRef, experienceRef, projectRef }} />
               </div>
               <ContactMe />
             </div>
@@ -32,9 +32,9 @@ export default function Home() {
         <div className="lg:col-span-7 h-full">
           <div className="sm:mx-16 space-y-20">
             <div
-              ref={aboutRef}
+              ref={backgroundRef}
               className="space-y-6 p-0 sm:p-5 text-gray-400 text-base sm:text-lg opacity-90 mx-6 sm:mx-0">
-              <AboutSection />
+              <BackgroundSection />
             </div>
 
             <div ref={experienceRef}>

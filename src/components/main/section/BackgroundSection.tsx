@@ -1,4 +1,4 @@
-export default function AboutSection() {
+export default function BackgroundSection() {
   return (
     <>
       <p>
