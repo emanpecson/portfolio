@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="lg:grid lg:grid-cols-12 h-full py-20">
+      <div className="lg:grid lg:grid-cols-12 h-full py-20 mx-auto max-w-[100rem]">
         <div className="lg:col-span-5 lg:h-full h-[24rem] flex justify-center">
           <div className="mx-6 sm:mx-16 lg:fixed h-full">
             <div className="flex flex-col place-content-between h-4/5">
