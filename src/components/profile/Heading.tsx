@@ -2,7 +2,7 @@ export default function Heading() {
   const name = 'Emanuel Pecson';
   const currentPosition = 'Software Engineer at JT4';
   const missionStatement =
-    'I utilize my experience in full-stack development to deliver impactful solutions and continuously learn new technologies.';
+    'I utilize my experience in full-stack development to deliver impactful and quality solutions';
 
   return (
     <>
