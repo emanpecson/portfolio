@@ -4,37 +4,20 @@ import Project from '../item/Project';
 export default function ProjectSection() {
   const projects: ProjectType[] = [
     {
-      imageSrc: 'https://placekitten.com/200/120',
+      imageSrc: '/gatekeeper_cover.pdf',
       title: 'Gatekeeper',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['React.js', 'Next', 'TypeScript', 'Prisma', 'Tailwind CSS'],
+        'An event-planning and ticket-scanning web-app in one. Our users are given the ability to create an event and manage who is invited by generating unique QR codes for guests. Additional features include the ability to scan the QR codes with your device’s integrated camera, and an automatically created group chat where other guests and the host and can communicate.',
+      tags: ['React.js', 'Next', 'TypeScript', 'Prisma', 'Tailwind CSS', 'Resend', 'Pusher', 'MySQL'],
       repository: 'https://github.com/UNLV-CS-GANG/gatekeeper',
       website: 'https://unlvgatekeeper.com',
     },
     {
-      imageSrc: 'https://placekitten.com/200/120',
-      title: 'NBA Fantasy Optimizer',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['React.js', 'Next', 'TypeScript', 'Prisma', 'Tailwind CSS'],
-      repository: 'https://github.com/emanpecson/nba-fantasy-optimizer',
-    },
-    {
-      imageSrc: 'https://placekitten.com/200/120',
+      imageSrc: '/portfolio_cover.pdf',
       title: 'My Portfolio',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
+      description: 'The very website you’re viewing right now!',
       tags: ['React.js', 'Next', 'TypeScript', 'Tailwind CSS'],
       repository: 'https://github.com/emanpecson/portfolio',
-    },
-    {
-      imageSrc: 'https://placekitten.com/200/120',
-      title: "Jessica's Portfolio",
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed posuere massa, vitae suscipit ante. Donec vulputate volutpat venenatis. Phasellus vel finibus nisl. Nullam pharetra egestas vulputate. Vestibulum id feugiat augue, ut auctor neque. Quisque at nunc orci. Aenean ut.',
-      tags: ['React.js', 'Next', 'TypeScript', 'Tailwind CSS'],
-      repository: 'https://github.com/emanpecson/jess-portfolio',
     },
   ];
 
