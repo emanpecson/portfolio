@@ -1,6 +1,7 @@
 import Tag from './Tag';
 import { useRouter } from 'next/navigation';
 import { ExperienceType } from '@/types/ExperienceType';
+import { TaskType } from '@/types/TaskType';
 
 export default function Experience({ params }: { params: ExperienceType }) {
   const router = useRouter();
@@ -20,10 +21,15 @@ export default function Experience({ params }: { params: ExperienceType }) {
       <div className="sm:w-9/12 space-y-6">
         <div className="place-items-center text-gray-300 font-medium">
           <h1 className="text-base sm:text-xl text-gray-300">{params.employer}</h1>
-          <h2 className="text-sm sm:text-base text-gray-400">{params.position}</h2>
+          <h2 className="text-sm sm:text-base text-gray-300">{params.position}</h2>
         </div>
 
-        <p className="text-gray-400 sm:text-base text-sm font-light">{params.description}</p>
+        {params.tasks.map((task: TaskType, index: number) => (
+          <div className="space-y-1.5">
+            <p className="text-gray-300 sm:text-base text-sm font-medium">{task.title}</p>
+            <p className="text-gray-400 sm:text-base text-sm font-light">{task.description}</p>
+          </div>
+        ))}
 
         <div className="flex flex-wrap">
           {params.tags.map((tag: string, index: number) => (
