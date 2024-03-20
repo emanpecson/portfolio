@@ -43,7 +43,7 @@ export default function ExperienceSection() {
       timeline: 'JUN 2022 - AUG 2022',
       tasks: [
         {
-          title: 'Data model library',
+          title: 'Improved developer efficiency',
           description:
             'My team faced an issue where they relied on a 3rd party library and needed to send requests to them whenever we needed to update anything in the data model. So I worked up a solution where we would be able to generate the data model locally, so when we needed to make an update, we had direct access. As a result, update processes reduced from ~3 days to just ~30 minutes.',
         },
