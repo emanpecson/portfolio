@@ -1,6 +1,6 @@
 export default function Heading() {
   const name = 'Emanuel Pecson';
-  const currentPosition = 'Software Engineer at JT4';
+  const currentPosition = 'Software Engineer Intern at JT4';
   const missionStatement =
     'I utilize my experience in full-stack development to deliver impactful and quality solutions';
 
