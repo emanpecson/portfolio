@@ -1,17 +1,49 @@
-export default function ExperienceItem() {
-  return (
-    <div className="flex space-x-4 place-items-center">
-      <div>
-        <div className="rounded-full bg-neutral-500 h-10 w-10" />
-      </div>
+'use client';
 
-      <div className="flex justify-between w-full">
-        <div className="w-full">
-          <p className="font-semibold text-lg">company</p>
-          <p className="font-medium text-sm">position</p>
+import { AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { cn } from '@/lib/utils';
+import { ExperienceType } from '@/types/v2/ExperienceType';
+import { ChevronRightIcon } from 'lucide-react';
+import { useState } from 'react';
+
+export default function ExperienceItem({ exp }: { exp: ExperienceType }) {
+  const [isHovering, setIsHovering] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <AccordionItem value={exp.company}>
+      <AccordionTrigger
+        onMouseOver={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full"
+      >
+        <div className="flex justify-between place-items-center w-full">
+          <div className="flex space-x-4 place-items-center">
+            <div>
+              <div className="rounded-full bg-neutral-500 h-10 w-10" />
+            </div>
+
+            <div className="w-full text-left">
+              <div className="flex place-items-center space-x-1">
+                <p className="font-semibold text-lg">{exp.company}</p>
+                <ChevronRightIcon
+                  size={20}
+                  className={cn(
+                    isHovering ? 'opacity-100 translate-x-1' : 'opacity-0 translate-x-0',
+                    isOpen ? 'rotate-90' : 'rotate-0',
+                    'transition-all duration-200'
+                  )}
+                />
+              </div>
+              <p className="font-medium text-sm">{exp.position}</p>
+            </div>
+          </div>
+
+          <p className="text-neutral-400 whitespace-nowrap">{exp.timeline}</p>
         </div>
-        <p className="text-neutral-400 whitespace-nowrap">some date</p>
-      </div>
-    </div>
+      </AccordionTrigger>
+      <AccordionContent className="pl-14">{exp.description}</AccordionContent>
+    </AccordionItem>
   );
 }
