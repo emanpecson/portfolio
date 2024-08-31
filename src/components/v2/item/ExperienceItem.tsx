@@ -21,7 +21,7 @@ export default function ExperienceItem({ exp }: { exp: ExperienceType }) {
         <div className="flex justify-between place-items-center w-full">
           <div className="flex space-x-4 place-items-center">
             <div>
-              <div className="rounded-full bg-neutral-500 h-10 w-10" />
+              <div className="rounded-full bg-neutral-500 h-12 w-12" />
             </div>
 
             <div className="w-full text-left">
