@@ -1,4 +1,4 @@
-import { ProjectType } from '@/types/ProjectType';
+import { ProjectType } from '@/types/v1/ProjectType';
 import Project from '../item/Project';
 
 export default function ProjectSection() {

@@ -10,7 +10,7 @@ export class Section {
     this.isVisible = isVisible;
     this.ref = ref;
 
-    // subscribe to changes in passed variable refernece
+    // subscribe to changes in passed variable reference
     useEffect(() => {
       this.isVisible = isVisible;
     }, [isVisible]);

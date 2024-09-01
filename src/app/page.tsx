@@ -1,13 +1,13 @@
 'use client';
 
 import { useRef } from 'react';
-import BackgroundSection from '@/components/main/section/BackgroundSection';
-import ExperienceSection from '@/components/main/section/ExperienceSection';
-import ProjectSection from '@/components/main/section/ProjectSection';
-import ContactMe from '@/components/profile/ContactMe';
-import SectionNavigation from '@/components/profile/SectionNavigation';
-import Heading from '@/components/profile/Heading';
-import CursorEffect from '@/components/CursorEffect';
+import BackgroundSection from '@/components/v1/main/section/BackgroundSection';
+import ExperienceSection from '@/components/v1/main/section/ExperienceSection';
+import ProjectSection from '@/components/v1/main/section/ProjectSection';
+import ContactMe from '@/components/v1/profile/ContactMe';
+import SectionNavigation from '@/components/v1/profile/SectionNavigation';
+import Heading from '@/components/v1/profile/Heading';
+import CursorEffect from '@/components/v1/CursorEffect';
 
 export default function Home() {
   const backgroundRef = useRef(null);

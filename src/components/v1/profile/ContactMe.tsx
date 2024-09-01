@@ -1,4 +1,4 @@
-import { SocialType } from '@/types/SocialType';
+import { SocialType } from '@/types/v1/SocialType';
 import { EnvelopeIcon } from '@heroicons/react/24/solid';
 import Social from '../main/item/Social';
 

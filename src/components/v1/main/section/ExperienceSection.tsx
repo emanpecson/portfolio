@@ -1,4 +1,4 @@
-import { ExperienceType } from '@/types/ExperienceType';
+import { ExperienceType } from '@/types/v1/ExperienceType';
 import Experience from '../item/Experience';
 
 export default function ExperienceSection() {

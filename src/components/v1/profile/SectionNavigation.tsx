@@ -1,7 +1,7 @@
 'use client';
 
 import { Dispatch, MutableRefObject, SetStateAction, useEffect, useState } from 'react';
-import { Section } from '@/types/Section';
+import { Section } from '@/types/v1/Section';
 import classNames from '@/lib/classNames';
 
 export default function SectionNavigation({
@@ -67,7 +67,8 @@ export default function SectionNavigation({
                 className={classNames(
                   sec.getIsVisible() ? 'opacity-100' : 'opacity-30 hover:opacity-90',
                   'transition-all duration-150 flex place-items-center space-x-2 text-sm'
-                )}>
+                )}
+              >
                 <div
                   className={classNames(
                     sec.getIsVisible() ? 'w-20 h-[0.12rem]' : 'w-10 h-[0.1rem]',
