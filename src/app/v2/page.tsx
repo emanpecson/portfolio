@@ -1,5 +1,6 @@
 import FloatingDock from '@/components/v2/FloatingDock';
 import About from '@/components/v2/section/About';
+import Education from '@/components/v2/section/Education';
 import Experience from '@/components/v2/section/Experience';
 import Intro from '@/components/v2/section/Intro';
 
@@ -11,6 +12,7 @@ export default function Home() {
         <Intro />
         <About />
         <Experience />
+        <Education />
       </div>
     </div>
   );
