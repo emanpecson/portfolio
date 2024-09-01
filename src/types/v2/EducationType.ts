@@ -1,7 +1,7 @@
 export enum CompletionStatus {
-  IN_PROGRESS,
-  COMPLETE,
-  EXPIRED,
+  IN_PROGRESS = 'in progress',
+  COMPLETE = 'complete',
+  EXPIRED = 'expired',
 }
 
 export type EducationType = {

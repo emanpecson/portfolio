@@ -2,6 +2,7 @@
 
 import { AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { cn } from '@/lib/utils';
+import { CompletionStatus } from '@/types/v2/EducationType';
 import { ExperienceType } from '@/types/v2/ExperienceType';
 import { ChevronRightIcon } from 'lucide-react';
 import Image from 'next/image';
@@ -13,6 +14,7 @@ export type DropdownItemParams = {
   iconSrc: string;
   timeline: string;
   children: React.ReactNode;
+  status?: CompletionStatus;
 };
 
 export default function DropdownItem(params: DropdownItemParams) {
@@ -58,7 +60,14 @@ export default function DropdownItem(params: DropdownItemParams) {
             </div>
           </div>
 
-          <p className="text-neutral-400 whitespace-nowrap">{params.timeline}</p>
+          <div className="flex place-items-end flex-col">
+            <p className="text-neutral-400 whitespace-nowrap">{params.timeline}</p>
+            {params.status !== undefined && params.status !== CompletionStatus.COMPLETE && (
+              <div className="rounded-full border px-2 py-0.5 dark:bg-neutral-900 bg-neutral-200 text-neutral-500 border-neutral-300 dark:border-neutral-800 text-sm">
+                {params.status}
+              </div>
+            )}
+          </div>
         </div>
       </AccordionTrigger>
       <AccordionContent className="pl-[4.5rem]">{params.children}</AccordionContent>
