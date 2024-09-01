@@ -23,7 +23,7 @@ export default function LinkItem(params: LinkItemParams) {
       <div className="flex justify-between w-full py-2">
         <div className="flex space-x-4 place-items-center">
           <div>
-            <div className="w-14 h-14 bg-white rounded-full relative border dark:border-none border-neutral-800">
+            <div className="w-14 h-14 bg-white rounded-full relative border dark:border-none border-neutral-300">
               <Image
                 src={params.iconSrc}
                 alt={params.iconSrc}
