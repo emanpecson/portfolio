@@ -1,5 +1,6 @@
 import Tag from './Tag';
 import { ProjectType } from '@/types/v1/ProjectType';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 export default function Project({ params }: { params: ProjectType }) {
@@ -12,7 +13,14 @@ export default function Project({ params }: { params: ProjectType }) {
     >
       <div className="sm:w-3/12 sm:pr-10">
         <div className="bg-gray-600 rounded-md bg-opacity-70 sm:block hidden w-fit">
-          <img src={params.imageSrc} className="rounded-md p-1" />
+          <Image
+            src={params.imageSrc}
+            alt={params.imageSrc}
+            height={32}
+            width={60}
+            className="rounded-md w-full object-cover"
+            unoptimized
+          />
         </div>
       </div>
 
