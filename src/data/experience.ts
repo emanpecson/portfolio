@@ -1,4 +1,5 @@
 import { ExperienceType } from '@/types/v2/ExperienceType';
+import { tempDescription } from './temp';
 
 export const experiences: ExperienceType[] = [
   {
@@ -8,8 +9,7 @@ export const experiences: ExperienceType[] = [
     timeline: 'May 2023 - Present',
     website: 'https://www.jt4llc.com/',
     tags: [''],
-    description:
-      'Lorem ipsum odor amet, consectetuer adipiscing elit. Viverra sit tortor; aenean taciti ex libero in. Lobortis integer fusce finibus fusce; class mus. Ac fusce congue scelerisque fringilla dignissim laoreet condimentum amet.',
+    description: tempDescription,
   },
   {
     company: 'General Atomics',
@@ -18,18 +18,16 @@ export const experiences: ExperienceType[] = [
     timeline: 'June 2022 - August 2022',
     website: 'https://www.ga.com/',
     tags: [''],
-    description:
-      'Lorem ipsum odor amet, consectetuer adipiscing elit. Viverra sit tortor; aenean taciti ex libero in. Lobortis integer fusce finibus fusce; class mus. Ac fusce congue scelerisque fringilla dignissim laoreet condimentum amet.',
+    description: tempDescription,
   },
   {
     company: 'Clark County Public Works',
-    position: 'Intern',
+    position: 'Geographic Information System Intern',
     iconSrc: '/logo/clark_county.jpg',
     timeline: 'January 2022 - May 2022',
     website: 'https://www.clarkcountynv.gov/',
     tags: [''],
-    description:
-      'Lorem ipsum odor amet, consectetuer adipiscing elit. Viverra sit tortor; aenean taciti ex libero in. Lobortis integer fusce finibus fusce; class mus. Ac fusce congue scelerisque fringilla dignissim laoreet condimentum amet.',
+    description: tempDescription,
   },
   {
     company: 'University of Nevada, Las Vegas',
@@ -38,7 +36,6 @@ export const experiences: ExperienceType[] = [
     timeline: 'January 2022 - May 2022',
     website: 'https://www.unlv.edu/cs',
     tags: [''],
-    description:
-      'Lorem ipsum odor amet, consectetuer adipiscing elit. Viverra sit tortor; aenean taciti ex libero in. Lobortis integer fusce finibus fusce; class mus. Ac fusce congue scelerisque fringilla dignissim laoreet condimentum amet.',
+    description: tempDescription,
   },
 ];
