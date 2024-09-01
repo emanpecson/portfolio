@@ -7,12 +7,12 @@ export default function ContactMe() {
     {
       name: 'GitHub',
       link: 'https://github.com/emanpecson',
-      imageSrc: '/github_icon.png',
+      imageSrc: '/icon/github.png',
     },
     {
       name: 'LinkedIn',
       link: 'https://www.linkedin.com/in/emanuel-pecson/',
-      imageSrc: '/linkedin_icon.png',
+      imageSrc: '/icon/linkedin.png',
     },
     {
       name: 'Email',

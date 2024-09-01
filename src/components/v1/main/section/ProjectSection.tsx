@@ -4,7 +4,7 @@ import Project from '../item/Project';
 export default function ProjectSection() {
   const projects: ProjectType[] = [
     {
-      imageSrc: '/gatekeeper_cover.pdf',
+      imageSrc: '/cover/gatekeeper.png',
       title: 'Gatekeeper',
       description:
         'An event-planning and ticket-scanning web-app in one. Our users are given the ability to create an event and manage who is invited by generating unique QR codes for guests. Additional features include the ability to scan the QR codes with your device’s integrated camera, and an automatically created group chat where other guests and the host and can communicate.',
@@ -13,9 +13,9 @@ export default function ProjectSection() {
       website: 'https://unlvgatekeeper.com',
     },
     {
-      imageSrc: '/portfolio_cover.pdf',
+      imageSrc: '/cover/portfolio.png',
       title: 'My Portfolio',
-      description: 'The very website you’re viewing right now!',
+      description: "The very website you're viewing right now!",
       tags: ['React.js', 'Next', 'TypeScript', 'Tailwind CSS'],
       repository: 'https://github.com/emanpecson/portfolio',
     },
