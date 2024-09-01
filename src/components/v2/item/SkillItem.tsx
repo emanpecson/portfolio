@@ -20,7 +20,7 @@ export default function SkillItem({ skill }: { skill: SkillType }) {
           unoptimized
         />
       </div>
-      <label className="pr-4 text-base font-semibold cursor-pointer">{skill.label}</label>
+      <label className="pr-4 text-sm font-semibold cursor-pointer">{skill.label}</label>
     </Link>
   );
 }
