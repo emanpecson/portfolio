@@ -131,13 +131,13 @@ overallSkills.set('MySQL', {
 overallSkills.set('Pusher', {
   label: 'Pusher',
   iconSrc: '/logo/pusher.png',
-  group: SkillGroup.DATABASE,
+  group: SkillGroup.TOOL,
   url: 'https://pusher.com/',
 });
 overallSkills.set('Resend', {
   label: 'Resend',
   iconSrc: '/logo/resend.svg',
-  group: SkillGroup.DATABASE,
+  group: SkillGroup.TOOL,
   url: 'https://resend.com/',
 });
 
