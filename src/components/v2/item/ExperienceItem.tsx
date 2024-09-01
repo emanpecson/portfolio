@@ -4,6 +4,7 @@ import { AccordionContent, AccordionItem, AccordionTrigger } from '@/components/
 import { cn } from '@/lib/utils';
 import { ExperienceType } from '@/types/v2/ExperienceType';
 import { ChevronRightIcon } from 'lucide-react';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function ExperienceItem({ exp }: { exp: ExperienceType }) {
@@ -21,7 +22,16 @@ export default function ExperienceItem({ exp }: { exp: ExperienceType }) {
         <div className="flex justify-between place-items-center w-full">
           <div className="flex space-x-4 place-items-center">
             <div>
-              <div className="rounded-full bg-neutral-500 h-12 w-12" />
+              <div className="w-14 h-14 bg-white rounded-full relative">
+                <Image
+                  src={exp.iconSrc}
+                  alt={exp.iconSrc}
+                  height={24}
+                  width={24}
+                  className="h-fit w-fit rounded-full object-contain"
+                  unoptimized
+                />
+              </div>
             </div>
 
             <div className="w-full text-left">
