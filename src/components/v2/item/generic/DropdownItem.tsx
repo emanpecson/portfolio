@@ -32,7 +32,7 @@ export default function DropdownItem(params: DropdownItemParams) {
         <div className="flex justify-between w-full">
           <div className="flex space-x-4 place-items-center">
             <div>
-              <div className="w-14 h-14 bg-white rounded-full relative">
+              <div className="w-14 h-14 bg-white rounded-full relative border border-neutral-300 dark:border-none">
                 <Image
                   src={params.iconSrc}
                   alt={params.iconSrc}
