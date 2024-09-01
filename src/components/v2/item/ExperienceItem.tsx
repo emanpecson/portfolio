@@ -1,5 +1,5 @@
 import { ExperienceType } from '@/types/v2/ExperienceType';
-import DropdownItem from './DropdownItem';
+import DropdownItem from './generic/DropdownItem';
 
 export default function ExperienceItem({ exp }: { exp: ExperienceType }) {
   return (

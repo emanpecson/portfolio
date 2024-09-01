@@ -1,5 +1,5 @@
 import { EducationType } from '@/types/v2/EducationType';
-import DropdownItem from './DropdownItem';
+import DropdownItem from './generic/DropdownItem';
 
 export default function EducationItem({ edu }: { edu: EducationType }) {
   return (
