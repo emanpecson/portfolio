@@ -56,17 +56,19 @@ export default function DropdownItem(params: DropdownItemParams) {
                   )}
                 />
               </div>
-              <p className="font-medium text-sm">{params.subheading}</p>
+              <div className="flex space-x-2 place-items-center">
+                <p className="font-medium text-sm">{params.subheading}</p>
+                {params.status !== undefined && params.status !== CompletionStatus.COMPLETE && (
+                  <div className="rounded-full border px-2 py-0.5 dark:bg-neutral-900 bg-neutral-200 text-neutral-500 border-neutral-300 dark:border-neutral-800 text-sm w-fit">
+                    {params.status}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
           <div className="flex place-items-end flex-col">
             <p className="text-neutral-400 whitespace-nowrap">{params.timeline}</p>
-            {params.status !== undefined && params.status !== CompletionStatus.COMPLETE && (
-              <div className="rounded-full border px-2 py-0.5 dark:bg-neutral-900 bg-neutral-200 text-neutral-500 border-neutral-300 dark:border-neutral-800 text-sm">
-                {params.status}
-              </div>
-            )}
           </div>
         </div>
       </AccordionTrigger>
