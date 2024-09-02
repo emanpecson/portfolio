@@ -15,7 +15,7 @@ export default function FloatingDock() {
         <DockIcon className="dark:hover:bg-neutral-800 hover:bg-neutral-200/50">
           <Tooltip>
             <TooltipTrigger asChild className="w-full h-full flex justify-center place-items-center">
-              <Link href="https://github.com/emanpecson">
+              <Link rel="noopener noreferrer" target="_blank" href="https://github.com/emanpecson">
                 <GithubIcon />
               </Link>
             </TooltipTrigger>
@@ -25,7 +25,7 @@ export default function FloatingDock() {
         <DockIcon className="dark:hover:bg-neutral-800 hover:bg-neutral-200/50">
           <Tooltip>
             <TooltipTrigger asChild className="w-full h-full flex justify-center place-items-center">
-              <Link href="https://linkedin.com/in/emanuel-pecson">
+              <Link rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/emanuel-pecson">
                 <LinkedinIcon />
               </Link>
             </TooltipTrigger>
