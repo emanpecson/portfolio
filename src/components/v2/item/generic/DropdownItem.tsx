@@ -1,12 +1,15 @@
 'use client';
 
 import { AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { CompletionStatus } from '@/types/v2/EducationType';
 import { ExperienceType } from '@/types/v2/ExperienceType';
-import { ChevronRightIcon } from 'lucide-react';
+import { ChevronRightIcon, LinkIcon } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
+import StatusWrapper from '../../StateWrap';
+import StateWrap from '../../StateWrap';
 
 export type DropdownItemParams = {
   heading: string;
@@ -59,17 +62,13 @@ export default function DropdownItem(params: DropdownItemParams) {
               <div className="flex space-x-2 place-items-center">
                 <p className="font-medium text-sm">{params.subheading}</p>
                 {params.status !== undefined && params.status !== CompletionStatus.COMPLETE && (
-                  <div className="rounded-full border px-2 py-0.5 dark:bg-neutral-900 bg-neutral-200 text-neutral-500 border-neutral-300 dark:border-neutral-800 text-sm w-fit">
-                    {params.status}
-                  </div>
+                  <StateWrap>{params.status}</StateWrap>
                 )}
               </div>
             </div>
           </div>
 
-          <div className="flex place-items-end flex-col">
-            <p className="text-neutral-400 whitespace-nowrap">{params.timeline}</p>
-          </div>
+          <p className="text-neutral-400 whitespace-nowrap">{params.timeline}</p>
         </div>
       </AccordionTrigger>
       <AccordionContent className="pl-[4.5rem]">{params.children}</AccordionContent>

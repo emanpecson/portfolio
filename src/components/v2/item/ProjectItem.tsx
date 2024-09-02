@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { GithubIcon, GlobeIcon } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import WebsiteButton from '../button/WebsiteButton';
+import GitHubButton from '../button/GitHubButton';
 
 export default function ProjectItem({ proj }: { proj: ProjectType }) {
   return (
@@ -20,7 +22,7 @@ export default function ProjectItem({ proj }: { proj: ProjectType }) {
         />
       </Link>
 
-      <div className="flex flex-col justify-between h-[18rem] pt-1.5">
+      <div className="flex flex-col justify-between h-[18rem] pt-1.5 space-y-2">
         <div>
           <h3 className="font-semibold text-xl text-neutral-700 dark:text-neutral-200">{proj.name}</h3>
           <p className="text-sm text-neutral-500">{proj.description}</p>
@@ -31,24 +33,11 @@ export default function ProjectItem({ proj }: { proj: ProjectType }) {
             {proj.tags.length > 0 && proj.tags.map((tag: SkillType, i: number) => <SkillItem skill={tag} />)}
           </div>
           <div className="flex space-x-2">
-            {!!proj.websiteUrl && (
-              <Link rel="noopener noreferrer" target="_blank" href={proj.websiteUrl}>
-                <Button size="sm" className="flex space-x-1.5 duration-150">
-                  <GlobeIcon size={20} />
-                  <p className="font-semibold">Website</p>
-                </Button>
-              </Link>
-            )}
-            <Link rel="noopener noreferrer" target="_blank" href={proj.repoUrl}>
-              <Button size="sm" className="flex space-x-1.5 duration-150">
-                <GithubIcon size={20} />
-                <p className="font-semibold">Repository</p>
-              </Button>
-            </Link>
+            {!!proj.websiteUrl && <WebsiteButton href={proj.websiteUrl} />}
+            <GitHubButton href={proj.repoUrl} />
           </div>
         </div>
       </div>
-      {/* </div> */}
     </div>
   );
 }

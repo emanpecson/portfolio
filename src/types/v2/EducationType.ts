@@ -11,5 +11,4 @@ export type EducationType = {
   timeline: string;
   website: string;
   status: CompletionStatus;
-  description: string;
 };

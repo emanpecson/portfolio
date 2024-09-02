@@ -140,5 +140,17 @@ overallSkills.set('Resend', {
   group: SkillGroup.TOOL,
   url: 'https://resend.com/',
 });
+overallSkills.set('SQL', {
+  label: 'SQL',
+  iconSrc: '/logo/sql.png',
+  group: SkillGroup.LANGUAGE,
+  url: 'https://www.w3schools.com/sql/sql_intro.asp',
+});
+overallSkills.set('GoogleTest', {
+  label: 'GoogleTest',
+  iconSrc: '/logo/googletest.png',
+  group: SkillGroup.FRAMEWORK,
+  url: 'https://github.com/google/googletest',
+});
 
 export default overallSkills;
