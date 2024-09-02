@@ -8,7 +8,7 @@ export default function FloatingDock() {
   return (
     <TooltipProvider delayDuration={0}>
       <Dock
-        className="fixed bottom-4 rounded-full shadow-2xl border-[1.5px] border-neutral-200 dark:border-neutral-800 dark:bg-neutral-900 opacity-[95%] backdrop-blur-xl z-30"
+        className="fixed bottom-4 rounded-full shadow-2xl border-[1.5px] border-neutral-200 dark:border-neutral-800 dark:bg-neutral-900 z-30 bg-white"
         direction="middle"
         magnification={50}
       >
