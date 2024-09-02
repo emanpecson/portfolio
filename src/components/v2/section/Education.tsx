@@ -7,11 +7,11 @@ export default function Education() {
   return (
     <div>
       <h2 className="font-semibold text-2xl">Education</h2>
-      <Accordion type="multiple">
+      <div>
         {education.map((edu: EducationType, i: number) => (
           <EducationItem edu={edu} key={i} />
         ))}
-      </Accordion>
+      </div>
     </div>
   );
 }
