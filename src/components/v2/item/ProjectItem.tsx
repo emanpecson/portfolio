@@ -22,8 +22,8 @@ export default function ProjectItem({ proj }: { proj: ProjectType }) {
 
       <div className="flex flex-col justify-between h-[18rem] pt-1.5">
         <div>
-          <h3 className="font-semibold text-xl">{proj.name}</h3>
-          <p className="text-sm">{proj.description}</p>
+          <h3 className="font-semibold text-xl text-neutral-700 dark:text-neutral-200">{proj.name}</h3>
+          <p className="text-sm text-neutral-500">{proj.description}</p>
         </div>
 
         <div className="space-y-2">
