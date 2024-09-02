@@ -1,12 +1,13 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { CompletionStatus, EducationType } from '@/types/v2/EducationType';
-import { ChevronRightIcon, LinkIcon } from 'lucide-react';
+import { CompletionStatus } from '@/types/v2/EducationType';
+import { LinkIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 import StateWrap from '../../StateWrap';
+import { useWindowResize, widthBreakpoints } from '@/hooks/useWindowResize';
 
 export type LinkItemParams = {
   heading: string;
@@ -19,6 +20,13 @@ export type LinkItemParams = {
 
 export default function LinkItem(params: LinkItemParams) {
   const [isHovering, setIsHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useWindowResize(
+    widthBreakpoints.sm,
+    () => setIsMobile(false),
+    () => setIsMobile(true)
+  );
 
   return (
     <Link
@@ -28,10 +36,10 @@ export default function LinkItem(params: LinkItemParams) {
       onMouseOver={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <div className="flex justify-between w-full py-2">
+      <div className="sm:flex justify-between w-full py-2">
         <div className="flex space-x-4 place-items-center">
           <div>
-            <div className="w-16 h-16 bg-white rounded-full relative border dark:border-none border-neutral-300">
+            <div className="sm:w-16 sm:h-16 w-12 h-12 bg-white rounded-full relative border dark:border-none border-neutral-300">
               <Image
                 src={params.iconSrc}
                 alt={params.iconSrc}
@@ -44,18 +52,19 @@ export default function LinkItem(params: LinkItemParams) {
           </div>
 
           <div className="w-full text-left">
-            <div className="flex place-items-center space-x-1">
-              <p className="font-semibold text-lg">{params.heading}</p>
+            <div className="flex place-items-center sm:space-x-1 space-x-2">
+              <p className="font-semibold sm:text-lg text-sm">{params.heading}</p>
               <LinkIcon
-                size={16}
+                size={isMobile ? 12 : 16}
                 className={cn(
                   isHovering ? 'opacity-100 translate-x-1' : 'opacity-0 translate-x-0',
+                  isMobile && 'opacity-100',
                   'transition-all duration-200'
                 )}
               />
             </div>
-            <div className="flex space-x-2 place-items-center">
-              <p className="font-medium text-sm">{params.subheading}</p>
+            <div className="sm:flex sm:space-x-2 place-items-center sm:space-y-0 space-y-1">
+              <p className="font-medium sm:text-sm text-xs">{params.subheading}</p>
               {params.status !== undefined && params.status !== CompletionStatus.COMPLETE && (
                 <StateWrap>{params.status}</StateWrap>
               )}
@@ -63,7 +72,9 @@ export default function LinkItem(params: LinkItemParams) {
           </div>
         </div>
 
-        <p className="text-neutral-400 whitespace-nowrap">{params.timeline}</p>
+        <p className="text-neutral-400 whitespace-nowrap sm:text-right text-left sm:pl-0 pl-16 sm:text-base text-xs sm:pt-0 pt-1">
+          {params.timeline}
+        </p>
       </div>
     </Link>
   );

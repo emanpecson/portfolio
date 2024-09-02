@@ -19,9 +19,9 @@ export default function ExperienceItem({ exp }: { exp: ExperienceType }) {
             <div>
               <div className="relative flex place-items-center">
                 <div className="rounded-full bg-gray-600 dark:bg-neutral-300 h-1.5 w-1.5 absolute -left-6" />
-                <h3 className="font-bold text-sm dark:text-neutral-300 text-neutral-600">{task.header}</h3>
+                <h3 className="font-bold sm:text-sm text-xs dark:text-neutral-300 text-neutral-600">{task.header}</h3>
               </div>
-              <p className="text-neutral-500 text-sm">{task.description}</p>
+              <p className="text-neutral-500 sm:text-sm text-xs">{task.description}</p>
             </div>
             <div className="gap-2 flex flex-wrap">
               {task.tags.map((tag: SkillType, j: number) => (
