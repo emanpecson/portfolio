@@ -74,7 +74,7 @@ export default function DropdownItem(params: DropdownItemParams) {
             </div>
           </div>
 
-          <p className="text-neutral-400 whitespace-nowrap sm:text-right text-left sm:pl-0 pl-16 sm:text-base text-xs">
+          <p className="text-neutral-400 whitespace-nowrap sm:text-right text-left sm:pl-0 pl-16 sm:text-base text-xs font-normal">
             {params.timeline}
           </p>
         </div>
