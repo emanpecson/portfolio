@@ -1,4 +1,4 @@
-import { EducationType } from '@/types/v2/EducationType';
+import { EducationType } from '@/types/EducationType';
 import EducationItem from '../item/EducationItem';
 import { education } from '@/data/education';
 import { Accordion } from '@/components/ui/accordion';

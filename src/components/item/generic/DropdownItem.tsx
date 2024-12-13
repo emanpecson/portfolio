@@ -2,7 +2,7 @@
 
 import { AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { cn } from '@/lib/utils';
-import { CompletionStatus } from '@/types/v2/EducationType';
+import { CompletionStatus } from '@/types/EducationType';
 import { ChevronRightIcon } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';

@@ -1,4 +1,4 @@
-import { SkillType } from '@/types/v2/SkillType';
+import { SkillType } from '@/types/SkillType';
 import Image from 'next/image';
 import Link from 'next/link';
 

@@ -1,7 +1,6 @@
-import { metadata } from './../app/layout';
-import { ProjectType } from '@/types/v2/ProjectType';
+import { ProjectType } from '@/types/ProjectType';
 import overallSkills from './overall-skills';
-import { SkillType } from '@/types/v2/SkillType';
+import { SkillType } from '@/types/SkillType';
 
 export const projects: ProjectType[] = [
   {

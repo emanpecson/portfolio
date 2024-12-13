@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { CompletionStatus } from '@/types/v2/EducationType';
+import { CompletionStatus } from '@/types/EducationType';
 import { LinkIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';

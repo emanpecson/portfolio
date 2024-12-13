@@ -1,7 +1,7 @@
-import { ExperienceType } from '@/types/v2/ExperienceType';
+import { ExperienceType } from '@/types/ExperienceType';
 import DropdownItem from './generic/DropdownItem';
-import { TaskType } from '@/types/v2/TaskType';
-import { SkillType } from '@/types/v2/SkillType';
+import { TaskType } from '@/types/TaskType';
+import { SkillType } from '@/types/SkillType';
 import SkillItem from './SkillItem';
 import BoxWrap from '../BoxWrap';
 import WebsiteButton from '../button/WebsiteButton';

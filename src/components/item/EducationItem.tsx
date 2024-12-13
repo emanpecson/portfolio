@@ -1,4 +1,4 @@
-import { EducationType } from '@/types/v2/EducationType';
+import { EducationType } from '@/types/EducationType';
 import DropdownItem from './generic/DropdownItem';
 import BoxWrap from '../BoxWrap';
 import WebsiteButton from '../button/WebsiteButton';

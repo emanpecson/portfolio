@@ -1,4 +1,4 @@
-import { SkillType } from '@/types/v2/SkillType';
+import { SkillType } from '@/types/SkillType';
 import SkillItem from '../item/SkillItem';
 import overallSkills from '@/data/overall-skills';
 

@@ -1,10 +1,10 @@
-import FloatingDock from '@/components/v2/FloatingDock';
-import About from '@/components/v2/section/About';
-import Education from '@/components/v2/section/Education';
-import Experience from '@/components/v2/section/Experience';
-import Intro from '@/components/v2/section/Intro';
-import Projects from '@/components/v2/section/Projects';
-import Skills from '@/components/v2/section/Skills';
+import FloatingDock from '@/components/FloatingDock';
+import About from '@/components/section/About';
+import Education from '@/components/section/Education';
+import Experience from '@/components/section/Experience';
+import Intro from '@/components/section/Intro';
+import Projects from '@/components/section/Projects';
+import Skills from '@/components/section/Skills';
 
 export default function Home() {
   return (

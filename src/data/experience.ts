@@ -1,7 +1,7 @@
-import { ExperienceType } from '@/types/v2/ExperienceType';
+import { ExperienceType } from '@/types/ExperienceType';
 import { tempDescription } from './temp';
 import overallSkills from './overall-skills';
-import { SkillType } from '@/types/v2/SkillType';
+import { SkillType } from '@/types/SkillType';
 
 export const experiences: ExperienceType[] = [
   {

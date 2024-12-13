@@ -1,7 +1,7 @@
 import { experiences } from '@/data/experience';
 import ExperienceItem from '../item/ExperienceItem';
 import { Accordion } from '@/components/ui/accordion';
-import { ExperienceType } from '@/types/v2/ExperienceType';
+import { ExperienceType } from '@/types/ExperienceType';
 
 export default function Experience() {
   return (

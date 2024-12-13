@@ -1,5 +1,5 @@
 import { projects } from '@/data/projects';
-import { ProjectType } from '@/types/v2/ProjectType';
+import { ProjectType } from '@/types/ProjectType';
 import ProjectItem from '../item/ProjectItem';
 
 export default function Projects() {

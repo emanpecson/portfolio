@@ -1,6 +1,6 @@
-import { ProjectType } from '@/types/v2/ProjectType';
+import { ProjectType } from '@/types/ProjectType';
 import SkillItem from './SkillItem';
-import { SkillType } from '@/types/v2/SkillType';
+import { SkillType } from '@/types/SkillType';
 import { Button } from '@/components/ui/button';
 import { GithubIcon, GlobeIcon } from 'lucide-react';
 import Link from 'next/link';

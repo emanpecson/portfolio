@@ -1,4 +1,4 @@
-import { CompletionStatus, EducationType } from '@/types/v2/EducationType';
+import { CompletionStatus, EducationType } from '@/types/EducationType';
 
 export const education: EducationType[] = [
   {

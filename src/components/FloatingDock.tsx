@@ -1,8 +1,8 @@
 import { Dock, DockIcon } from '@/components/magicui/dock';
 import { GithubIcon, LinkedinIcon, MailIcon } from 'lucide-react';
 import Link from 'next/link';
-import { ThemeToggle } from '../ThemeToggle';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
+import { ThemeToggle } from './ThemeToggle';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
 
 export default function FloatingDock() {
   return (
