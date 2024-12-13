@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex justify-center sm:py-24 py-16 px-4">
       <FloatingDock />
-      <div className="sm:w-[56rem] w-full space-y-10">
+      <div className="max-w-[44rem] w-full space-y-10">
         <Intro />
         <About />
         <Experience />
