@@ -15,13 +15,19 @@ export default function Header() {
       <Link href="/">logo</Link>
       <div className="flex space-x-5">
         {routes.map((route, i) => (
-          <Link
-            key={i}
-            className="font-medium opacity-60 hover:opacity-100 transition-opacity duration-150"
-            href={route.path}
-          >
-            {route.label}
-          </Link>
+          <div key={i}>
+            <div className="sm:block hidden">
+              <Link
+                className="font-medium opacity-60 hover:opacity-100 transition-opacity duration-150"
+                href={route.path}
+              >
+                {route.label}
+              </Link>
+            </div>
+            <div className="sm:hidden block">
+              <IconLinkButton icon={route.icon} href={route.path} />
+            </div>
+          </div>
         ))}
 
         <IconLinkButton icon={GithubIcon} href="https://github.com/emanpecson/portfolio" />
