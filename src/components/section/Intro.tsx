@@ -6,7 +6,7 @@ export default function Intro() {
     <div className="flex sm:space-x-8 space-x-4 justify-between">
       <div className="font-medium space-y-4">
         <div>
-          <h1 className="sm:text-6xl text-3xl">{greeting}</h1>
+          <h1 className="sm:text-4xl text-3xl font-extrabold">Emanuel Pecson</h1>
           <p className="sm:text-2xl text-xl dark:text-neutral-400 text-neutral-700">{position}</p>
         </div>
         <p className="sm:text-2xl text-xl dark:text-neutral-400 text-neutral-700">{mission}</p>
