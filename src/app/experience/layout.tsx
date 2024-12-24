@@ -17,7 +17,7 @@ export default function ExperienceLayout({ children }: { children: React.ReactNo
             href={exp.path}
             className={cn(
               exp.path !== pathname &&
-                'text-opacity-30 dark:text-opacity-30 hover:text-neutral-800 dark:hover:text-neutral-200',
+                'text-opacity-30 dark:text-opacity-30 hover:text-neutral-600 dark:hover:text-neutral-400',
               'text-neutral-800 dark:text-neutral-200 text-3xl font-extrabold w-fit transition-colors duration-150'
             )}
           >
