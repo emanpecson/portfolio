@@ -8,7 +8,7 @@ import WebsiteButton from '../button/WebsiteButton';
 
 export default function ExperienceItem({ exp }: { exp: ExperienceType }) {
   return (
-    <DropdownItem heading={exp.company} subheading={exp.position} iconSrc={exp.iconSrc} timeline={exp.timeline}>
+    <DropdownItem heading={exp.company} subheading={exp.position} iconSrc={exp.logoSrc} timeline={exp.timeline}>
       <div className="space-y-3">
         <div className="pl-3">
           <WebsiteButton href={exp.website} />

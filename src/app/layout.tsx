@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Header />
-          <div className="pt-8">{children}</div>
+          <div className="sm:py-32 py-24 flex justify-center px-4">{children}</div>
         </ThemeProvider>
       </body>
     </html>

@@ -1,3 +1,3 @@
 export default function ProjectsPage() {
-  return <div>projects page</div>;
+  return <div className="max-w-[40rem] w-full">projects page</div>;
 }

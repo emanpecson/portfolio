@@ -11,7 +11,7 @@ export default function Header() {
   const { setTheme, resolvedTheme } = useTheme();
 
   return (
-    <div className="w-full flex justify-between mx-auto py-6 px-8 fixed bg-opacity-40 backdrop-blur-xl">
+    <div className="w-full flex justify-between mx-auto py-6 px-8 fixed bg-opacity-40 backdrop-blur-sm z-40">
       <Link href="/">logo</Link>
       <div className="flex space-x-5">
         {routes.map((route, i) => (

@@ -1,5 +1,4 @@
 import { ExperienceType } from '@/types/ExperienceType';
-import { tempDescription } from './temp';
 import overallSkills from './overall-skills';
 import { SkillType } from '@/types/SkillType';
 
@@ -7,9 +6,11 @@ export const experiences: ExperienceType[] = [
   {
     company: 'JT4',
     position: 'Software Engineer Intern',
-    iconSrc: '/logo/jt4.jpeg',
-    timeline: 'May 2023 - Present',
-    website: 'https://www.jt4llc.com/',
+    location: 'Las Vegas, NV',
+    logoSrc: '/logo/jt4.png',
+    path: '/experience/jt4',
+    timeline: '05/2023 - Present',
+    website: 'https://www.jt4llc.com',
     tasks: [
       {
         header: 'Employee Image App (full-stack app)',
@@ -66,9 +67,11 @@ export const experiences: ExperienceType[] = [
   {
     company: 'General Atomics',
     position: 'Software Developer Intern',
-    iconSrc: '/logo/general_atomics.png',
-    timeline: 'June 2022 - August 2022',
-    website: 'https://www.ga.com/',
+    location: 'San Diego, CA',
+    logoSrc: '/logo/general_atomics.png',
+    path: '/experience/general-atomics',
+    timeline: '06/2022 - 08/2022',
+    website: 'https://www.ga.com',
     tasks: [
       {
         header: 'Improved developer efficiency',
@@ -91,11 +94,13 @@ export const experiences: ExperienceType[] = [
     ],
   },
   {
-    company: 'Clark County Public Works',
+    company: 'Clark County',
     position: 'Geographic Information System Intern',
-    iconSrc: '/logo/clark_county.jpg',
-    timeline: 'January 2022 - May 2022',
-    website: 'https://www.clarkcountynv.gov/',
+    location: 'Las Vegas, NV',
+    logoSrc: '/logo/clark_county.png',
+    path: '/experience/clark-county',
+    timeline: '01/2022 - 05/2022',
+    website: 'https://www.clarkcountynv.gov',
     tasks: [
       {
         header: 'Web-scraping',
@@ -110,10 +115,12 @@ export const experiences: ExperienceType[] = [
     ],
   },
   {
-    company: 'University of Nevada, Las Vegas',
+    company: 'UNLV',
     position: 'Computer Science Teaching Assistant',
-    iconSrc: '/logo/unlv.png',
-    timeline: 'January 2022 - May 2022',
+    location: 'Las Vegas, NV',
+    logoSrc: '/logo/unlv.png',
+    path: '/experience/unlv',
+    timeline: '01/2022 - 05/2022',
     website: 'https://www.unlv.edu/cs',
     tasks: [
       {
