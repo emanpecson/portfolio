@@ -16,7 +16,7 @@ export default function ExperienceItem({ experience }: { experience: ExperienceT
               alt={experience.company}
               height={24}
               width={24}
-              className="rounded-full border dark:border-none h-16 w-16 object-contain bg-white"
+              className="h-16 w-16 rounded-md object-contain"
               unoptimized
             />
             <div>
