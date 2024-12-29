@@ -5,14 +5,21 @@ import { projects } from '@/data/projects';
 import { ContentHeaderType } from '@/types/ContentHeader';
 import NavContentHeader from '../NavContentHeader';
 import { useEffect, useState } from 'react';
+import { ChevronLeftIcon } from 'lucide-react';
+import Label from '../Label';
+import Paragraph from '../Paragraph';
+import { ProjectType } from '@/types/ProjectType';
+import ProjectTab from './ProjectTab';
+import ProjectPreview from './ProjectPreview';
 
-export interface ContentProps {
+export interface ProjectContentProps {
+  project: ProjectType;
   headers: ContentHeaderType[];
   children: React.ReactNode;
 }
 export type InViewMap = { [id: string]: boolean };
 
-export default function Content(props: ContentProps) {
+export default function ProjectContent(props: ProjectContentProps) {
   const [inViewMap, setInViewMap] = useState<InViewMap>({});
 
   // trigger when a header leaves the view: updates the map of headers-in-view
@@ -51,18 +58,31 @@ export default function Content(props: ContentProps) {
   return (
     <div className="flex h-screen">
       {/* route navigations */}
-      <div className="sm:block hidden w-80 overflow-y-auto pb-16 px-8 pt-20 space-y-4">
+      <div className="sm:flex flex-col hidden w-80 overflow-y-auto pb-16 px-8 pt-20 space-y-4">
         {projects.map((proj, i) => (
-          <div>
-            <Link href={proj.path} key={i}>
-              {proj.name}
-            </Link>
-          </div>
+          <ProjectTab project={proj} key={i} />
         ))}
       </div>
 
       {/* content */}
-      <div className="w-full max-w-[40rem] space-y-4">{props.children}</div>
+      <div className="lg:px-8 px-4 overflow-y-auto max-w-[40rem] w-full pb-16 pt-20 min-h-screen">
+        <div>
+          <Link
+            href="/projects"
+            className="flex space-x-1 w-fit place-items-center rounded-full text-neutral-500 hover:text-black dark:hover:text-white transition-colors duration-150"
+          >
+            <ChevronLeftIcon size={20} />
+            <span className="font-medium">Return to projects</span>
+          </Link>
+
+          <div>
+            <h1 className="text-4xl font-extrabold text-neutral-700 dark:text-neutral-200">{props.project.name}</h1>
+            <Label>{props.project.label}</Label>
+          </div>
+          <Paragraph>{props.project.description}</Paragraph>
+        </div>
+        <div>{props.children}</div>
+      </div>
 
       {/* in-page navigations */}
       <div className="lg:block hidden w-[28rem] overflow-y-auto pb-16 pt-20 px-8 space-y-6">

@@ -32,6 +32,7 @@ export const projects: ProjectType[] = [
     coverImageSrc: '/cover/portfolio.png',
     repoUrl: 'https://github.com/emanpecson/portfolio',
     websiteUrl: 'https://www.emanpecson.com',
+    iconSrc: '/linkedin_pfp.jpeg',
     tags: [
       overallSkills.get('React.js') as SkillType,
       overallSkills.get('Next') as SkillType,
@@ -47,6 +48,7 @@ export const projects: ProjectType[] = [
     coverImageSrc: '/cover/quorum-bots.png',
     repoUrl: 'https://github.com/emanpecson/quorum-bots-docs',
     websiteUrl: 'https://www.quorumbots.com',
+    iconSrc: '/logo/quorum.svg',
     tags: [
       overallSkills.get('React.js') as SkillType,
       overallSkills.get('Next') as SkillType,
@@ -77,6 +79,7 @@ export const projects: ProjectType[] = [
     coverImageSrc: '/cover/abilliti.png',
     repoUrl: 'https://github.com/abilliti-dev',
     websiteUrl: 'https://abilliti.com',
+    iconSrc: '/logo/abilliti.svg',
     tags: [
       overallSkills.get('React.js') as SkillType,
       overallSkills.get('TypeScript') as SkillType,
@@ -89,6 +92,7 @@ export const projects: ProjectType[] = [
     path: '/projects/employee-image',
     description: 'Webapp that allows users to update their profile picture among all corporate apps',
     coverImageSrc: '/cover/na.png',
+    iconSrc: '/logo/jt4.png',
     tags: [
       overallSkills.get('Vue.js') as SkillType,
       overallSkills.get('Nuxt') as SkillType,
@@ -102,6 +106,7 @@ export const projects: ProjectType[] = [
     path: '/projects/fileship',
     description: 'Webapp that provides employees with a way to securely upload files',
     coverImageSrc: '/cover/na.png',
+    iconSrc: '/logo/jt4.png',
     tags: [
       overallSkills.get('Vue.js') as SkillType,
       overallSkills.get('Nuxt') as SkillType,
@@ -115,6 +120,7 @@ export const projects: ProjectType[] = [
     path: '/projects/concur-travel-approver',
     description: 'Webapp that simplifies the management of employee travel info',
     coverImageSrc: '/cover/na.png',
+    iconSrc: '/logo/jt4.png',
     tags: [
       overallSkills.get('Vue.js') as SkillType,
       overallSkills.get('Nuxt') as SkillType,

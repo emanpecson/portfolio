@@ -9,7 +9,7 @@ export default function ExperienceLayout({ children }: { children: React.ReactNo
   const pathname = usePathname();
 
   return (
-    <div className="max-w-[40rem] w-full space-y-10">
+    <div className="max-w-[40rem] w-full mx-auto space-y-10 pt-20 pb-16">
       <div className="flex max-sm:flex-col justify-between">
         {experiences.map((exp, i) => (
           <Link

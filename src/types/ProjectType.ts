@@ -9,4 +9,5 @@ export type ProjectType = {
   tags: SkillType[];
   repoUrl?: string;
   websiteUrl?: string;
+  iconSrc?: string;
 };

@@ -1,9 +1,8 @@
 'use client';
 
-import Content from '@/components/content/Content';
+import ProjectContent from '@/components/project/ProjectContent';
 import ContentSection from '@/components/content/ContentSection';
 import ContentText from '@/components/content/ContentText';
-import ContentTitleProject from '@/components/content/ContentTitleProject';
 import { projects } from '@/data/projects';
 import { useRefMap } from '@/hooks/useRefMap';
 import { ContentHeaderType } from '@/types/ContentHeader';
@@ -27,12 +26,10 @@ export default function GatekeeperPage() {
   ];
 
   return (
-    <Content headers={headers}>
-      <ContentTitleProject project={proj} />
-
+    <ProjectContent project={proj} headers={headers}>
       <ContentSection header={headers[0]}>
         <ContentText>This is some motivational stuff man.</ContentText>
       </ContentSection>
-    </Content>
+    </ProjectContent>
   );
 }

@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import { ContentHeaderType, ContentSubheaderType } from '@/types/ContentHeader';
-import { InViewMap } from './content/Content';
+import { InViewMap } from './project/ProjectContent';
 
 interface NavContentHeaderProps {
   header: ContentHeaderType;
