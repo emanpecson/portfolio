@@ -11,7 +11,7 @@ export default function ContentSection(props: ContentSectionProps) {
       <h2
         ref={props.header.ref}
         id={props.header.id}
-        className="text-2xl font-bold py-2 text-onyx dark:text-neutral-100"
+        className="text-2xl font-bold py-2 text-neutral-700 dark:text-neutral-100"
       >
         {props.header.label}
       </h2>

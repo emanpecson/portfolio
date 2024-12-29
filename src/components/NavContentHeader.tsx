@@ -26,7 +26,7 @@ export default function NavContentHeader(props: NavContentHeaderProps) {
       </button>
 
       <div className="space-y-2 flex flex-col">
-        {props.header.subheaders.length > 0 &&
+        {props.header.subheaders &&
           props.header.subheaders.map((subheader: ContentSubheaderType) => (
             <button
               key={subheader.id}

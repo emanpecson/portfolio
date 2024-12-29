@@ -38,8 +38,10 @@ export default function ProjectContent(props: ProjectContentProps) {
     // let all headers/subheaders be tracked by observer
     for (const header of props.headers) {
       if (header.ref?.current) observer.observe(header.ref.current);
-      for (const subheader of header.subheaders) {
-        if (subheader.ref?.current) observer.observe(subheader.ref.current);
+      if (header.subheaders) {
+        for (const subheader of header.subheaders) {
+          if (subheader.ref?.current) observer.observe(subheader.ref.current);
+        }
       }
     }
 
@@ -47,8 +49,10 @@ export default function ProjectContent(props: ProjectContentProps) {
       // cleanup observer on exit
       for (const header of props.headers) {
         if (header.ref?.current) observer.unobserve(header.ref.current);
-        for (const subheader of header.subheaders) {
-          if (subheader.ref?.current) observer.unobserve(subheader.ref.current);
+        if (header.subheaders) {
+          for (const subheader of header.subheaders) {
+            if (subheader.ref?.current) observer.unobserve(subheader.ref.current);
+          }
         }
       }
       observer.disconnect();
@@ -56,17 +60,17 @@ export default function ProjectContent(props: ProjectContentProps) {
   }, [props.headers]);
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen w-full justify-center">
       {/* route navigations */}
-      <div className="sm:flex flex-col hidden w-80 overflow-y-auto pb-16 px-8 pt-20 space-y-4">
+      <div className="sm:flex flex-col hidden max-w-[20rem] w-full overflow-y-auto pb-16 px-8 pt-20 space-y-4">
         {projects.map((proj, i) => (
           <ProjectTab project={proj} key={i} />
         ))}
       </div>
 
       {/* content */}
-      <div className="lg:px-8 px-4 overflow-y-auto max-w-[40rem] w-full pb-16 pt-20 min-h-screen">
-        <div>
+      <div className="lg:px-8 px-4 overflow-y-auto max-w-[50rem] w-full pb-16 pt-20 min-h-screen">
+        <div className="space-y-4">
           <Link
             href="/projects"
             className="flex space-x-1 w-fit place-items-center rounded-full text-neutral-500 hover:text-black dark:hover:text-white transition-colors duration-150"
@@ -76,16 +80,16 @@ export default function ProjectContent(props: ProjectContentProps) {
           </Link>
 
           <div>
-            <h1 className="text-4xl font-extrabold text-neutral-700 dark:text-neutral-200">{props.project.name}</h1>
+            <h1 className="text-4xl font-extrabold text-neutral-700 dark:text-neutral-100">{props.project.name}</h1>
             <Label>{props.project.label}</Label>
           </div>
           <Paragraph>{props.project.description}</Paragraph>
         </div>
-        <div>{props.children}</div>
+        <div className="space-y-8">{props.children}</div>
       </div>
 
       {/* in-page navigations */}
-      <div className="lg:block hidden w-[28rem] overflow-y-auto pb-16 pt-20 px-8 space-y-6">
+      <div className="lg:block hidden w-[20rem] overflow-y-auto pb-16 pt-20 px-8 space-y-6">
         <p className="text-xs font-semibold uppercase">On this page</p>
         <div className="flex flex-col space-y-2">
           {props.headers.map((header: ContentHeaderType) => (

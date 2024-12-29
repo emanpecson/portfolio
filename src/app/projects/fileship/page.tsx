@@ -8,8 +8,8 @@ import { useRefMap } from '@/hooks/useRefMap';
 import { ContentHeaderType } from '@/types/ContentHeader';
 import ContentSubsection from '@/components/content/ContentSubsection';
 
-export default function GatekeeperPage() {
-  const proj = projects[0];
+export default function FileshipPage() {
+  const proj = projects[6];
   const refMap = useRefMap(['problem', 'solution', 'features', 'f1', 'f2', 'f3']);
   const headers: ContentHeaderType[] = [
     { id: '0', label: 'Problem', ref: refMap.problem },

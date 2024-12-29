@@ -11,7 +11,7 @@ export default function ContentSubsection(props: ContentSubsectionProps) {
       <h3
         ref={props.subheader.ref}
         id={props.subheader.id}
-        className="text-xl font-semibold py-1 text-onyx dark:text-neutral-100"
+        className="text-xl font-semibold py-1 text-neutral-700 dark:text-neutral-100"
       >
         {props.subheader.label}
       </h3>

@@ -3,7 +3,7 @@ import { MutableRefObject } from 'react';
 export type ContentHeaderType = {
   id: string;
   label: string;
-  subheaders: ContentSubheaderType[];
+  subheaders?: ContentSubheaderType[];
   ref: MutableRefObject<HTMLDivElement | null>;
 };
 
