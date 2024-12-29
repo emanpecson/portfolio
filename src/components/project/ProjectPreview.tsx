@@ -1,12 +1,12 @@
 import { SkillType } from '@/types/SkillType';
 import Link from 'next/link';
 import Image from 'next/image';
-import WebsiteButton from './button/WebsiteButton';
-import GitHubButton from './button/GitHubButton';
-import IconLinkTag from './button/IconLinkTag';
+import WebsiteButton from '../button/WebsiteButton';
+import GitHubButton from '../button/GitHubButton';
+import IconLinkTag from '../button/IconLinkTag';
 import { ProjectType } from '@/types/ProjectType';
-import Label from './Label';
-import { Button } from './ui/button';
+import Label from '../Label';
+import { Button } from '../ui/button';
 
 export default function ProjectPreview({ project }: { project: ProjectType }) {
   return (
@@ -17,7 +17,7 @@ export default function ProjectPreview({ project }: { project: ProjectType }) {
           height={24}
           width={36}
           alt={project.coverImageSrc}
-          className="w-full rounded-t-lg object-cover border-b"
+          className="w-full rounded-t-lg object-cover border-b hover:opacity-90 duration-150 transition-all"
           unoptimized
         />
       </Link>
@@ -38,9 +38,9 @@ export default function ProjectPreview({ project }: { project: ProjectType }) {
           </div>
 
           <div className="flex space-x-1.5 place-items-center">
-            <Link href={project.path}>
-              <Button size="sm">Learn more</Button>
-            </Link>
+            <Button size="sm" asChild>
+              <Link href={project.path}>Learn more</Link>
+            </Button>
             {!!project.websiteUrl && <WebsiteButton href={project.websiteUrl} />}
             {!!project.repoUrl && <GitHubButton href={project.repoUrl} />}
           </div>
