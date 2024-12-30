@@ -62,11 +62,11 @@ export default function ProjectContent(props: ProjectContentProps) {
   return (
     <div className="flex h-screen w-full justify-center">
       {/* route navigations */}
-      <div className="sm:flex flex-col hidden max-w-[20rem] w-full overflow-y-auto pb-16 px-8 pt-20 space-y-4">
+      {/* <div className="sm:flex flex-col hidden max-w-[20rem] w-full overflow-y-auto pb-16 px-8 pt-20 space-y-4">
         {projects.map((proj, i) => (
           <ProjectTab project={proj} key={i} />
         ))}
-      </div>
+      </div> */}
 
       {/* content */}
       <div className="lg:px-8 px-4 overflow-y-auto max-w-[50rem] w-full pb-16 pt-20 min-h-screen">
