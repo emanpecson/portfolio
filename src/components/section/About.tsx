@@ -1,6 +1,7 @@
 import { lbp_url } from '@/data/url';
 import InlineLink from '../button/InlineLink';
 import Paragraph from '../Paragraph';
+import { experiences } from '@/data/experience';
 
 export default function About() {
   return (
@@ -18,12 +19,13 @@ export default function About() {
         <span>This passion for engineering carried on into </span>
         <InlineLink href="https://www.unlv.edu/">UNLV</InlineLink>
         <span>, where I graduated cum laude with a </span>
-        <InlineLink href="https://www.unlv.edu/degree/bs-computer-science">BS in Computer Science</InlineLink>.
+        <InlineLink href="https://www.unlv.edu/degree/bs-computer-science">BS in Computer Science</InlineLink>
+        <span> in 2024.</span>
       </Paragraph>
 
       <Paragraph>
         <span>I had the opportunity to showcase my skills and </span>
-        <InlineLink href="/experience">gain valuable experience through internships</InlineLink>
+        <InlineLink href={experiences[0].path}>gain valuable experience through internships</InlineLink>
         <span>. But it didn't stop there. I continued to learn and bring my ideas to life by engaging in a </span>
         <InlineLink href="/projects">variety of personal projects</InlineLink>.
       </Paragraph>
