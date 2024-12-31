@@ -25,7 +25,7 @@ export default function ProjectTab({ project }: { project: ProjectType }) {
           height={24}
           width={36}
           alt={project.coverImageSrc}
-          className="w-full rounded-t-md object-cover border-b hover:opacity-90 duration-150 transition-all"
+          className="w-full rounded-t-md object-cover border-b hover:opacity-90 duration-150 transition-all max-h-24"
           unoptimized
         />
         <div className="p-1.5">
