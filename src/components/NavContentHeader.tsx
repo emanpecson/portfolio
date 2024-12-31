@@ -31,7 +31,9 @@ export default function NavContentHeader(props: NavContentHeaderProps) {
             <button
               key={subheader.id}
               className={cn(
-                props.inViewMap[subheader.id] ? 'font-medium' : 'font-light',
+                props.inViewMap[subheader.id]
+                  ? 'font-semibold text-black dark:text-white'
+                  : 'font-light text-neutral-500',
                 'text-left w-fit text-sm pl-4 duration-150 transition-all'
               )}
               onClick={() => jump(subheader.id)}
