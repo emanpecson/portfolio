@@ -67,6 +67,7 @@ export const projects: ProjectType[] = [
     tags: [
       overallSkills.get('React.js') as SkillType,
       overallSkills.get('Next') as SkillType,
+      overallSkills.get('Node.js') as SkillType,
       overallSkills.get('TypeScript') as SkillType,
       overallSkills.get('Tailwind CSS') as SkillType,
     ],
@@ -94,10 +95,14 @@ export const projects: ProjectType[] = [
     coverImageSrc: '/cover/na.png',
     iconSrc: '/logo/jt4.png',
     tags: [
-      overallSkills.get('Vue.js') as SkillType,
-      overallSkills.get('Nuxt') as SkillType,
+      overallSkills.get('React.js') as SkillType,
+      overallSkills.get('Next') as SkillType,
+      overallSkills.get('Node.js') as SkillType,
       overallSkills.get('TypeScript') as SkillType,
       overallSkills.get('Tailwind CSS') as SkillType,
+      overallSkills.get('Prisma') as SkillType,
+      overallSkills.get('SQL Server') as SkillType,
+      // overallSkills.get('Minio') as SkillType,
     ],
   },
   {
@@ -110,8 +115,11 @@ export const projects: ProjectType[] = [
     tags: [
       overallSkills.get('Vue.js') as SkillType,
       overallSkills.get('Nuxt') as SkillType,
+      overallSkills.get('Node.js') as SkillType,
       overallSkills.get('TypeScript') as SkillType,
       overallSkills.get('Tailwind CSS') as SkillType,
+      overallSkills.get('Prisma') as SkillType,
+      overallSkills.get('SQL Server') as SkillType,
     ],
   },
   {
@@ -124,8 +132,11 @@ export const projects: ProjectType[] = [
     tags: [
       overallSkills.get('Vue.js') as SkillType,
       overallSkills.get('Nuxt') as SkillType,
+      overallSkills.get('Node.js') as SkillType,
       overallSkills.get('TypeScript') as SkillType,
       overallSkills.get('Tailwind CSS') as SkillType,
+      overallSkills.get('Prisma') as SkillType,
+      overallSkills.get('SQL Server') as SkillType,
     ],
   },
 ];
