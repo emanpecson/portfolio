@@ -1,16 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import { projects } from '@/data/projects';
 import { ContentHeaderType } from '@/types/ContentHeader';
 import NavContentHeader from '../NavContentHeader';
 import { useEffect, useState } from 'react';
-import { ChevronLeftIcon } from 'lucide-react';
+import { ChevronLeftIcon, GithubIcon, MousePointerClickIcon } from 'lucide-react';
 import Label from '../Label';
-import Paragraph from '../Paragraph';
 import { ProjectType } from '@/types/ProjectType';
-import ProjectTab from './ProjectTab';
-import ProjectPreview from './ProjectPreview';
+import InlineLink from '../button/InlineLink';
+import { SkillType } from '@/types/SkillType';
+import IconLinkTag from '../button/IconLinkTag';
+import IconLinkButton from '../button/IconLinkButton';
 
 export interface ProjectContentProps {
   project: ProjectType;
@@ -61,30 +61,27 @@ export default function ProjectContent(props: ProjectContentProps) {
 
   return (
     <div className="flex h-screen w-full justify-center">
-      {/* route navigations */}
-      {/* <div className="sm:flex flex-col hidden max-w-[20rem] w-full overflow-y-auto pb-16 px-8 pt-20 space-y-4">
-        {projects.map((proj, i) => (
-          <ProjectTab project={proj} key={i} />
-        ))}
-      </div> */}
+      <div className="lg:px-8 px-4 overflow-y-auto max-w-[50rem] w-full pb-16 pt-20 min-h-screen space-y-4">
+        <Link
+          href="/projects"
+          className="flex space-x-1 w-fit place-items-center rounded-full text-neutral-500 hover:text-black dark:hover:text-white transition-colors duration-150"
+        >
+          <ChevronLeftIcon size={20} />
+          <span className="font-medium">Return to projects</span>
+        </Link>
 
-      {/* content */}
-      <div className="lg:px-8 px-4 overflow-y-auto max-w-[50rem] w-full pb-16 pt-20 min-h-screen">
-        <div className="space-y-4">
-          <Link
-            href="/projects"
-            className="flex space-x-1 w-fit place-items-center rounded-full text-neutral-500 hover:text-black dark:hover:text-white transition-colors duration-150"
-          >
-            <ChevronLeftIcon size={20} />
-            <span className="font-medium">Return to projects</span>
-          </Link>
-
-          <div>
-            <h1 className="text-4xl font-extrabold text-neutral-700 dark:text-neutral-100">{props.project.name}</h1>
+        <div className="space-y-1.5">
+          <h1 className="text-4xl font-extrabold text-neutral-700 dark:text-neutral-100">{props.project.name}</h1>
+          <div className="flex space-x-2">
             <Label>{props.project.label}</Label>
+            {props.project.websiteUrl && (
+              <IconLinkButton icon={MousePointerClickIcon} href={props.project.websiteUrl} />
+            )}
+            {props.project.repoUrl && <IconLinkButton icon={GithubIcon} href={props.project.repoUrl} />}
           </div>
-          <Paragraph>{props.project.description}</Paragraph>
         </div>
+        <p className="font-normal">{props.project.description}</p>
+
         <div className="space-y-8">{props.children}</div>
       </div>
 
@@ -94,6 +91,31 @@ export default function ProjectContent(props: ProjectContentProps) {
         <div className="flex flex-col space-y-2">
           {props.headers.map((header: ContentHeaderType) => (
             <NavContentHeader header={header} key={header.id} inViewMap={inViewMap} />
+          ))}
+        </div>
+
+        {props.project.websiteUrl && (
+          <div className="border rounded-md shadow-md p-3">
+            <div className="flex space-x-1 place-items-center text-neutral-700 dark:text-neutral-300">
+              <MousePointerClickIcon size={20} />
+              <span>Give the project a try at </span>
+            </div>
+            <InlineLink href={props.project.websiteUrl}>{props.project.name}</InlineLink>.
+          </div>
+        )}
+        {props.project.repoUrl && (
+          <div className="border rounded-md shadow-md p-3">
+            <div className="flex space-x-1 place-items-center text-neutral-700 dark:text-neutral-300">
+              <GithubIcon size={20} />
+              <span>Source code is available on </span>
+            </div>
+            <InlineLink href={props.project.repoUrl}>GitHub</InlineLink>.
+          </div>
+        )}
+
+        <div className="flex flex-wrap gap-1.5">
+          {props.project.tags.map((tag: SkillType, i: number) => (
+            <IconLinkTag href={tag.url} imgSrc={tag.iconSrc} label={tag.label} key={i} />
           ))}
         </div>
       </div>

@@ -44,19 +44,25 @@ export default function GatekeeperPage() {
       </ContentSection>
       <ContentSection header={headers[2]}>
         <ContentSubsection subheader={headers[2].subheaders![0]}>
-          proident laborum sit amet do deserunt nisi ullamco nostrud aute dolore officia mollit sint esse amet aliquip
-          occaecat consectetur ea amet qui eiusmod amet veniam excepteur dolor sit duis reprehenderit do minim dolore
-          sunt deserunt est nostrud elit aute commodo
+          <ContentText>
+            proident laborum sit amet do deserunt nisi ullamco nostrud aute dolore officia mollit sint esse amet aliquip
+            occaecat consectetur ea amet qui eiusmod amet veniam excepteur dolor sit duis reprehenderit do minim dolore
+            sunt deserunt est nostrud elit aute commodo
+          </ContentText>
         </ContentSubsection>
         <ContentSubsection subheader={headers[2].subheaders![1]}>
-          proident laborum sit amet do deserunt nisi ullamco nostrud aute dolore officia mollit sint esse amet aliquip
-          occaecat consectetur ea amet qui eiusmod amet veniam excepteur dolor sit duis reprehenderit do minim dolore
-          sunt deserunt est nostrud elit aute commodo
+          <ContentText>
+            proident laborum sit amet do deserunt nisi ullamco nostrud aute dolore officia mollit sint esse amet aliquip
+            occaecat consectetur ea amet qui eiusmod amet veniam excepteur dolor sit duis reprehenderit do minim dolore
+            sunt deserunt est nostrud elit aute commodo
+          </ContentText>
         </ContentSubsection>
         <ContentSubsection subheader={headers[2].subheaders![2]}>
-          proident laborum sit amet do deserunt nisi ullamco nostrud aute dolore officia mollit sint esse amet aliquip
-          occaecat consectetur ea amet qui eiusmod amet veniam excepteur dolor sit duis reprehenderit do minim dolore
-          sunt deserunt est nostrud elit aute commodo
+          <ContentText>
+            proident laborum sit amet do deserunt nisi ullamco nostrud aute dolore officia mollit sint esse amet aliquip
+            occaecat consectetur ea amet qui eiusmod amet veniam excepteur dolor sit duis reprehenderit do minim dolore
+            sunt deserunt est nostrud elit aute commodo
+          </ContentText>
         </ContentSubsection>
       </ContentSection>
     </ProjectContent>
