@@ -6,9 +6,12 @@ import Link from 'next/link';
 import IconButton from './button/IconButton';
 import { useTheme } from 'next-themes';
 import IconLinkButton from './button/IconLinkButton';
+import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
 export default function Header() {
   const { setTheme, resolvedTheme } = useTheme();
+  const pathname = usePathname();
 
   return (
     <div className="w-full flex justify-between mx-auto py-6 px-8 fixed bg-opacity-40 backdrop-blur-sm z-40">
@@ -18,7 +21,10 @@ export default function Header() {
           <div key={i}>
             <div className="sm:block hidden">
               <Link
-                className="font-medium opacity-60 hover:opacity-100 transition-opacity duration-150"
+                className={cn(
+                  pathname.startsWith(route.path) ? 'opacity-100' : 'opacity-50 hover:opacity-100',
+                  'font-medium transition-opacity duration-150'
+                )}
                 href={route.path}
               >
                 {route.label}
