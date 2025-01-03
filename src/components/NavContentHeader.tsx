@@ -17,7 +17,7 @@ export default function NavContentHeader(props: NavContentHeaderProps) {
     <div className="space-y-2">
       <button
         className={cn(
-          props.inViewMap[props.header.id] ? 'font-medium' : 'font-light',
+          props.inViewMap[props.header.id] ? 'font-semibold text-black dark:text-white' : 'font-light text-neutral-500',
           'text-left w-fit text-sm duration-150 transition-all'
         )}
         onClick={() => jump(props.header.id)}
