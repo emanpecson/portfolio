@@ -13,8 +13,10 @@ export const experiences: ExperienceType[] = [
     website: 'https://www.jt4llc.com',
     tasks: [
       {
-        header: 'Employee Image App (full-stack app)',
+        header: 'Employee Image App',
         description: 'Built a web app that allows users to update their profile picture among all corporate apps.',
+        label: 'full-stack webapp',
+        externalLink: '/projects/employee-image',
         tags: [
           overallSkills.get('Next') as SkillType,
           overallSkills.get('React.js') as SkillType,
@@ -26,9 +28,11 @@ export const experiences: ExperienceType[] = [
         ],
       },
       {
-        header: 'Fileship (full-stack app)',
+        header: 'Fileship',
         description:
           'Built a web application tool that provides employees with a way to securely upload files. This includes functionalities for uploading files, an automated email notification system, and enabling real-time features with a web-socket.',
+        label: 'full-stack webapp',
+        externalLink: '/projects/fileship',
         tags: [
           overallSkills.get('Nuxt') as SkillType,
           overallSkills.get('Vue.js') as SkillType,
@@ -43,9 +47,11 @@ export const experiences: ExperienceType[] = [
         ],
       },
       {
-        header: 'Concur Travel Approver (full-stack app)',
+        header: 'Concur Travel Approver',
         description:
           'Built a web application tool that simplifies the management of employee travel info. This app displays an employee table with options for managing their info, search and filter tools to quickly find employees, and support for updating employees over entire departments within a few clicks.',
+        label: 'full-stack webapp',
+        externalLink: '/projects/concur-travel-approver',
         tags: [
           overallSkills.get('Nuxt') as SkillType,
           overallSkills.get('Vue.js') as SkillType,

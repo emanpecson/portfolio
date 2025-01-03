@@ -5,4 +5,5 @@ export type TaskType = {
   description: string;
   tags: SkillType[];
   externalLink?: string;
+  label?: string;
 };

@@ -31,16 +31,22 @@ export default function ExperienceItem({ experience }: { experience: ExperienceT
         </BoxWrap>
       </Link>
 
-      <div className="space-y-4">
+      <div className="space-y-2">
         {experience.tasks.map((task: TaskType, i: number) => {
           if (task.externalLink) {
             return (
-              <Link href={task.externalLink} className="hover:cursor-pointer">
-                <TaskItem task={task} key={i} />
-              </Link>
+              <BoxWrap>
+                <Link href={task.externalLink} className="hover:cursor-pointer">
+                  <TaskItem task={task} key={i} />
+                </Link>
+              </BoxWrap>
             );
           }
-          return <TaskItem task={task} key={i} />;
+          return (
+            <div className="p-2.5">
+              <TaskItem task={task} key={i} />
+            </div>
+          );
         })}
       </div>
     </div>
