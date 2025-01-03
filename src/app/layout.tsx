@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="min-h-screen w-screen overflow-x-hidden">
             <Header />
             <div className="w-full flex justify-center">
-              <div className="w-full">{children}</div>
+              <div className="w-full px-4">{children}</div>
             </div>
           </div>
         </ThemeProvider>
