@@ -1,4 +1,5 @@
 import GitHubButton from '@/components/button/GitHubButton';
+import Footer from '@/components/Footer';
 import ProjectPreview from '@/components/project/ProjectPreview';
 import BlurFade from '@/components/ui/blur-fade';
 import { projects } from '@/data/projects';
@@ -21,6 +22,8 @@ export default function ProjectsPage() {
           ))}
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

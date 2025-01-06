@@ -1,5 +1,6 @@
 'use client';
 
+import Footer from '@/components/Footer';
 import { experiences } from '@/data/experience';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
@@ -26,6 +27,7 @@ export default function ExperienceLayout({ children }: { children: React.ReactNo
         ))}
       </div>
       <div>{children}</div>
+      <Footer />
     </div>
   );
 }

@@ -20,8 +20,8 @@ export default function IconLinkButton(props: IconLinkButtonProps) {
         'transition-opacity duration-150'
       )}
       href={props.href}
-      target="_blank"
-      rel="noreferrer noopener"
+      // target="_blank"
+      // rel="noreferrer noopener"
     >
       <props.icon size={20} />
     </Link>

@@ -1,4 +1,3 @@
-import ProjectContent from '@/components/project/ProjectContent';
 import ProjectTab from '@/components/project/ProjectTab';
 import { projects } from '@/data/projects';
 

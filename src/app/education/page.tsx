@@ -1,5 +1,6 @@
 import CertificationItem from '@/components/CertificationItem';
 import EducationItem from '@/components/EducationItem';
+import Footer from '@/components/Footer';
 import BlurFade from '@/components/ui/blur-fade';
 import VolunteerItem from '@/components/VolunteerItem';
 import { certifications } from '@/data/certifications';
@@ -44,6 +45,8 @@ export default function EducationPage() {
           </div>
         </div>
       </BlurFade>
+
+      <Footer />
     </div>
   );
 }

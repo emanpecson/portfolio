@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import About from '@/components/section/About';
 import Intro from '@/components/section/Intro';
 import BlurFade from '@/components/ui/blur-fade';
@@ -10,6 +11,9 @@ export default function Home() {
       </BlurFade>
       <BlurFade delay={0.25}>
         <About />
+      </BlurFade>
+      <BlurFade delay={0.5}>
+        <Footer />
       </BlurFade>
     </div>
   );
