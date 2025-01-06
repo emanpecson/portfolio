@@ -26,7 +26,7 @@ export default function Header() {
           unoptimized
         />
       </Link>
-      <div className="flex space-x-5">
+      <div className="flex space-x-4">
         {routes.map((route, i) => (
           <div key={i}>
             <div className="sm:block hidden">
