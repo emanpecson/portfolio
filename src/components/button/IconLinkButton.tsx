@@ -16,7 +16,9 @@ export default function IconLinkButton(props: IconLinkButtonProps) {
   return (
     <Link
       className={cn(
-        pathname.startsWith(props.href) ? 'opacity-100' : 'opacity-50 hover:opacity-100',
+        (pathname === '/' && pathname === props.href) || (props.href !== '/' && pathname.startsWith(props.href))
+          ? 'opacity-100'
+          : 'opacity-50 hover:opacity-100',
         'transition-opacity duration-150'
       )}
       href={props.href}

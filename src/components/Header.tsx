@@ -32,7 +32,10 @@ export default function Header() {
             <div className="sm:block hidden">
               <Link
                 className={cn(
-                  pathname.startsWith(route.path) ? 'opacity-100' : 'opacity-50 hover:opacity-100',
+                  (pathname === '/' && pathname === route.path) ||
+                    (route.path !== '/' && pathname.startsWith(route.path))
+                    ? 'opacity-100'
+                    : 'opacity-50 hover:opacity-100',
                   'font-medium transition-opacity duration-150'
                 )}
                 href={route.path}
