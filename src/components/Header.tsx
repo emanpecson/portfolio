@@ -14,16 +14,6 @@ export default function Header() {
   const { setTheme, resolvedTheme } = useTheme();
   const pathname = usePathname();
 
-  const downloadResume = () => {
-    const filepath = '/emanuel-pecson-resume.pdf';
-    const link = document.createElement('a');
-    link.href = filepath;
-    link.download = 'emanuel-pecson-resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <div className="w-full flex justify-between mx-auto py-6 px-8 fixed bg-opacity-40 backdrop-blur-sm z-40">
       <Link href="/">logo</Link>
