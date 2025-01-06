@@ -8,10 +8,21 @@ import { useTheme } from 'next-themes';
 import IconLinkButton from './button/IconLinkButton';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
 
 export default function Header() {
   const { setTheme, resolvedTheme } = useTheme();
   const pathname = usePathname();
+
+  const downloadResume = () => {
+    const filepath = '/emanuel-pecson-resume.pdf';
+    const link = document.createElement('a');
+    link.href = filepath;
+    link.download = 'emanuel-pecson-resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className="w-full flex justify-between mx-auto py-6 px-8 fixed bg-opacity-40 backdrop-blur-sm z-40">
@@ -39,7 +50,20 @@ export default function Header() {
         <IconLinkButton icon={GithubIcon} href="https://github.com/emanpecson/portfolio" />
         <IconLinkButton icon={LinkedinIcon} href="https://www.linkedin.com/in/emanuel-pecson" />
         <IconLinkButton icon={MailIcon} href="mailto:emanpecson@gmail.com" />
-        <IconButton icon={FileUserIcon} onClick={() => {}} />
+        <Dialog>
+          <DialogTrigger asChild>
+            <IconButton icon={FileUserIcon} onClick={() => {}} />
+          </DialogTrigger>
+          <DialogContent className="h-[44rem] p-2">
+            <object
+              data="/emanuel-pecson-resume.pdf"
+              type="application/pdf"
+              width="100%"
+              height="100%"
+              className="rounded-md"
+            />
+          </DialogContent>
+        </Dialog>
         <IconButton
           icon={resolvedTheme === 'dark' ? MoonIcon : SunIcon}
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
