@@ -13,7 +13,8 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: 'Emanuel Pecson',
-  description: "Emanuel Pecson's portfolio",
+  description:
+    "Hey, I'm Emanuel 👋. I utilize my proficiency in software development to create effective solutions and leave a lasting impact.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
