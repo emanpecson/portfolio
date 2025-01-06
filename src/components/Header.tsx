@@ -9,6 +9,7 @@ import IconLinkButton from './button/IconLinkButton';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
+import Image from 'next/image';
 
 export default function Header() {
   const { setTheme, resolvedTheme } = useTheme();
@@ -16,7 +17,15 @@ export default function Header() {
 
   return (
     <div className="w-full flex justify-between mx-auto py-6 px-8 fixed bg-opacity-40 backdrop-blur-sm z-40">
-      <Link href="/">logo</Link>
+      <Link href="/">
+        <Image
+          src={resolvedTheme === 'light' ? '/logo-light.png' : '/logo-dark.png'}
+          height={24}
+          width={24}
+          alt="Emanuel Pecson"
+          unoptimized
+        />
+      </Link>
       <div className="flex space-x-5">
         {routes.map((route, i) => (
           <div key={i}>
