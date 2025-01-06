@@ -1,5 +1,6 @@
 import GitHubButton from '@/components/button/GitHubButton';
 import ProjectPreview from '@/components/project/ProjectPreview';
+import BlurFade from '@/components/ui/blur-fade';
 import { projects } from '@/data/projects';
 
 export default function ProjectsPage() {
@@ -14,7 +15,9 @@ export default function ProjectsPage() {
       <div className="w-full flex justify-center">
         <div className="xl:columns-3 md:columns-2 columns-1 space-y-4">
           {projects.map((proj, i) => (
-            <ProjectPreview project={proj} key={i} />
+            <BlurFade delay={0.25 * i * 0.1}>
+              <ProjectPreview project={proj} key={i} />
+            </BlurFade>
           ))}
         </div>
       </div>
