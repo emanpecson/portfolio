@@ -1,14 +1,10 @@
-export enum CompletionStatus {
-  IN_PROGRESS = 'in progress',
-  COMPLETE = 'complete',
-  EXPIRED = 'expired',
-}
+import { CompletionStatus } from './enum/CompletionStatus';
 
 export type EducationType = {
   school: string;
-  document: string;
+  degree: string;
   iconSrc: string;
   timeline: string;
   website: string;
-  status: CompletionStatus;
+  labels: string[];
 };
