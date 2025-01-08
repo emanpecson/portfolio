@@ -10,14 +10,15 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
 import Image from 'next/image';
+import Search from './Search';
 
 export default function Header() {
   const { setTheme, resolvedTheme } = useTheme();
   const pathname = usePathname();
 
   return (
-    <div className="w-full flex justify-between mx-auto py-6 px-8 fixed bg-opacity-40 backdrop-blur-sm z-40">
-      <Link href="/">
+    <div className="w-full flex justify-between py-4 sm:px-8 px-4 fixed bg-opacity-40 backdrop-blur-sm z-40 space-x-4">
+      <Link href="/" className="flex-shrink-0">
         <Image
           src={resolvedTheme === 'light' ? '/logo-light.png' : '/logo-dark.png'}
           height={24}
@@ -26,10 +27,12 @@ export default function Header() {
           unoptimized
         />
       </Link>
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 place-items-center justify-end w-full">
+        <Search />
+
         {routes.map((route, i) => (
           <div key={i}>
-            <div className="sm:block hidden">
+            <div className="lg:block hidden">
               <Link
                 className={cn(
                   (pathname === '/' && pathname === route.path) ||
@@ -43,7 +46,7 @@ export default function Header() {
                 {route.label}
               </Link>
             </div>
-            <div className="sm:hidden block">
+            <div className="lg:hidden block">
               <IconLinkButton icon={route.icon} href={route.path} />
             </div>
           </div>
