@@ -29,29 +29,29 @@ const projectsRouteGroup: RouteGroupType = {
   icon: LightbulbIcon,
   routes: [
     { name: 'Projects', path: '/projects', keywords: [] },
-    { name: 'Gatekeeper', path: '/projects/gatekeeper', keywords: ['projects', ...fs] },
-    { name: 'Portfolio', path: '/projects/portfolio', keywords: ['projects', 'website'] },
-    { name: 'Quorum Bots', path: '/projects/quorum-bots', keywords: ['projects', 'website', 'docs', 'documentation'] },
+    { name: 'Gatekeeper', path: '/projects/gatekeeper', keywords: ['project', ...fs] },
+    { name: 'Portfolio', path: '/projects/portfolio', keywords: ['project', 'website'] },
+    { name: 'Quorum Bots', path: '/projects/quorum-bots', keywords: ['project', 'website', 'docs', 'documentation'] },
     {
       name: 'NBA Fantasy Optimizer',
       path: '/projects/nba-fantasy-optimizer',
-      keywords: ['projects', ...fs, 'selenium', 'webscrape'],
+      keywords: ['project', ...fs, 'selenium', 'webscrape'],
     },
-    { name: 'Abilliti', path: '/projects/abilliti', keywords: ['projects', ...fs] },
+    { name: 'Abilliti', path: '/projects/abilliti', keywords: ['project', ...fs] },
     {
       name: 'Employee Image',
       path: '/projects/employee-image',
-      keywords: ['projects', ...fs, 'private', 'upload', 'jt4'],
+      keywords: ['project', ...fs, 'private', 'upload', 'jt4'],
     },
     {
       name: 'Fileship',
       path: '/projects/fileship',
-      keywords: ['projects', ...fs, 'private', 'websocket', 'upload', 'jt4'],
+      keywords: ['project', ...fs, 'private', 'websocket', 'upload', 'jt4'],
     },
     {
       name: 'Concur Travel Approver',
       path: '/projects/concur-travel-approver',
-      keywords: ['projects', ...fs, 'private', 'jt4'],
+      keywords: ['project', ...fs, 'private', 'jt4'],
     },
   ],
 };
