@@ -8,7 +8,7 @@ const experienceRouteGroup: RouteGroupType = {
   label: 'Experience',
   icon: BriefcaseBusinessIcon,
   routes: [
-    { name: 'Experience', path: 'experience/jt4', keywords: [] },
+    { name: 'Experience', path: '/experience/jt4', keywords: [] },
     { name: 'JT4 (SWE Intern)', path: '/experience/jt4', keywords: ['experience', ...swe, 'internship'] },
     {
       name: 'General Atomics (SDE Intern)',
