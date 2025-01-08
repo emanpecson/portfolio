@@ -7,9 +7,9 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { SearchIcon } from 'lucide-react';
-import { allRoutes } from '@/data/routes';
 import Label from './Label';
-import { RouteType } from '@/types/RouteType';
+import { RouteGroupType, RouteType } from '@/types/RouteType';
+import { mainRouteGroups } from '@/data/routes';
 
 export default function Search() {
   const router = useRouter();
@@ -75,22 +75,31 @@ export default function Search() {
           <CommandList>
             <CommandEmpty>No page found</CommandEmpty>
             <CommandGroup>
-              {allRoutes.map((route: RouteType, i: number) => (
-                <CommandItem
-                  value={`${route.name} ${route.keywords.join(' ')}`}
-                  onSelect={() => handleSelect(route.path)}
-                  key={i}
-                >
-                  <Link href={route.path} className="flex space-x-1.5 w-full dark:text-neutral-300 text-neutral-700">
-                    <span className="font-semibold whitespace-nowrap">{route.name}</span>
-                    {route.keywords
-                      .filter((kw) => kw.includes(query))
-                      .map((kw) => (
-                        <Label>{kw}</Label>
-                      ))}
-                  </Link>
-                </CommandItem>
-              ))}
+              {mainRouteGroups.map((routeGroup: RouteGroupType) =>
+                routeGroup.routes.map((route: RouteType, j: number) => (
+                  <CommandItem
+                    value={`${route.name} ${route.keywords.join(' ')}`}
+                    onSelect={() => handleSelect(route.path)}
+                    key={j}
+                  >
+                    <Link href={route.path} className="flex space-x-1.5 w-full dark:text-neutral-300 text-neutral-700">
+                      <div className="flex space-x-1 place-items-center">
+                        <routeGroup.icon
+                          size={16}
+                          strokeWidth={2.5}
+                          className="text-neutral-600 dark:text-neutrarl-400"
+                        />
+                        <span className="font-semibold whitespace-nowrap">{route.name}</span>
+                      </div>
+                      {route.keywords
+                        .filter((kw) => kw.includes(query))
+                        .map((kw) => (
+                          <Label>{kw}</Label>
+                        ))}
+                    </Link>
+                  </CommandItem>
+                ))
+              )}
             </CommandGroup>
           </CommandList>
         </Command>

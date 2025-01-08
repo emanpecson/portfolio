@@ -61,4 +61,3 @@ const educationRouteGroup: RouteGroupType = {
 };
 
 export const mainRouteGroups: RouteGroupType[] = [experienceRouteGroup, projectsRouteGroup, educationRouteGroup];
-export const allRoutes: RouteType[] = mainRouteGroups.flatMap((routeGroup) => routeGroup.routes);
