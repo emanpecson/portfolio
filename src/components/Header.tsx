@@ -1,6 +1,5 @@
 'use client';
 
-import { routes } from '@/data/routes';
 import { FileUserIcon, GithubIcon, LinkedinIcon, MailIcon, MoonIcon, SunIcon } from 'lucide-react';
 import Link from 'next/link';
 import IconButton from './button/IconButton';
@@ -11,6 +10,8 @@ import { cn } from '@/lib/utils';
 import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
 import Image from 'next/image';
 import Search from './Search';
+import { mainRouteGroups } from '@/data/routes';
+import { RouteGroupType } from '@/types/RouteType';
 
 export default function Header() {
   const { setTheme, resolvedTheme } = useTheme();
@@ -30,27 +31,30 @@ export default function Header() {
       <div className="flex space-x-4 place-items-center justify-end w-full">
         <Search />
 
-        {routes.map((route, i) => (
-          <div key={i}>
-            <div className="lg:block hidden">
-              <Link
-                className={cn(
-                  (pathname === '/' && pathname === route.path) ||
-                    (route.path !== '/' && pathname.startsWith(route.path))
-                    ? 'opacity-100'
-                    : 'opacity-50 hover:opacity-100',
-                  'font-medium transition-opacity duration-150'
-                )}
-                href={route.path}
-              >
-                {route.label}
-              </Link>
+        {mainRouteGroups.map((routeGroup: RouteGroupType, i: number) => {
+          const mainRoute = routeGroup.routes[0];
+          return (
+            <div key={i}>
+              <div className="lg:block hidden">
+                <Link
+                  className={cn(
+                    (pathname === '/' && pathname === mainRoute.path) ||
+                      (mainRoute.path !== '/' && pathname.startsWith(mainRoute.path))
+                      ? 'opacity-100'
+                      : 'opacity-50 hover:opacity-100',
+                    'font-medium transition-opacity duration-150'
+                  )}
+                  href={mainRoute.path}
+                >
+                  {mainRoute.name}
+                </Link>
+              </div>
+              <div className="lg:hidden block">
+                <IconLinkButton label={mainRoute.name} icon={routeGroup.icon} href={mainRoute.path} />
+              </div>
             </div>
-            <div className="lg:hidden block">
-              <IconLinkButton label={route.label} icon={route.icon} href={route.path} />
-            </div>
-          </div>
-        ))}
+          );
+        })}
 
         <IconLinkButton label="GitHub" icon={GithubIcon} href="https://github.com/emanpecson" />
         <IconLinkButton label="LinkedIn" icon={LinkedinIcon} href="https://www.linkedin.com/in/emanuel-pecson" />

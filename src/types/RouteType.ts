@@ -1,7 +1,13 @@
 import { LucideIcon } from 'lucide-react';
 
-export type RouteType = {
+export type RouteGroupType = {
   label: string;
-  path: string;
   icon: LucideIcon;
+  routes: RouteType[];
+};
+
+export type RouteType = {
+  name: string;
+  path: string;
+  keywords: string[];
 };

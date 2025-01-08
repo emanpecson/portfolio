@@ -7,8 +7,9 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { SearchIcon } from 'lucide-react';
-import { keywordRoutes, KeywordRouteType } from '@/data/routes';
+import { allRoutes } from '@/data/routes';
 import Label from './Label';
+import { RouteType } from '@/types/RouteType';
 
 export default function Search() {
   const router = useRouter();
@@ -74,14 +75,14 @@ export default function Search() {
           <CommandList>
             <CommandEmpty>No page found</CommandEmpty>
             <CommandGroup>
-              {keywordRoutes.map((route: KeywordRouteType, i: number) => (
+              {allRoutes.map((route: RouteType, i: number) => (
                 <CommandItem
-                  value={`${route.title} ${route.keywords.join(' ')}`}
+                  value={`${route.name} ${route.keywords.join(' ')}`}
                   onSelect={() => handleSelect(route.path)}
                   key={i}
                 >
                   <Link href={route.path} className="flex space-x-1.5 w-full dark:text-neutral-300 text-neutral-700">
-                    <span className="font-semibold whitespace-nowrap">{route.title}</span>
+                    <span className="font-semibold whitespace-nowrap">{route.name}</span>
                     {route.keywords
                       .filter((kw) => kw.includes(query))
                       .map((kw) => (
