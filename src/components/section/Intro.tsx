@@ -14,7 +14,7 @@ export default function Intro() {
           </h1>
           <Paragraph>
             <div className="flex space-x-1">
-              <span>Software engineer intern at</span>
+              <span className="font-semibold">Software engineer intern at</span>
               <IconLinkTag label="JT4 LLC" imgSrc="/logo/jt4.png" href={jt4_url} />
             </div>
           </Paragraph>
