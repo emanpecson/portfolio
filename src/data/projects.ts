@@ -28,7 +28,7 @@ export const projects: ProjectType[] = [
     name: 'Portfolio',
     label: 'website',
     path: '/projects/portfolio',
-    description: 'Website to display my experience, projects, and education',
+    description: 'Website to display my experience, projects, and education ',
     coverImageSrc: '/cover/portfolio.png',
     repoUrl: 'https://github.com/emanpecson/portfolio',
     websiteUrl: 'https://www.emanpecson.com',
