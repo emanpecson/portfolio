@@ -9,10 +9,18 @@ const experienceRouteGroup: RouteGroupType = {
   icon: BriefcaseBusinessIcon,
   routes: [
     { name: 'Experience', path: 'experience/jt4', keywords: [] },
-    { name: 'JT4', path: '/experience/jt4', keywords: ['experience', ...swe, 'internship'] },
-    { name: 'General Atomics', path: '/experience/general-atomics', keywords: ['experience', ...swe, 'internship'] },
-    { name: 'Clark County', path: '/experience/clark-county', keywords: ['experience', 'internship'] },
-    { name: 'UNLV', path: '/experience/unlv', keywords: ['experience', 'teaching', 'assistant', 'service'] },
+    { name: 'JT4 (SWE Intern)', path: '/experience/jt4', keywords: ['experience', ...swe, 'internship'] },
+    {
+      name: 'General Atomics (SDE Intern)',
+      path: '/experience/general-atomics',
+      keywords: ['experience', ...swe, 'internship'],
+    },
+    { name: 'Clark County (Intern)', path: '/experience/clark-county', keywords: ['experience', 'internship'] },
+    {
+      name: 'UNLV (Teaching Assistant)',
+      path: '/experience/unlv',
+      keywords: ['experience', 'teaching', 'assistant', 'service'],
+    },
   ],
 };
 
