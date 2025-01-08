@@ -75,9 +75,9 @@ export default function ProjectContent(props: ProjectContentProps) {
           <div className="flex space-x-2">
             <Label>{props.project.label}</Label>
             {props.project.websiteUrl && (
-              <IconLinkButton icon={MousePointerClickIcon} href={props.project.websiteUrl} />
+              <IconLinkButton label="Try it out" icon={MousePointerClickIcon} href={props.project.websiteUrl} />
             )}
-            {props.project.repoUrl && <IconLinkButton icon={GithubIcon} href={props.project.repoUrl} />}
+            {props.project.repoUrl && <IconLinkButton label="GitHub" icon={GithubIcon} href={props.project.repoUrl} />}
           </div>
         </div>
         <p className="font-normal">{props.project.description}</p>

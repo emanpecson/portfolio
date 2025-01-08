@@ -47,17 +47,17 @@ export default function Header() {
               </Link>
             </div>
             <div className="lg:hidden block">
-              <IconLinkButton icon={route.icon} href={route.path} />
+              <IconLinkButton label={route.label} icon={route.icon} href={route.path} />
             </div>
           </div>
         ))}
 
-        <IconLinkButton icon={GithubIcon} href="https://github.com/emanpecson/portfolio" />
-        <IconLinkButton icon={LinkedinIcon} href="https://www.linkedin.com/in/emanuel-pecson" />
-        <IconLinkButton icon={MailIcon} href="mailto:emanpecson@gmail.com" />
+        <IconLinkButton label="GitHub" icon={GithubIcon} href="https://github.com/emanpecson" />
+        <IconLinkButton label="LinkedIn" icon={LinkedinIcon} href="https://www.linkedin.com/in/emanuel-pecson" />
+        <IconLinkButton label="Email" icon={MailIcon} href="mailto:emanpecson@gmail.com" />
         <Dialog>
           <DialogTrigger asChild>
-            <IconButton icon={FileUserIcon} onClick={() => {}} />
+            <IconButton label="Resume" icon={FileUserIcon} onClick={() => {}} />
           </DialogTrigger>
           <DialogContent className="h-[44rem] p-2">
             <object
@@ -70,6 +70,7 @@ export default function Header() {
           </DialogContent>
         </Dialog>
         <IconButton
+          label="Theme"
           icon={resolvedTheme === 'dark' ? MoonIcon : SunIcon}
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
         />
