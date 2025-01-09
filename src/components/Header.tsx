@@ -13,17 +13,23 @@ import Search from './Search';
 import { mainRouteGroups } from '@/data/routes';
 import { RouteGroupType } from '@/types/RouteType';
 import BlurWrapper from './BlurWrapper';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
   const { setTheme, resolvedTheme } = useTheme();
+  const lightLogoSrc = '/logo-light.png';
+  const darkLogoSrc = '/logo-dark.png';
   const pathname = usePathname();
+  const [logoSrc, setLogoSrc] = useState(lightLogoSrc);
+
+  useEffect(() => setLogoSrc(resolvedTheme === 'light' ? lightLogoSrc : darkLogoSrc));
 
   return (
     <div className="w-full flex justify-between pt-2 sm:px-8 px-4 fixed z-40 space-x-2 place-items-center">
       <BlurWrapper>
         <Link href="/" className="flex-shrink-0">
           <Image
-            src={resolvedTheme === 'light' ? '/logo-light.png' : '/logo-dark.png'}
+            src={logoSrc}
             height={24}
             width={24}
             alt="Emanuel Pecson"
