@@ -9,7 +9,7 @@ export default function ProjectsPage() {
     <div className="space-y-16 max-w-[120rem] pt-20 pb-16">
       <div className="mx-auto text-center space-y-1">
         <h1 className="font-black text-4xl">Projects</h1>
-        <p className="text-lg font-medium">Projects that I have created or am maintaining</p>
+        <p className="text-lg font-medium">Full-stack webapps, documentation websites, and more!</p>
         <GitHubButton href="https://github.com/emanpecson" />
       </div>
 
