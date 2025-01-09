@@ -1,4 +1,4 @@
-import { SkillGroup, SkillType } from '@/types/v2/SkillType';
+import { SkillGroup, SkillType } from '@/types/SkillType';
 
 const overallSkills = new Map<string, SkillType>();
 
