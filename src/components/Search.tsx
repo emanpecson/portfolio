@@ -75,31 +75,36 @@ export default function Search() {
           <CommandList>
             <CommandEmpty>No page found</CommandEmpty>
             <CommandGroup>
-              {mainRouteGroups.map((routeGroup: RouteGroupType) =>
-                routeGroup.routes.map((route: RouteType, j: number) => (
-                  <CommandItem
-                    value={`${route.name} ${route.keywords.join(' ')}`}
-                    onSelect={() => handleSelect(route.path)}
-                    key={j}
-                  >
-                    <Link href={route.path} className="flex space-x-1.5 w-full dark:text-neutral-300 text-neutral-700">
-                      <div className="flex space-x-1 place-items-center">
-                        <routeGroup.icon
-                          size={16}
-                          strokeWidth={2.5}
-                          className="text-neutral-600 dark:text-neutrarl-400"
-                        />
-                        <span className="font-semibold whitespace-nowrap">{route.name}</span>
-                      </div>
-                      {route.keywords
-                        .filter((kw) => kw.includes(query))
-                        .map((kw) => (
-                          <Label>{kw}</Label>
-                        ))}
-                    </Link>
-                  </CommandItem>
-                ))
-              )}
+              {mainRouteGroups.map((routeGroup: RouteGroupType, i: number) => (
+                <div key={i}>
+                  {routeGroup.routes.map((route: RouteType, j: number) => (
+                    <CommandItem
+                      value={`${route.name} ${route.keywords.join(' ')}`}
+                      onSelect={() => handleSelect(route.path)}
+                      key={j}
+                    >
+                      <Link
+                        href={route.path}
+                        className="flex space-x-1.5 w-full dark:text-neutral-300 text-neutral-700"
+                      >
+                        <div className="flex space-x-1 place-items-center">
+                          <routeGroup.icon
+                            size={16}
+                            strokeWidth={2.5}
+                            className="text-neutral-600 dark:text-neutrarl-400"
+                          />
+                          <span className="font-semibold whitespace-nowrap">{route.name}</span>
+                        </div>
+                        {route.keywords
+                          .filter((kw) => kw.includes(query))
+                          .map((kw, i) => (
+                            <Label key={i}>{kw}</Label>
+                          ))}
+                      </Link>
+                    </CommandItem>
+                  ))}
+                </div>
+              ))}
             </CommandGroup>
           </CommandList>
         </Command>
