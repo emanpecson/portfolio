@@ -19,7 +19,7 @@ const experienceRouteGroup: RouteGroupType = {
     {
       name: 'UNLV (Teaching Assistant)',
       path: '/experience/unlv',
-      keywords: ['experience', 'teaching', 'assistant', 'service'],
+      keywords: ['experience', 'service'],
     },
   ],
 };
