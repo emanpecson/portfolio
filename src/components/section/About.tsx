@@ -1,4 +1,4 @@
-import { lbp_url } from '@/data/url';
+import { lbpUrl } from '@/data/url';
 import InlineLink from '../button/InlineLink';
 import Paragraph from '../Paragraph';
 import { experiences } from '@/data/experience';
@@ -8,7 +8,7 @@ export default function About() {
     <div className="space-y-4">
       <Paragraph>
         <span>I discovered a passion for engineering after stumbling upon </span>
-        <InlineLink href={lbp_url}>LittleBigPlanet</InlineLink>
+        <InlineLink href={lbpUrl}>LittleBigPlanet</InlineLink>
         <span>
           , a video game series that fosters curiosity and creativity by giving players the tools to build whatever they
           could imagine.
