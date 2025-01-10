@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { jt4_url } from '@/data/url';
+import { jt4Url } from '@/data/url';
 import Paragraph from '../Paragraph';
 import IconLinkTag from '../button/IconLinkTag';
 import { metadata } from '@/app/layout';
@@ -15,7 +15,7 @@ export default function Intro() {
           <Paragraph>
             <div className="flex space-x-1">
               <span className="font-semibold">Software engineer intern at</span>
-              <IconLinkTag label="JT4 LLC" imgSrc="/logo/jt4.png" href={jt4_url} />
+              <IconLinkTag label="JT4 LLC" imgSrc="/logo/jt4.png" href={jt4Url} />
             </div>
           </Paragraph>
         </div>

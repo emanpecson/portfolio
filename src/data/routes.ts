@@ -1,8 +1,14 @@
-import { RouteGroupType, RouteType } from '@/types/RouteType';
-import { BriefcaseBusinessIcon, GraduationCapIcon, LightbulbIcon } from 'lucide-react';
+import { RouteGroupType } from '@/types/RouteType';
+import { BriefcaseBusinessIcon, CircleUserIcon, GraduationCapIcon, LightbulbIcon } from 'lucide-react';
 
 const swe: string[] = ['software', 'developer', 'engineer'];
 const fs: string[] = ['full-stack', 'webapp'];
+
+const homeRouteGroup: RouteGroupType = {
+  label: 'Home',
+  icon: CircleUserIcon,
+  routes: [{ name: 'Home', path: '/', keywords: ['emanuel', 'pecson'] }],
+};
 
 const experienceRouteGroup: RouteGroupType = {
   label: 'Experience',
@@ -68,4 +74,9 @@ const educationRouteGroup: RouteGroupType = {
   ],
 };
 
-export const mainRouteGroups: RouteGroupType[] = [experienceRouteGroup, projectsRouteGroup, educationRouteGroup];
+export const mainRouteGroups: RouteGroupType[] = [
+  homeRouteGroup,
+  experienceRouteGroup,
+  projectsRouteGroup,
+  educationRouteGroup,
+];
