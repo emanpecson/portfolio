@@ -13,7 +13,7 @@ export default function Intro() {
             {metadata.title as string}
           </h1>
           <Paragraph>
-            <div className="flex space-x-1">
+            <div className="sm:flex space-x-1">
               <span className="font-semibold">Software engineer intern at</span>
               <IconLinkTag label="JT4 LLC" imgSrc="/logo/jt4.png" href={jt4Url} />
             </div>

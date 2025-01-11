@@ -23,7 +23,7 @@ export default function IconLinkTag(props: IconLinkTagProps) {
         className="object-contain rounded-full w-5 h-5"
         unoptimized
       />
-      <span>{props.label}</span>
+      <span className="whitespace-nowrap">{props.label}</span>
     </Link>
   );
 }

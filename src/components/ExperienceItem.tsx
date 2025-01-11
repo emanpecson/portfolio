@@ -23,10 +23,10 @@ export default function ExperienceItem({ experience }: { experience: ExperienceT
               />
               <div>
                 <h2 className="font-extrabold sm:text-2xl text-lg">{experience.position}</h2>
-                <div className="flex space-x-4 place-items-center">
-                  <p className="font-semibold">{experience.timeline}</p>
-                  <div className="rounded-full h-[5px] w-[5px] bg-neutral-800 dark:bg-neutral-200" />
-                  <p className="font-semibold">{experience.location}</p>
+                <div className="sm:flex sm:space-x-4 sm:place-items-center">
+                  <p className="sm:font-semibold">{experience.timeline}</p>
+                  <div className="sm:block hidden rounded-full h-[5px] w-[5px] bg-neutral-800 dark:bg-neutral-200" />
+                  <p className="sm:font-semibold">{experience.location}</p>
                 </div>
               </div>
             </div>
@@ -34,7 +34,7 @@ export default function ExperienceItem({ experience }: { experience: ExperienceT
         </Link>
       </BlurFade>
 
-      <div className="space-y-2">
+      <div className="space-y-4">
         {experience.tasks.map((task: TaskType, i: number) => {
           if (task.externalLink) {
             return (
