@@ -1,15 +1,12 @@
 'use client';
 
 import ProjectContent from '@/components/project/ProjectContent';
-import ContentSection from '@/components/content/ContentSection';
-import ContentText from '@/components/content/ContentText';
 import { projects } from '@/data/projects';
 import { useRefMap } from '@/hooks/useRefMap';
 import { ContentHeaderType } from '@/types/ContentHeader';
-import ContentSubsection from '@/components/content/ContentSubsection';
 import UnderDevelopment from '@/components/UnderDevelopment';
 
-export default function NbaFantasyOptimizerPage() {
+export default function MatchupMetricsPage() {
   const proj = projects[3];
   const refMap = useRefMap([]);
   const headers: ContentHeaderType[] = [];

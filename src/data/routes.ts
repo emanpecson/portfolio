@@ -39,8 +39,8 @@ const projectsRouteGroup: RouteGroupType = {
     { name: 'Portfolio', path: '/projects/portfolio', keywords: ['project', 'website'] },
     { name: 'Quorum Bots', path: '/projects/quorum-bots', keywords: ['project', 'website', 'docs', 'documentation'] },
     {
-      name: 'NBA Fantasy Optimizer',
-      path: '/projects/nba-fantasy-optimizer',
+      name: 'Matchup Metrics',
+      path: '/projects/matchup-metrics',
       keywords: ['project', ...fs, 'selenium', 'webscrape'],
     },
     { name: 'Abilliti', path: '/projects/abilliti', keywords: ['project', ...fs] },
