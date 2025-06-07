@@ -10,7 +10,7 @@ export const experiences: ExperienceType[] = [
     website: 'https://www.jt4llc.com',
     positions: [
       {
-        name: 'Programmer I',
+        name: 'Software Engineer',
         timeline: '02/2025 - Present',
         location: 'Las Vegas, NV',
         tasks: [
