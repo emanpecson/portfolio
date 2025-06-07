@@ -10,12 +10,12 @@ import ContentSubsection from '@/components/content/ContentSubsection';
 import UnderDevelopment from '@/components/UnderDevelopment';
 
 export default function QuorumBotsPage() {
-  const proj = projects[2];
+  const name = 'Quorum Bots';
   const refMap = useRefMap([]);
   const headers: ContentHeaderType[] = [];
 
   return (
-    <ProjectContent project={proj} headers={headers}>
+    <ProjectContent name={name} details={projects[name]} headers={headers}>
       <UnderDevelopment />
     </ProjectContent>
   );

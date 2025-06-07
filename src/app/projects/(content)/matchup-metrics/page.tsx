@@ -7,12 +7,12 @@ import { ContentHeaderType } from '@/types/ContentHeader';
 import UnderDevelopment from '@/components/UnderDevelopment';
 
 export default function MatchupMetricsPage() {
-  const proj = projects[3];
+  const name = 'Matchup Metrics';
   const refMap = useRefMap([]);
   const headers: ContentHeaderType[] = [];
 
   return (
-    <ProjectContent project={proj} headers={headers}>
+    <ProjectContent name={name} details={projects[name]} headers={headers}>
       <UnderDevelopment />
     </ProjectContent>
   );

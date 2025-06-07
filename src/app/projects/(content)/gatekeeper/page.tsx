@@ -10,7 +10,7 @@ import ContentSubsection from '@/components/content/ContentSubsection';
 import { BellIcon, MailIcon, MessageCircleIcon, QrCodeIcon, SmartphoneIcon } from 'lucide-react';
 
 export default function GatekeeperPage() {
-  const proj = projects[0];
+  const name = 'Gatekeeper';
   const refMap = useRefMap(['problem', 'solution', 'features', 'f1', 'f2', 'f3', 'f4', 'f5']);
   const headers: ContentHeaderType[] = [
     { id: '0', label: 'Problem', ref: refMap.problem },
@@ -30,7 +30,7 @@ export default function GatekeeperPage() {
   ];
 
   return (
-    <ProjectContent project={proj} headers={headers}>
+    <ProjectContent name={name} details={projects[name]} headers={headers}>
       <ContentSection header={headers[0]}>
         <ContentText>
           The process of manually verifying whether an individual should be allowed into some event can be tedious.

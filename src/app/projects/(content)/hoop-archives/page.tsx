@@ -9,8 +9,8 @@ import { ContentHeaderType } from '@/types/ContentHeader';
 import ContentSubsection from '@/components/content/ContentSubsection';
 import UnderDevelopment from '@/components/UnderDevelopment';
 
-export default function ConcurTravelApproverPage() {
-  const name = 'Concur Travel Approver';
+export default function HoopArchivesPage() {
+  const name = 'Hoop Archives';
   const refMap = useRefMap([]);
   const headers: ContentHeaderType[] = [];
 

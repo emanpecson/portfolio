@@ -10,12 +10,12 @@ import ContentSubsection from '@/components/content/ContentSubsection';
 import UnderDevelopment from '@/components/UnderDevelopment';
 
 export default function PortfolioPage() {
-  const proj = projects[1];
+  const name = 'Portfolio';
   const refMap = useRefMap([]);
   const headers: ContentHeaderType[] = [];
 
   return (
-    <ProjectContent project={proj} headers={headers}>
+    <ProjectContent name={name} details={projects[name]} headers={headers}>
       <UnderDevelopment />
     </ProjectContent>
   );

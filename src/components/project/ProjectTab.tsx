@@ -8,10 +8,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-export default function ProjectTab({ project }: { project: ProjectType }) {
+export default function ProjectTab({ name, details }: { name: string; details: ProjectType[keyof ProjectType] }) {
   const [isHovering, setIsHovering] = useState(false);
   const pathname = usePathname();
-  const isActive = pathname === project.path;
+  const isActive = pathname === details.path;
 
   return (
     <div
@@ -19,20 +19,20 @@ export default function ProjectTab({ project }: { project: ProjectType }) {
       onMouseOver={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <Link href={project.path} className="w-full">
+      <Link href={details.path} className="w-full">
         <Image
-          src={project.coverImageSrc}
+          src={details.coverImageSrc}
           height={24}
           width={36}
-          alt={project.coverImageSrc}
+          alt={details.coverImageSrc}
           className="w-full rounded-t-md object-cover border-b hover:opacity-90 duration-150 transition-all max-h-24"
           unoptimized
         />
         <div className="p-1.5">
           <div className="flex space-x-2 place-items-center">
-            {project.iconSrc ? (
+            {details.iconSrc ? (
               <Image
-                src={project.iconSrc}
+                src={details.iconSrc}
                 alt="icon"
                 height={24}
                 width={24}
@@ -48,7 +48,7 @@ export default function ProjectTab({ project }: { project: ProjectType }) {
                 'font-semibold text-sm'
               )}
             >
-              {project.name}
+              {name}
             </span>
 
             {isActive ? (

@@ -10,12 +10,12 @@ import ContentSubsection from '@/components/content/ContentSubsection';
 import UnderDevelopment from '@/components/UnderDevelopment';
 
 export default function FileshipPage() {
-  const proj = projects[6];
+  const name = 'Fileship';
   const refMap = useRefMap([]);
   const headers: ContentHeaderType[] = [];
 
   return (
-    <ProjectContent project={proj} headers={headers}>
+    <ProjectContent name={name} details={projects[name]} headers={headers}>
       <UnderDevelopment />
     </ProjectContent>
   );

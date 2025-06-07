@@ -13,7 +13,8 @@ import IconLinkTag from '../button/IconLinkTag';
 import IconLinkButton from '../button/IconLinkButton';
 
 export interface ProjectContentProps {
-  project: ProjectType;
+  name: string;
+  details: ProjectType[keyof ProjectType];
   headers: ContentHeaderType[];
   children: React.ReactNode;
 }
@@ -71,16 +72,16 @@ export default function ProjectContent(props: ProjectContentProps) {
         </Link>
 
         <div className="space-y-1.5">
-          <h1 className="text-4xl font-extrabold text-neutral-700 dark:text-neutral-100">{props.project.name}</h1>
+          <h1 className="text-4xl font-extrabold text-neutral-700 dark:text-neutral-100">{props.name}</h1>
           <div className="flex space-x-2">
-            <Label>{props.project.label}</Label>
-            {props.project.websiteUrl && (
-              <IconLinkButton label="Try it out" icon={MousePointerClickIcon} href={props.project.websiteUrl} />
+            <Label>{props.details.label}</Label>
+            {props.details.websiteUrl && (
+              <IconLinkButton label="Try it out" icon={MousePointerClickIcon} href={props.details.websiteUrl} />
             )}
-            {props.project.repoUrl && <IconLinkButton label="GitHub" icon={GithubIcon} href={props.project.repoUrl} />}
+            {props.details.repoUrl && <IconLinkButton label="GitHub" icon={GithubIcon} href={props.details.repoUrl} />}
           </div>
         </div>
-        <p className="font-normal">{props.project.description}</p>
+        <p className="font-normal">{props.details.description}</p>
 
         <div className="space-y-8">{props.children}</div>
       </div>
@@ -94,27 +95,27 @@ export default function ProjectContent(props: ProjectContentProps) {
           ))}
         </div>
 
-        {props.project.websiteUrl && (
+        {props.details.websiteUrl && (
           <div className="border rounded-md shadow-md p-3">
             <div className="flex space-x-1 place-items-center text-neutral-700 dark:text-neutral-300">
               <MousePointerClickIcon size={20} />
               <span>Give the project a try at </span>
             </div>
-            <InlineLink href={props.project.websiteUrl}>{props.project.name}</InlineLink>.
+            <InlineLink href={props.details.websiteUrl}>{props.name}</InlineLink>.
           </div>
         )}
-        {props.project.repoUrl && (
+        {props.details.repoUrl && (
           <div className="border rounded-md shadow-md p-3">
             <div className="flex space-x-1 place-items-center text-neutral-700 dark:text-neutral-300">
               <GithubIcon size={20} />
               <span>Source code is available on </span>
             </div>
-            <InlineLink href={props.project.repoUrl}>GitHub</InlineLink>.
+            <InlineLink href={props.details.repoUrl}>GitHub</InlineLink>.
           </div>
         )}
 
         <div className="flex flex-wrap gap-1.5">
-          {props.project.tags.map((tag: SkillType, i: number) => (
+          {props.details.tags.map((tag: SkillType, i: number) => (
             <IconLinkTag href={tag.url} imgSrc={tag.iconSrc} label={tag.label} key={i} />
           ))}
         </div>

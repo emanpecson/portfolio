@@ -9,8 +9,8 @@ export default function ProjectsContentLayout(props: ProjectsContentLayoutProps)
   return (
     <div className="flex h-screen w-full">
       <div className="sm:flex flex-col hidden max-w-[20rem] w-full overflow-y-auto pb-16 px-8 pt-20 space-y-4">
-        {projects.map((proj, i) => (
-          <ProjectTab project={proj} key={i} />
+        {Object.entries(projects).map(([name, details], i) => (
+          <ProjectTab name={name} details={details} key={i} />
         ))}
       </div>
       <div className="w-full">{props.children}</div>

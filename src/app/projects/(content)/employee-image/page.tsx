@@ -10,12 +10,12 @@ import ContentSubsection from '@/components/content/ContentSubsection';
 import UnderDevelopment from '@/components/UnderDevelopment';
 
 export default function EmployeeImagePage() {
-  const proj = projects[5];
+  const name = 'Employee Image';
   const refMap = useRefMap([]);
   const headers: ContentHeaderType[] = [];
 
   return (
-    <ProjectContent project={proj} headers={headers}>
+    <ProjectContent name={name} details={projects[name]} headers={headers}>
       <UnderDevelopment />
     </ProjectContent>
   );
