@@ -29,6 +29,7 @@ export default function Intro() {
         height="24"
         className="sm:h-36 sm:w-36 h-24 w-24 rounded-full bg-white"
         unoptimized
+        priority
       />
     </div>
   );
