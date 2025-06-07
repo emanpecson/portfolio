@@ -2,7 +2,7 @@ import { ProjectType } from '@/types/ProjectType';
 import overallSkills from './overall-skills';
 import { SkillType } from '@/types/SkillType';
 
-export const projects: ProjectType = {
+export const personalProjects: ProjectType = {
   'Hoop Archives': {
     label: 'full-stack webapp',
     path: '/projects/hoop-archives',
@@ -98,55 +98,59 @@ export const projects: ProjectType = {
   },
 };
 
-// {
-//   name: 'Employee Image',
-//   label: 'full-stack webapp',
-//   path: '/projects/employee-image',
-//   description: 'Webapp that allows users to update their profile picture among all corporate apps',
-//   coverImageSrc: '/cover/na.png',
-//   iconSrc: '/logo/jt4.png',
-//   tags: [
-//     overallSkills.get('React.js') as SkillType,
-//     overallSkills.get('Next') as SkillType,
-//     overallSkills.get('Node.js') as SkillType,
-//     overallSkills.get('TypeScript') as SkillType,
-//     overallSkills.get('Tailwind CSS') as SkillType,
-//     overallSkills.get('Prisma') as SkillType,
-//     overallSkills.get('SQL Server') as SkillType,
-//     // overallSkills.get('Minio') as SkillType,
-//   ],
-// },
-// {
-//   name: 'Fileship',
-//   label: 'full-stack webapp',
-//   path: '/projects/fileship',
-//   description: 'Webapp that provides employees with a way to securely upload files',
-//   coverImageSrc: '/cover/na.png',
-//   iconSrc: '/logo/jt4.png',
-//   tags: [
-//     overallSkills.get('Vue.js') as SkillType,
-//     overallSkills.get('Nuxt') as SkillType,
-//     overallSkills.get('Node.js') as SkillType,
-//     overallSkills.get('TypeScript') as SkillType,
-//     overallSkills.get('Tailwind CSS') as SkillType,
-//     overallSkills.get('Prisma') as SkillType,
-//     overallSkills.get('SQL Server') as SkillType,
-//   ],
-// },
-// {
-//   name: 'Concur Travel Approver',
-//   label: 'full-stack webapp',
-//   path: '/projects/concur-travel-approver',
-//   description: 'Webapp that simplifies the management of employee travel info',
-//   coverImageSrc: '/cover/na.png',
-//   iconSrc: '/logo/jt4.png',
-//   tags: [
-//     overallSkills.get('Vue.js') as SkillType,
-//     overallSkills.get('Nuxt') as SkillType,
-//     overallSkills.get('Node.js') as SkillType,
-//     overallSkills.get('TypeScript') as SkillType,
-//     overallSkills.get('Tailwind CSS') as SkillType,
-//     overallSkills.get('Prisma') as SkillType,
-//     overallSkills.get('SQL Server') as SkillType,
-//   ],
-// },
+export const workProjects: ProjectType = {
+  'Employee Image': {
+    label: 'full-stack webapp',
+    path: '/projects/employee-image',
+    description: 'Webapp that allows users to update their profile picture among all corporate apps',
+    coverImageSrc: '/cover/na.png',
+    iconSrc: '/logo/jt4.png',
+    tags: [
+      overallSkills.get('React.js') as SkillType,
+      overallSkills.get('Next') as SkillType,
+      overallSkills.get('Node.js') as SkillType,
+      overallSkills.get('TypeScript') as SkillType,
+      overallSkills.get('Tailwind CSS') as SkillType,
+      overallSkills.get('Prisma') as SkillType,
+      overallSkills.get('SQL Server') as SkillType,
+      // overallSkills.get('Minio') as
+    ],
+  },
+  Fileship: {
+    label: 'full-stack webapp',
+    path: '/projects/fileship',
+    description: 'Webapp that provides employees with a way to securely upload files',
+    coverImageSrc: '/cover/na.png',
+    iconSrc: '/logo/jt4.png',
+    tags: [
+      overallSkills.get('Vue.js') as SkillType,
+      overallSkills.get('Nuxt') as SkillType,
+      overallSkills.get('Node.js') as SkillType,
+      overallSkills.get('TypeScript') as SkillType,
+      overallSkills.get('Tailwind CSS') as SkillType,
+      overallSkills.get('Prisma') as SkillType,
+      overallSkills.get('SQL Server') as SkillType,
+    ],
+  },
+  'Concur Travel Approver': {
+    label: 'full-stack webapp',
+    path: '/projects/concur-travel-approver',
+    description: 'Webapp that simplifies the management of employee travel info',
+    coverImageSrc: '/cover/na.png',
+    iconSrc: '/logo/jt4.png',
+    tags: [
+      overallSkills.get('Vue.js') as SkillType,
+      overallSkills.get('Nuxt') as SkillType,
+      overallSkills.get('Node.js') as SkillType,
+      overallSkills.get('TypeScript') as SkillType,
+      overallSkills.get('Tailwind CSS') as SkillType,
+      overallSkills.get('Prisma') as SkillType,
+      overallSkills.get('SQL Server') as SkillType,
+    ],
+  },
+};
+
+export const projects = {
+  ...personalProjects,
+  ...workProjects,
+};
