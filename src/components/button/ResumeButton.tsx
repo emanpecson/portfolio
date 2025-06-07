@@ -1,22 +1,11 @@
 import { FileUserIcon } from 'lucide-react';
-import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog';
 import IconButton from './IconButton';
+import Link from 'next/link';
 
 export default function ResumeButton() {
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <IconButton label="Resume" icon={FileUserIcon} onClick={() => {}} />
-      </DialogTrigger>
-      <DialogContent className="h-[44rem] p-2">
-        <object
-          data="/emanuel-pecson-resume.pdf"
-          type="application/pdf"
-          width="100%"
-          height="100%"
-          className="rounded-md"
-        />
-      </DialogContent>
-    </Dialog>
+    <Link href="/emanuel-pecson-resume.pdf" rel="noopener noreferrer" target="_blank">
+      <IconButton label="Resume" icon={FileUserIcon} onClick={() => {}} />
+    </Link>
   );
 }
