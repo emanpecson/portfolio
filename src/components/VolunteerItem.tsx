@@ -18,8 +18,8 @@ export default function VolunteerItem({ volunteer }: { volunteer: VolunteerType 
               unoptimized
             />
             <div className="sm:flex sm:justify-between w-full">
-              <h2 className="sm:text-2xl text-lg font-extrabold">{volunteer.place}</h2>
-              <p className="sm:font-normal sm:text-lg font-normal text-base">{volunteer.timeline}</p>
+              <h2 className="sm:text-xl text-base font-extrabold">{volunteer.place}</h2>
+              <p className="sm:font-normal sm:text-base font-normal text-sm">{volunteer.timeline}</p>
             </div>
           </div>
           <p>{volunteer.description}</p>

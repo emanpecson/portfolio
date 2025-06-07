@@ -6,8 +6,7 @@ import Label from './Label';
 
 export default function TaskItem({ task }: { task: TaskType }) {
   return (
-    // <BoxWrap>
-    <div>
+    <div className="space-y-2">
       <div>
         <div className="relative flex place-items-center">
           <div className="rounded-full bg-gray-600 dark:bg-neutral-300 h-1.5 w-1.5 absolute sm:-left-6 -left-4" />
@@ -24,6 +23,5 @@ export default function TaskItem({ task }: { task: TaskType }) {
         ))}
       </div>
     </div>
-    // </BoxWrap>
   );
 }

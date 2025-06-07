@@ -24,11 +24,11 @@ export default function ExperienceItem({ experience }: { experience: ExperienceT
                     unoptimized
                   />
                   <div>
-                    <h2 className="font-extrabold sm:text-2xl text-lg">{position.name}</h2>
+                    <h2 className="font-semibold sm:text-2xl text-lg">{position.name}</h2>
                     <div className="sm:flex sm:space-x-4 sm:place-items-center">
-                      <p className="sm:font-semibold">{position.timeline}</p>
-                      <div className="sm:block hidden rounded-full h-[5px] w-[5px] bg-neutral-800 dark:bg-neutral-200" />
-                      <p className="sm:font-semibold">{position.location}</p>
+                      <p className="sm:font-medium text-sm">{position.timeline}</p>
+                      <div className="sm:block hidden rounded-full h-1 w-1 bg-neutral-800 dark:bg-neutral-200" />
+                      <p className="sm:font-medium text-sm">{position.location}</p>
                     </div>
                   </div>
                 </div>

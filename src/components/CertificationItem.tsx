@@ -19,8 +19,8 @@ export default function CertificationItem({ certification }: { certification: Ce
               unoptimized
             />
             <div>
-              <h2 className="sm:text-2xl text-lg font-extrabold">{certification.source}</h2>
-              <p className="sm:font-normal sm:text-lg font-normal text-base">{certification.certificate}</p>
+              <h2 className="sm:text-xl text-base font-extrabold">{certification.source}</h2>
+              <p className="sm:font-normal sm:text-base font-normal text-sm">{certification.certificate}</p>
             </div>
           </div>
           <div className="flex flex-wrap gap-1.5">

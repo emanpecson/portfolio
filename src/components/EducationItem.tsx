@@ -20,12 +20,12 @@ export default function EducationItem({ education }: { education: EducationType 
             />
             <div className="sm:flex sm:justify-between w-full">
               <div>
-                <h2 className="sm:text-2xl text-lg font-extrabold">{education.school}</h2>
-                <p className="sm:font-normal sm:text-lg font-normal text-base">{education.degree}</p>
+                <h2 className="sm:text-xl text-base font-extrabold">{education.school}</h2>
+                <p className="sm:font-normal sm:text-base font-normal text-sm">{education.degree}</p>
               </div>
 
               <div>
-                <p className="sm:font-normal sm:text-lg font-normal text-base">{education.timeline}</p>
+                <p className="sm:font-normal sm:text-base font-normal text-sm">{education.timeline}</p>
               </div>
             </div>
           </div>
