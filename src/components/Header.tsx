@@ -1,6 +1,6 @@
 'use client';
 
-import { GithubIcon, LinkedinIcon, MailIcon } from 'lucide-react';
+import { FileUserIcon, GithubIcon, LinkedinIcon, MailIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import IconLinkButton from './button/IconLinkButton';
@@ -78,7 +78,7 @@ export default function Header() {
             <IconLinkButton label="Email" icon={MailIcon} href="mailto:emanpecson@gmail.com" />
             <IconLinkButton label="LinkedIn" icon={LinkedinIcon} href={linkedinUrl} />
             <IconLinkButton label="GitHub" icon={GithubIcon} href={githubUrl} />
-            <ResumeButton />
+            <IconLinkButton label="Resume" icon={FileUserIcon} href="/emanuel-pecson-resume.pdf" />
             <ThemeToggle />
           </BlurWrapper>
         </div>
