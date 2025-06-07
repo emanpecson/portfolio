@@ -22,7 +22,7 @@ export default function EducationPage() {
         </div>
       </BlurFade>
 
-      <BlurFade delay={0.1}>
+      {/* <BlurFade delay={0.1}>
         <div className="space-y-2">
           <h1 className="text-3xl font-extrabold text-neutral-700 dark:text-neutral-200">Certifications</h1>
           <hr />
@@ -32,7 +32,7 @@ export default function EducationPage() {
             ))}
           </div>
         </div>
-      </BlurFade>
+      </BlurFade> */}
 
       <BlurFade delay={0.2}>
         <div className="space-y-2">
