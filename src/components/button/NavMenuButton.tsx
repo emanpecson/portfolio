@@ -1,6 +1,6 @@
 'use client';
 
-import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { mainRouteGroups } from '@/data/routes';
 import { RouteGroupType } from '@/types/RouteType';
 import { GithubIcon, LinkedinIcon, MailIcon, MenuIcon } from 'lucide-react';
@@ -27,31 +27,35 @@ export function NavMenuButton() {
             Emanuel Pecson
           </SheetTitle>
         </SheetHeader>
-        <div className="py-4 space-y-2">
+        <div className="py-4 space-y-3">
           <h3 className="font-semibold text-neutral-700 dark:text-neutral-200">Learn more</h3>
-          {mainRouteGroups.map((routeGroup: RouteGroupType, i: number) => {
-            const mainRoute = routeGroup.routes[0];
-            const isActive =
-              (pathname === '/' && pathname === mainRoute.path) ||
-              (mainRoute.path !== '/' && pathname.startsWith(mainRoute.path));
-            return (
-              <NavMenuItem key={i} href={mainRoute.path} icon={routeGroup.icon} isActive={isActive} onClick={close}>
-                {mainRoute.name}
-              </NavMenuItem>
-            );
-          })}
+          <div className="space-y-3">
+            {mainRouteGroups.map((routeGroup: RouteGroupType, i: number) => {
+              const mainRoute = routeGroup.routes[0];
+              const isActive =
+                (pathname === '/' && pathname === mainRoute.path) ||
+                (mainRoute.path !== '/' && pathname.startsWith(mainRoute.path));
+              return (
+                <NavMenuItem key={i} href={mainRoute.path} icon={routeGroup.icon} isActive={isActive} onClick={close}>
+                  {mainRoute.name}
+                </NavMenuItem>
+              );
+            })}
+          </div>
         </div>
-        <div className="py-4 space-y-2">
+        <div className="py-4 space-y-3">
           <h3 className="font-semibold text-neutral-700 dark:text-neutral-200">Let's get in touch!</h3>
-          <NavMenuItem href="mailto:emanpecson@gmail.com" icon={MailIcon} isActive={false}>
-            emanpecson@gmail.com
-          </NavMenuItem>
-          <NavMenuItem href={linkedinUrl} icon={LinkedinIcon} isActive={false}>
-            LinkedIn
-          </NavMenuItem>
-          <NavMenuItem href={githubUrl} icon={GithubIcon} isActive={false}>
-            GitHub
-          </NavMenuItem>
+          <div className="space-y-3">
+            <NavMenuItem href="mailto:emanpecson@gmail.com" icon={MailIcon} isActive={false}>
+              emanpecson@gmail.com
+            </NavMenuItem>
+            <NavMenuItem href={linkedinUrl} icon={LinkedinIcon} isActive={false}>
+              LinkedIn
+            </NavMenuItem>
+            <NavMenuItem href={githubUrl} icon={GithubIcon} isActive={false}>
+              GitHub
+            </NavMenuItem>
+          </div>
         </div>
       </SheetContent>
     </Sheet>

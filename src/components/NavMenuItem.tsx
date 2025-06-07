@@ -16,8 +16,8 @@ export default function NavMenuItem(props: NavMenuItemProps) {
       <Link
         href={props.href}
         className={cn(
-          props.isActive ? 'opacity-100 shadow-md' : 'opacity-50 hover:opacity-100 shadow-sm',
-          'transition-opacity duration-150 flex place-items-center space-x-2 border p-2.5 rounded-lg'
+          props.isActive ? 'opacity-100' : 'opacity-50 hover:opacity-100',
+          'transition-opacity duration-150 flex place-items-center space-x-2'
         )}
       >
         <props.icon size={24} />
