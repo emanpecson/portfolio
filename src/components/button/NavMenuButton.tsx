@@ -35,7 +35,7 @@ export function NavMenuButton() {
               (pathname === '/' && pathname === mainRoute.path) ||
               (mainRoute.path !== '/' && pathname.startsWith(mainRoute.path));
             return (
-              <NavMenuItem href={mainRoute.path} icon={routeGroup.icon} isActive={isActive} onClick={close}>
+              <NavMenuItem key={i} href={mainRoute.path} icon={routeGroup.icon} isActive={isActive} onClick={close}>
                 {mainRoute.name}
               </NavMenuItem>
             );
