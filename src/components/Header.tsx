@@ -14,7 +14,6 @@ import BlurWrapper from './BlurWrapper';
 import { useEffect, useState } from 'react';
 import { NavMenuButton } from './button/NavMenuButton';
 import { githubUrl, linkedinUrl } from '@/data/url';
-import ResumeButton from './button/ResumeButton';
 import ThemeToggle from './button/ThemeToggle';
 
 export default function Header() {
@@ -27,7 +26,7 @@ export default function Header() {
   useEffect(() => setLogoSrc(resolvedTheme === 'light' ? lightLogoSrc : darkLogoSrc));
 
   return (
-    <div className="w-full flex justify-between pt-2 md:px-4 px-2 fixed z-40 space-x-2 place-items-center">
+    <div className="w-full flex justify-between pt-2 md:px-6 px-2 fixed z-40 space-x-2 place-items-center">
       <BlurWrapper>
         <Link href="/" className="flex-shrink-0">
           <Image
@@ -57,7 +56,7 @@ export default function Header() {
                           (mainRoute.path !== '/' && pathname.startsWith(mainRoute.path))
                           ? 'opacity-100'
                           : 'opacity-50 hover:opacity-100',
-                        'font-medium transition-opacity duration-150'
+                        'font-medium transition-opacity duration-150 text-sm'
                       )}
                       href={mainRoute.path}
                     >
@@ -78,7 +77,7 @@ export default function Header() {
             <IconLinkButton label="Email" icon={MailIcon} href="mailto:emanpecson@gmail.com" />
             <IconLinkButton label="LinkedIn" icon={LinkedinIcon} href={linkedinUrl} />
             <IconLinkButton label="GitHub" icon={GithubIcon} href={githubUrl} />
-            <IconLinkButton label="Resume" icon={FileUserIcon} href="/emanuel-pecson-resume.pdf" />
+            {/* <IconLinkButton label="Resume" icon={FileUserIcon} href="/emanuel-pecson-resume.pdf" /> */}
             <ThemeToggle />
           </BlurWrapper>
         </div>

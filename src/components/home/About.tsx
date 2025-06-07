@@ -7,14 +7,12 @@ export default function About() {
   return (
     <div className="space-y-4">
       <Paragraph>
-        <span>I discovered a passion for engineering after stumbling upon </span>
+        <span>I discovered my love for engineering through </span>
         <InlineLink href={lbpUrl}>LittleBigPlanet</InlineLink>
         <span>
-          , a video game series that fosters curiosity and creativity by giving players the tools to build whatever they
-          could imagine.
+          , a video game series that encourages curiosity and creativity by letting players build whatever they imagine.
         </span>
       </Paragraph>
-
       <Paragraph>
         <span>This passion for engineering carried on into </span>
         <InlineLink href="https://www.unlv.edu/">UNLV</InlineLink>
@@ -22,17 +20,17 @@ export default function About() {
         <InlineLink href="https://www.unlv.edu/degree/bs-computer-science">BS in Computer Science</InlineLink>
         <span> in 2024.</span>
       </Paragraph>
-
       <Paragraph>
-        <span>I had the opportunity to showcase my skills and </span>
-        <InlineLink href={experiences[0].path}>gain valuable experience through internships</InlineLink>
-        <span>. But it didn't stop there. I continued to learn and bring my ideas to life by engaging in a </span>
-        <InlineLink href="/projects">variety of personal projects</InlineLink>.
+        <span>I've had the chance to </span>
+        <InlineLink href={experiences[0].path}>
+          showcase my skills and gain hands-on experience through internships
+        </InlineLink>
+        <span>. But my learning didn't stop there. I continue to grow by bringing ideas to life with </span>
+        <InlineLink href="/projects">personal projects</InlineLink>.
       </Paragraph>
-
       <Paragraph>
-        Outside of programming, I share a passion for basketball, playing the electric guitar, street fashion, and
-        creating animations.
+        When I'm not coding, you can find me playing basketball, playing the electric guitar, exploring street fashion,
+        or creating animations.
       </Paragraph>
     </div>
   );

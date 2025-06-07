@@ -19,7 +19,10 @@ export default function Intro() {
             </div>
           </Paragraph>
         </div>
-        <Paragraph>{metadata.description}</Paragraph>
+        <Paragraph>Welcome! I'm Emanuel 👋</Paragraph>
+        <Paragraph>
+          I'm a software engineer passionate about building effective solutions that make a meaningful impact.
+        </Paragraph>
       </div>
 
       <Image
