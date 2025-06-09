@@ -7,7 +7,6 @@ export default function ThemeToggle() {
 
   return (
     <IconButton
-      label="Theme"
       icon={resolvedTheme === 'dark' ? MoonIcon : SunIcon}
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
     />
