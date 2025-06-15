@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ContentHeaderType } from '@/types/ContentHeader';
 import NavContentHeader from '../NavContentHeader';
 import { useEffect, useState } from 'react';
-import { ChevronLeftIcon, GithubIcon, MousePointerClickIcon } from 'lucide-react';
+import { ChevronLeftIcon, GithubIcon, GlobeIcon } from 'lucide-react';
 import Label from '../Label';
 import { ProjectType } from '@/types/ProjectType';
 import InlineLink from '../button/InlineLink';
@@ -76,7 +76,7 @@ export default function ProjectContent(props: ProjectContentProps) {
           <div className="flex space-x-2">
             <Label>{props.details.label}</Label>
             {props.details.websiteUrl && (
-              <IconLinkButton label="Try it out" icon={MousePointerClickIcon} href={props.details.websiteUrl} />
+              <IconLinkButton label="Try it out" icon={GlobeIcon} href={props.details.websiteUrl} />
             )}
             {props.details.repoUrl && <IconLinkButton label="GitHub" icon={GithubIcon} href={props.details.repoUrl} />}
           </div>
@@ -87,25 +87,29 @@ export default function ProjectContent(props: ProjectContentProps) {
       </div>
 
       {/* in-page navigations */}
-      <div className="lg:block hidden w-[20rem] overflow-y-auto pb-16 pt-20 px-8 space-y-6">
-        <p className="text-xs font-semibold uppercase">On this page</p>
-        <div className="flex flex-col space-y-2">
-          {props.headers.map((header: ContentHeaderType) => (
-            <NavContentHeader header={header} key={header.id} inViewMap={inViewMap} />
-          ))}
-        </div>
+      <div className="lg:block hidden w-[20rem] overflow-y-auto pb-16 pt-20 px-8 space-y-4">
+        {props.headers.length > 0 && (
+          <>
+            <p className="text-xs font-semibold uppercase">On this page</p>
+            <div className="flex flex-col space-y-2">
+              {props.headers.map((header: ContentHeaderType) => (
+                <NavContentHeader header={header} key={header.id} inViewMap={inViewMap} />
+              ))}
+            </div>
+          </>
+        )}
 
         {props.details.websiteUrl && (
-          <div className="border rounded-md shadow-md p-3">
+          <div className="border rounded-md p-3">
             <div className="flex space-x-1 place-items-center text-neutral-700 dark:text-neutral-300">
-              <MousePointerClickIcon size={20} />
+              <GlobeIcon size={20} />
               <span>Give the project a try at </span>
             </div>
             <InlineLink href={props.details.websiteUrl}>{props.name}</InlineLink>.
           </div>
         )}
         {props.details.repoUrl && (
-          <div className="border rounded-md shadow-md p-3">
+          <div className="border rounded-md p-3">
             <div className="flex space-x-1 place-items-center text-neutral-700 dark:text-neutral-300">
               <GithubIcon size={20} />
               <span>Source code is available on </span>

@@ -6,7 +6,6 @@ import GitHubButton from '../button/GitHubButton';
 import IconLinkTag from '../button/IconLinkTag';
 import { ProjectType } from '@/types/ProjectType';
 import Label from '../Label';
-import { Button } from '../ui/button';
 
 export default function ProjectPreview({ name, details }: { name: string; details: ProjectType[keyof ProjectType] }) {
   return (
@@ -40,9 +39,6 @@ export default function ProjectPreview({ name, details }: { name: string; detail
           </div>
 
           <div className="flex space-x-1.5 place-items-center">
-            {/* <Button size="sm" asChild>
-              <Link href={details.path}>Learn more</Link>
-            </Button> */}
             {!!details.websiteUrl && <WebsiteButton href={details.websiteUrl} />}
             {!!details.repoUrl && <GitHubButton href={details.repoUrl} />}
           </div>

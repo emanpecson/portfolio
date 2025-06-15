@@ -15,19 +15,11 @@ export default function ProjectTab({ name, details }: { name: string; details: P
 
   return (
     <div
-      className={cn(!isActive && 'hover:translate-x-2 transition-all duration-150', 'border rounded-md shadow-md')}
+      className={cn(!isActive && 'hover:translate-x-2', 'transition-all duration-150')}
       onMouseOver={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
       <Link href={details.path} className="w-full">
-        <Image
-          src={details.coverImageSrc}
-          height={24}
-          width={36}
-          alt={details.coverImageSrc}
-          className="w-full rounded-t-md object-cover border-b hover:opacity-90 duration-150 transition-all max-h-24"
-          unoptimized
-        />
         <div className="p-1.5">
           <div className="flex space-x-2 place-items-center">
             {details.iconSrc ? (
@@ -53,8 +45,8 @@ export default function ProjectTab({ name, details }: { name: string; details: P
 
             {isActive ? (
               <div className="relative flex justify-center place-items-center">
-                <div className="rounded-full w-1.5 h-1.5 bg-orange-500 animate-pulse" />
-                <div className="rounded-full w-2 h-2 bg-orange-300 animate-ping absolute" />
+                <div className="rounded-full w-1.5 h-1.5 bg-green-500 animate-pulse" />
+                <div className="rounded-full w-2 h-2 bg-green-300 animate-ping absolute" />
               </div>
             ) : (
               <ChevronRightIcon

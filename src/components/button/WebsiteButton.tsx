@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { GlobeIcon, MousePointerClickIcon } from 'lucide-react';
+import { GlobeIcon } from 'lucide-react';
 import Link from 'next/link';
 
 export default function WebsiteButton({ href }: { href: string }) {
