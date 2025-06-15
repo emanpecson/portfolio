@@ -1,13 +1,13 @@
 import { cn } from '@/lib/utils';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Roboto_Serif, Roboto_Mono } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/ui/theme-provider';
 import Header from '@/components/Header';
 
-const fontSerif = Roboto_Serif({
+const fontSans = Inter({
   subsets: ['latin'],
-  variable: '--font-serif',
+  variable: '--font-sans',
 });
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('min-h-screen bg-background font-serif antialiased', fontSerif.variable)}>
+      <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="min-h-screen w-screen overflow-x-hidden">
             <Header />
