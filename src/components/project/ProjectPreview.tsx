@@ -24,7 +24,9 @@ export default function ProjectPreview({ name, details }: { name: string; detail
 
       <div className="p-3">
         <div className="flex space-x-2 place-items-center">
-          <h3 className="font-extrabold text-xl text-neutral-700 dark:text-neutral-200">{name}</h3>
+          <Link href={details.path}>
+            <h3 className="font-extrabold text-xl text-neutral-700 dark:text-neutral-200 hover:underline">{name}</h3>
+          </Link>
           <Label>{details.label}</Label>
         </div>
 
@@ -38,9 +40,9 @@ export default function ProjectPreview({ name, details }: { name: string; detail
           </div>
 
           <div className="flex space-x-1.5 place-items-center">
-            <Button size="sm" asChild>
+            {/* <Button size="sm" asChild>
               <Link href={details.path}>Learn more</Link>
-            </Button>
+            </Button> */}
             {!!details.websiteUrl && <WebsiteButton href={details.websiteUrl} />}
             {!!details.repoUrl && <GitHubButton href={details.repoUrl} />}
           </div>

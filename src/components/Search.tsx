@@ -49,7 +49,7 @@ export default function Search() {
         <Button
           variant="outline"
           size="sm"
-          className="w-full lg:w-fit text-neutral-600 dark:text-neutral-400 rounded-full px-3 py-2 relative h-fit space-x-4 justify-between dark:bg-neutral-950 dark:bg-opacity-70 backdrop-blur-lg bg-transparent"
+          className="w-full lg:w-fit text-neutral-600 dark:text-neutral-400 rounded-full px-3 py-2 relative h-fit space-x-4 justify-between dark:bg-background dark:bg-opacity-70 backdrop-blur-lg bg-transparent"
         >
           <div className="flex space-x-2 place-items-center">
             <SearchIcon size={20} className="opacity-60" />

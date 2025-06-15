@@ -1,12 +1,12 @@
 import { RouteGroupType } from '@/types/RouteType';
-import { BriefcaseBusinessIcon, CircleUserIcon, FileUserIcon, GraduationCapIcon, LightbulbIcon } from 'lucide-react';
+import { BriefcaseBusinessIcon, HouseIcon, FileUserIcon, GraduationCapIcon, LightbulbIcon } from 'lucide-react';
 
 const swe: string[] = ['software', 'developer', 'engineer'];
-const fs: string[] = ['full-stack', 'webapp'];
+const fs: string[] = ['full-stack', 'web app'];
 
 const homeRouteGroup: RouteGroupType = {
   label: 'Home',
-  icon: CircleUserIcon,
+  icon: HouseIcon,
   routes: [{ name: 'Home', path: '/', keywords: ['emanuel', 'pecson'] }],
 };
 
@@ -75,10 +75,12 @@ const educationRouteGroup: RouteGroupType = {
   ],
 };
 
+export const resumePath = '/emanuel-pecson-resume.pdf';
+
 const resumeRouteGroup: RouteGroupType = {
   label: 'Resume',
   icon: FileUserIcon,
-  routes: [{ name: 'Resume', path: '/emanuel-pecson-resume.pdf', keywords: ['resume'] }],
+  routes: [{ name: 'Resume', path: resumePath, keywords: ['resume'] }],
 };
 
 export const mainRouteGroups: RouteGroupType[] = [

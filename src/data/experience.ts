@@ -11,15 +11,34 @@ export const experiences: ExperienceType[] = [
     positions: [
       {
         name: 'Software Engineer',
-        timeline: '02/2025 - Present',
+        timeline: '08/2023 - Present',
         location: 'Las Vegas, NV',
         tasks: [
           {
-            header: 'Employee Image App',
-            description: 'Built a web app that allows users to update their profile picture among all corporate apps.',
-            label: 'full-stack webapp',
+            header: 'Internal forum app',
+            description:
+              'Spearheaded the development of an internal forum app while mentoring **2 SWE interns** throughout the project lifecycle, leading system design discussions and enforcing best security practices across all team code contributions',
+            label: 'full-stack web app',
+            // externalLink: '/projects/employee-image',
+            tags: [
+              overallSkills.get('Minio') as SkillType,
+              overallSkills.get('Next') as SkillType,
+              overallSkills.get('React.js') as SkillType,
+              overallSkills.get('Node.js') as SkillType,
+              overallSkills.get('Tailwind CSS') as SkillType,
+              overallSkills.get('SQL Server') as SkillType,
+              overallSkills.get('Prisma') as SkillType,
+              overallSkills.get('Git') as SkillType,
+            ],
+          },
+          {
+            header: 'Badge photo app',
+            description:
+              'Modernized a deprecated badge photo pipeline with a full-stack **Next.js** app, restoring **4,000+ employee photos** across **5+ enterprise apps** by oﬄoading media to **MinIO S3** to dynamically store and serve image assets as the company scales',
+            label: 'full-stack web app',
             externalLink: '/projects/employee-image',
             tags: [
+              overallSkills.get('Minio') as SkillType,
               overallSkills.get('Next') as SkillType,
               overallSkills.get('React.js') as SkillType,
               overallSkills.get('Node.js') as SkillType,
@@ -33,14 +52,14 @@ export const experiences: ExperienceType[] = [
       },
       {
         name: 'Software Engineer Intern',
-        timeline: '05/2023 - 02/2025',
+        timeline: '05/2023 - 08/2023',
         location: 'Las Vegas, NV',
         tasks: [
           {
-            header: 'Fileship',
+            header: 'Secure file transfer app',
             description:
-              'Built a web application tool that provides employees with a way to securely upload files. This includes functionalities for uploading files, an automated email notification system, and enabling real-time features with a web-socket.',
-            label: 'full-stack webapp',
+              'Delivered an internal file transfer app with **Nuxt.js** to mitigate the insecurities of a shared directory system, leveraging **Socket.IO** for real-time transfer status updates and ensuring secure migration of **~65 sensitive files monthly**', // 15 files/week -> 15 x 4.3 = ~65 files/month
+            label: 'full-stack web app',
             externalLink: '/projects/fileship',
             tags: [
               overallSkills.get('Nuxt') as SkillType,
@@ -56,10 +75,10 @@ export const experiences: ExperienceType[] = [
             ],
           },
           {
-            header: 'Concur Travel Approver',
+            header: 'Employee travel approver app',
             description:
-              'Built a web application tool that simplifies the management of employee travel info. This app displays an employee table with options for managing their info, search and filter tools to quickly find employees, and support for updating employees over entire departments within a few clicks.',
-            label: 'full-stack webapp',
+              'Built a full-stack **Nuxt.js** and **SQL Server** solution to replace a bottlenecked spreadsheet process, decentralizing data entry and slashing update delays from **~1 day to ~1 minute**',
+            label: 'full-stack web app',
             externalLink: '/projects/concur-travel-approver',
             tags: [
               overallSkills.get('Nuxt') as SkillType,
@@ -73,9 +92,9 @@ export const experiences: ExperienceType[] = [
             ],
           },
           {
-            header: 'Automatic Birthday Mail',
+            header: 'Automated birthday emailer',
             description:
-              'Develop a SQL trigger that automatically emails employees a special message on their birthday.',
+              'Developed a SQL trigger that automatically emails employees a message from the company president, emailing **~90 employees monthly**.', // 20 emps/week -> 20 x 4.3 = ~86 -> ~90 emps/month
             tags: [overallSkills.get('SQL') as SkillType, overallSkills.get('SQL Server') as SkillType],
           },
         ],
@@ -94,21 +113,20 @@ export const experiences: ExperienceType[] = [
         location: 'San Diego, CA',
         tasks: [
           {
-            header: 'Improved developer efficiency',
+            header: 'Reduced third-party dependence',
             description:
-              'My team faced an issue where they relied on a 3rd party library and needed to send requests to them whenever we needed to update anything in the data model. So I worked up a solution where we would be able to generate the data model locally, so when we needed to make an update, we had direct access. As a result, update processes reduced from ~3 days to just ~30 minutes.',
-            tags: [overallSkills.get('CMake') as SkillType, overallSkills.get('Subversion') as SkillType],
+              'Delivered a code generator with **Python** to transform **30,000+ struct deﬁnitions** into a **C++** data model library, eliminating third-party update dependence and cutting data model update wait time by **~97%**.',
+            tags: [
+              overallSkills.get('Python') as SkillType,
+              overallSkills.get('C++') as SkillType,
+              overallSkills.get('CMake') as SkillType,
+              overallSkills.get('Subversion') as SkillType,
+            ],
           },
           {
-            header: 'Refactor existing code',
+            header: 'Created unit tests',
             description:
-              'Updated an outdated Python script to perform the function of generating thousands of C++ class header files.',
-            tags: [overallSkills.get('Python') as SkillType],
-          },
-          {
-            header: 'Write unit tests',
-            description:
-              'Wrote basic unit tests with the GoogleTest framework to ensure the functionality of C++ source code.',
+              'Developed unit tests for **C++** code using **GoogleTest**, integrating automated build-time validation into the CI/CD pipeline.',
             tags: [overallSkills.get('C++') as SkillType, overallSkills.get('GoogleTest') as SkillType],
           },
         ],
@@ -129,12 +147,18 @@ export const experiences: ExperienceType[] = [
           {
             header: 'Web-scraping',
             description:
-              'Applied prior knowledge of programming to automate a manual process of storing office data into an ArcGIS data table using Python and Selenium.',
+              'Automated the collection of phone conﬁguration data from **600+ IP-addressable assets** using **Python** and **Selenium**, cutting manual inventory time from **~4 hours to ~20 minutes**.',
             tags: [
               overallSkills.get('Python') as SkillType,
               overallSkills.get('Selenium') as SkillType,
               overallSkills.get('ArcGIS') as SkillType,
             ],
+          },
+          {
+            header: 'Web-scraping',
+            description:
+              'Built an interactive map app with **QML**, **JavaScript**, and **AppStudio**, displaying **70+** Clark County parks with selectable points and detailed park information',
+            tags: [overallSkills.get('JavaScript') as SkillType],
           },
         ],
       },
@@ -153,8 +177,15 @@ export const experiences: ExperienceType[] = [
         tasks: [
           {
             header: 'Tutoring',
-            description: 'Assisted college students in learning introductory computer science concepts in C++.',
+            description:
+              'Assisted **50+** college students in understanding fundamental programming concepts through one-on-one mentorship and code reviews.',
             tags: [overallSkills.get('C++') as SkillType],
+          },
+          {
+            header: 'Grading',
+            description:
+              'Evaluated and graded student programming assignments based on code quality, readability, and correct execution.',
+            tags: [],
           },
         ],
       },

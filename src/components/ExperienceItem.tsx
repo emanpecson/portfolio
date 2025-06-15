@@ -8,7 +8,7 @@ import BlurFade from './ui/blur-fade';
 
 export default function ExperienceItem({ experience }: { experience: ExperienceType }) {
   return (
-    <div className="divide-y">
+    <div>
       {experience.positions.map((position: PositionType) => (
         <div className="space-y-4 py-4">
           <BlurFade delay={0}>

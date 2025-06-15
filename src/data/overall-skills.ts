@@ -152,5 +152,11 @@ overallSkills.set('GoogleTest', {
   group: SkillGroup.FRAMEWORK,
   url: 'https://github.com/google/googletest',
 });
+overallSkills.set('Minio', {
+  label: 'MinIO S3',
+  iconSrc: '/logo/minio.png',
+  group: SkillGroup.FRAMEWORK,
+  url: 'https://min.io/product/overview?igaag=181971973331&igaat=&igacm=22323943809&igacr=738215221815&igakw=minio%20cloud%20storage&igamt=b&igant=g&utm_term=minio%20cloud%20storage&utm_campaign=22323943809&utm_source=google&utm_medium=cpc&utm_content=181971973331&hsa_acc=8976569894&hsa_cam=22323943809&hsa_grp=181971973331&hsa_ad=738215221815&hsa_src=g&hsa_tgt=kwd-2406043310353&hsa_kw=minio%20cloud%20storage&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=22323943809&gbraid=0AAAAACxqcBus7a0WbxqMv-D6Gw0qao6aA&gclid=CjwKCAjw6ZTCBhBOEiwAqfwJd7o9qegXJFAHsPRkF1W24rYxLA4GJIj-EkyAaQb3-jQjFrmr7xbYHRoC3t8QAvD_BwE',
+});
 
 export default overallSkills;

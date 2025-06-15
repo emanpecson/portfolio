@@ -5,7 +5,7 @@ import { experiences } from '@/data/experience';
 
 export default function About() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <Paragraph>
         <span>I discovered my love for engineering through </span>
         <InlineLink href={lbpUrl}>LittleBigPlanet</InlineLink>

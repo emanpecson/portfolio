@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Paragraph from '../Paragraph';
 import { experiences } from '@/data/experience';
 import InlineLink from '../button/InlineLink';
+import { resumePath } from '@/data/routes';
 
 export default function Directory() {
   return (
@@ -11,7 +12,7 @@ export default function Directory() {
         <InlineLink href={experiences[0].path}>💼 Experience</InlineLink>
         <InlineLink href="/projects">💡 Projects</InlineLink>
         <InlineLink href="/education">🎓 Education</InlineLink>
-        <InlineLink href="/emanuel-pecson-resume.pdf">📄 Resume</InlineLink>
+        <InlineLink href={resumePath}>📄 Resume</InlineLink>
       </div>
     </div>
   );

@@ -2,11 +2,11 @@ import { ProjectType } from '@/types/ProjectType';
 import overallSkills from './overall-skills';
 import { SkillType } from '@/types/SkillType';
 
-export const personalProjects: ProjectType = {
+export const projects: ProjectType = {
   'Hoop Archives': {
-    label: 'full-stack webapp',
+    label: 'full-stack web app',
     path: '/projects/hoop-archives',
-    description: 'Webapp for previewing your own basketball highlights',
+    description: 'Web app for previewing your own basketball highlights',
     coverImageSrc: '/cover/hoop-archives.png',
     tags: [
       overallSkills.get('React.js') as SkillType,
@@ -14,6 +14,10 @@ export const personalProjects: ProjectType = {
       overallSkills.get('Node.js') as SkillType,
       overallSkills.get('TypeScript') as SkillType,
       overallSkills.get('Tailwind CSS') as SkillType,
+      // aws dynamo db
+      // aws s3
+      // aws ec2
+      // aws cdk
     ],
     // repoUrl: 'https://github.com/emanpecson/hoop-archives',
   },
@@ -33,17 +37,21 @@ export const personalProjects: ProjectType = {
     ],
   },
   Abilliti: {
-    label: 'full-stack webapp',
+    label: 'full-stack web app',
     path: '/projects/abilliti',
-    description: 'All-in-one webapp that offers solutions for common business operations',
+    description: 'All-in-one web app that offers solutions for common business operations',
     coverImageSrc: '/cover/abilliti.png',
     repoUrl: 'https://github.com/abilliti-dev',
     websiteUrl: 'https://abilliti.com',
     iconSrc: '/logo/abilliti.svg',
     tags: [
       overallSkills.get('React.js') as SkillType,
+      // vite
       overallSkills.get('TypeScript') as SkillType,
       overallSkills.get('Tailwind CSS') as SkillType,
+      // aws dynamo db
+      // aws cdk
+      // aws s3
     ],
   },
   'Quorum Bots': {
@@ -62,9 +70,9 @@ export const personalProjects: ProjectType = {
     ],
   },
   'Matchup Metrics': {
-    label: 'full-stack webapp',
+    label: 'full-stack web app',
     path: '/projects/matchup-metrics',
-    description: 'Webapp solution for comparing NBA players and custom lineups 🏀',
+    description: 'Compare stats between your favorite NBA players and custom lineups 🏀',
     coverImageSrc: '/cover/matchup-metrics.png',
     repoUrl: 'https://github.com/emanpecson/matchup-metrics',
     websiteUrl: 'https://matchupmetrics.vercel.app',
@@ -73,84 +81,31 @@ export const personalProjects: ProjectType = {
       overallSkills.get('Next') as SkillType,
       overallSkills.get('Node.js') as SkillType,
       overallSkills.get('TypeScript') as SkillType,
+      // mongo db
       overallSkills.get('Tailwind CSS') as SkillType,
+      overallSkills.get('Python') as SkillType,
+      overallSkills.get('Selenium') as SkillType,
     ],
   },
-  Gatekeeper: {
-    label: 'full-stack webapp',
-    path: '/projects/gatekeeper',
-    description:
-      'An event-planning and ticket-scanning webapp in one, users are given the ability to create and manage events through QR-based invitations',
-    coverImageSrc: '/cover/gatekeeper.png',
-    repoUrl: 'https://github.com/UNLV-CS-GANG/gatekeeper',
-    websiteUrl: 'https://unlvgatekeeper.com',
-    tags: [
-      overallSkills.get('React.js') as SkillType,
-      overallSkills.get('Next') as SkillType,
-      overallSkills.get('TypeScript') as SkillType,
-      overallSkills.get('Node.js') as SkillType,
-      overallSkills.get('Prisma') as SkillType,
-      overallSkills.get('Tailwind CSS') as SkillType,
-      overallSkills.get('Resend') as SkillType,
-      overallSkills.get('Pusher') as SkillType,
-      overallSkills.get('MySQL') as SkillType,
-    ],
-  },
-};
-
-export const workProjects: ProjectType = {
-  'Employee Image': {
-    label: 'full-stack webapp',
-    path: '/projects/employee-image',
-    description: 'Webapp that allows users to update their profile picture among all corporate apps',
-    coverImageSrc: '/cover/na.png',
-    iconSrc: '/logo/jt4.png',
-    tags: [
-      overallSkills.get('React.js') as SkillType,
-      overallSkills.get('Next') as SkillType,
-      overallSkills.get('Node.js') as SkillType,
-      overallSkills.get('TypeScript') as SkillType,
-      overallSkills.get('Tailwind CSS') as SkillType,
-      overallSkills.get('Prisma') as SkillType,
-      overallSkills.get('SQL Server') as SkillType,
-      // overallSkills.get('Minio') as
-    ],
-  },
-  Fileship: {
-    label: 'full-stack webapp',
-    path: '/projects/fileship',
-    description: 'Webapp that provides employees with a way to securely upload files',
-    coverImageSrc: '/cover/na.png',
-    iconSrc: '/logo/jt4.png',
-    tags: [
-      overallSkills.get('Vue.js') as SkillType,
-      overallSkills.get('Nuxt') as SkillType,
-      overallSkills.get('Node.js') as SkillType,
-      overallSkills.get('TypeScript') as SkillType,
-      overallSkills.get('Tailwind CSS') as SkillType,
-      overallSkills.get('Prisma') as SkillType,
-      overallSkills.get('SQL Server') as SkillType,
-    ],
-  },
-  'Concur Travel Approver': {
-    label: 'full-stack webapp',
-    path: '/projects/concur-travel-approver',
-    description: 'Webapp that simplifies the management of employee travel info',
-    coverImageSrc: '/cover/na.png',
-    iconSrc: '/logo/jt4.png',
-    tags: [
-      overallSkills.get('Vue.js') as SkillType,
-      overallSkills.get('Nuxt') as SkillType,
-      overallSkills.get('Node.js') as SkillType,
-      overallSkills.get('TypeScript') as SkillType,
-      overallSkills.get('Tailwind CSS') as SkillType,
-      overallSkills.get('Prisma') as SkillType,
-      overallSkills.get('SQL Server') as SkillType,
-    ],
-  },
-};
-
-export const projects = {
-  ...personalProjects,
-  ...workProjects,
+  // Gatekeeper: {
+  //   label: 'full-stack web app',
+  //   path: '/projects/gatekeeper',
+  //   description:
+  //     'An event-planning and ticket-scanning web app in one, users are given the ability to create and manage events through QR-based invitations',
+  //   coverImageSrc: '/cover/gatekeeper.png',
+  //   repoUrl: 'https://github.com/UNLV-CS-GANG/gatekeeper',
+  //   websiteUrl: 'https://unlvgatekeeper.com',
+  //   tags: [
+  //     overallSkills.get('React.js') as SkillType,
+  //     overallSkills.get('Next') as SkillType,
+  //     overallSkills.get('TypeScript') as SkillType,
+  //     overallSkills.get('Node.js') as SkillType,
+  //     overallSkills.get('Prisma') as SkillType,
+  //     overallSkills.get('Tailwind CSS') as SkillType,
+  //     overallSkills.get('Resend') as SkillType,
+  //     overallSkills.get('Pusher') as SkillType,
+  //     overallSkills.get('MySQL') as SkillType,
+  //     // supabase
+  //   ],
+  // },
 };

@@ -8,7 +8,7 @@ import BlurFade from '@/components/ui/blur-fade';
 export default function Home() {
   return (
     <div className="max-w-[40rem] mx-auto">
-      <div className="w-full space-y-4 py-20 pb-16">
+      <div className="w-full space-y-6 py-20 pb-16">
         <BlurFade delay={0}>
           <Intro />
         </BlurFade>
@@ -16,10 +16,10 @@ export default function Home() {
           <About />
         </BlurFade>
         <BlurFade delay={0.5}>
-          <Contacts />
+          <Directory />
         </BlurFade>
         <BlurFade delay={0.75}>
-          <Directory />
+          <Contacts />
         </BlurFade>
       </div>
       <BlurFade delay={1}>

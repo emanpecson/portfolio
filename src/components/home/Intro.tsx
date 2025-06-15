@@ -7,7 +7,7 @@ import { metadata } from '@/app/layout';
 export default function Intro() {
   return (
     <div className="flex sm:space-x-8 space-x-4 justify-between">
-      <div className="space-y-4">
+      <div className="space-y-6">
         <div>
           <h1 className="sm:text-4xl text-3xl font-extrabold text-neutral-700 dark:text-neutral-200">
             {metadata.title as string}
@@ -19,10 +19,12 @@ export default function Intro() {
             </div>
           </Paragraph>
         </div>
-        <Paragraph>Welcome! I'm Emanuel 👋</Paragraph>
-        <Paragraph>
-          I'm a software engineer passionate about building effective solutions that make a meaningful impact.
-        </Paragraph>
+        <div>
+          <Paragraph>Hello! I'm Emanuel 👋</Paragraph>
+          <Paragraph>
+            I'm a software engineer passionate about building effective solutions that make a meaningful impact.
+          </Paragraph>
+        </div>
       </div>
 
       <Image
