@@ -43,8 +43,9 @@ export default function HoopArchivesPage() {
             }
           </ContentText>
           <ContentText>
-            {"It got to a point where there'd be over 100 posts, which made it harder to go through the games and find"}
-            specific clips or highlights.
+            {
+              "It got to a point where there'd be over 100 posts, which made it harder to go through the games and find specific clips or highlights."
+            }
           </ContentText>
           <ContentText>
             In addition, the video editor that I was using, iMovie, was okay, but I noticed that i had a specific
