@@ -109,4 +109,6 @@ export const projects: ProjectType = {
   //     // supabase
   //   ],
   // },
-};
+} as const;
+
+export type ProjectKey = typeof projects;

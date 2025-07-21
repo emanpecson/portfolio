@@ -1,28 +1,17 @@
 'use client';
 
 import ProjectContent from '@/components/project/ProjectContent';
-import { projects } from '@/data/projects';
-import { useRefMap } from '@/hooks/useRefMap';
-import { ContentHeaderType } from '@/types/ContentHeader';
+import { ProjectKey, projects } from '@/data/projects';
 import ContentSection from '@/components/content/ContentSection';
 import ContentText from '@/components/content/ContentText';
 import InlineLink from '@/components/button/InlineLink';
 import ContentImage from '@/components/content/ContentImage';
 import ContentSubsection from '@/components/content/ContentSubsection';
+import { headers } from '@/data/project/matchup-metrics';
 
 export default function MatchupMetricsPage() {
-  const name = 'Matchup Metrics';
+  const name: keyof ProjectKey = 'Matchup Metrics';
   const proj = projects[name];
-  const refMap = useRefMap(['website', 'motivation', 'fans']);
-  const headers: ContentHeaderType[] = [
-    { id: '0', label: 'Try it out!', ref: refMap.website },
-    {
-      id: '1',
-      label: 'Motivation',
-      ref: refMap.motivation,
-      subheaders: [{ id: '1.1', label: 'An App for NBA Fans', ref: refMap.fans }],
-    },
-  ];
 
   return (
     <ProjectContent name={name} details={proj} headers={headers}>

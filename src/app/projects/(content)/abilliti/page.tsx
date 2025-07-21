@@ -1,22 +1,16 @@
 'use client';
 
 import ProjectContent from '@/components/project/ProjectContent';
-import ContentSection from '@/components/content/ContentSection';
-import ContentText from '@/components/content/ContentText';
-import { projects } from '@/data/projects';
-import { useRefMap } from '@/hooks/useRefMap';
-import { ContentHeaderType } from '@/types/ContentHeader';
-import ContentSubsection from '@/components/content/ContentSubsection';
+import { ProjectKey, projects } from '@/data/projects';
 import UnderDevelopment from '@/components/UnderDevelopment';
+import { headers } from '@/data/project/abilliti';
 
 export default function AbillitiPage() {
-  const name = 'Abilliti';
-
-  const refMap = useRefMap([]);
-  const headers: ContentHeaderType[] = [];
+  const name: keyof ProjectKey = 'Abilliti';
+  const proj = projects[name];
 
   return (
-    <ProjectContent name={name} details={projects[name]} headers={headers}>
+    <ProjectContent name={name} details={proj} headers={headers}>
       <UnderDevelopment />
     </ProjectContent>
   );

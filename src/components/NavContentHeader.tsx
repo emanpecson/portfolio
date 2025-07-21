@@ -22,7 +22,7 @@ export default function NavContentHeader(props: NavContentHeaderProps) {
         )}
         onClick={() => jump(props.header.id)}
       >
-        {props.header.label}
+        {props.header.id}
       </button>
 
       <div className="space-y-2 flex flex-col">
@@ -38,7 +38,7 @@ export default function NavContentHeader(props: NavContentHeaderProps) {
               )}
               onClick={() => jump(subheader.id)}
             >
-              {subheader.label}
+              {subheader.id}
             </button>
           ))}
       </div>
