@@ -19,7 +19,8 @@ export const projects: ProjectType = {
       // aws ec2
       // aws cdk
     ],
-    // repoUrl: 'https://github.com/emanpecson/hoop-archives',
+    repoUrl: 'https://github.com/emanpecson/hoop-archives-app',
+    websiteUrl: 'https://www.hoop-archives.com',
   },
   Portfolio: {
     label: 'website',
