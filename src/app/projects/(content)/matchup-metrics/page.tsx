@@ -24,8 +24,9 @@ export default function MatchupMetricsPage() {
         <ContentImage src={proj.coverImageSrc} alt="Motivation" />
 
         <ContentSubsection subheader={headers[1].subheaders![0]}>
-          As an NBA fan, I like to make up various "what-if" scenarios to see just how good a lineup would be. So I
-          thought, why not make an app for that?
+          {
+            'As an NBA fan, I like to make up various "what-if" scenarios to see just how good a lineup would be. So I thought, why not make an app for that?'
+          }
         </ContentSubsection>
       </ContentSection>
     </ProjectContent>

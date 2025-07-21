@@ -23,7 +23,8 @@ export default function Header() {
   const pathname = usePathname();
   const [logoSrc, setLogoSrc] = useState(lightLogoSrc);
 
-  useEffect(() => setLogoSrc(resolvedTheme === 'light' ? lightLogoSrc : darkLogoSrc));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => setLogoSrc(resolvedTheme === 'light' ? lightLogoSrc : darkLogoSrc), []);
 
   return (
     <div className="w-full flex justify-between pt-2 md:px-6 px-2 fixed z-40 space-x-2 place-items-center">

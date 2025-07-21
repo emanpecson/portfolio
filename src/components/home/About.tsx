@@ -21,16 +21,17 @@ export default function About() {
         <span> in 2024.</span>
       </Paragraph>
       <Paragraph>
-        <span>I've had the chance to </span>
+        <span>{"I've had the chance to "}</span>
         <InlineLink href={experiences[0].path}>
           showcase my skills and gain hands-on experience through internships
         </InlineLink>
-        <span>. But my learning didn't stop there. I continue to grow by bringing ideas to life with </span>
+        <span>{". But my learning didn't stop there. I continue to grow by bringing ideas to life with "}</span>
         <InlineLink href="/projects">personal projects</InlineLink>.
       </Paragraph>
       <Paragraph>
-        When I'm not coding, you can find me playing basketball, playing the electric guitar, exploring street fashion,
-        or creating animations.
+        {
+          "When I'm not coding, you can find me playing basketball, playing the electric guitar, exploring street fashion, or creating animations."
+        }
       </Paragraph>
     </div>
   );

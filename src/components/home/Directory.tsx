@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Paragraph from '../Paragraph';
 import { experiences } from '@/data/experience';
 import InlineLink from '../button/InlineLink';

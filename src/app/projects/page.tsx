@@ -16,7 +16,7 @@ export default function ProjectsPage() {
       <div className="w-full flex justify-center">
         <div className="xl:columns-3 md:columns-2 columns-1 space-y-4">
           {Object.entries(projects).map(([name, details], i) => (
-            <BlurFade delay={0.25 * i * 0.1}>
+            <BlurFade key={i} delay={0.25 * i * 0.1}>
               <ProjectPreview name={name} details={details} key={i} />
             </BlurFade>
           ))}

@@ -20,9 +20,9 @@ export default function Intro() {
           </Paragraph>
         </div>
         <div>
-          <Paragraph>Hello! I'm Emanuel 👋</Paragraph>
+          <Paragraph>{"Hello! I'm Emanuel 👋"}</Paragraph>
           <Paragraph>
-            I'm a software engineer passionate about building effective solutions that make a meaningful impact.
+            {"I'm a software engineer passionate about building effective solutions that make a meaningful impact."}
           </Paragraph>
         </div>
       </div>

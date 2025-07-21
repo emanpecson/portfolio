@@ -38,11 +38,12 @@ export default function HoopArchivesPage() {
 
         <ContentSubsection subheader={headers[1].subheaders[1]}>
           <ContentText>
-            Before this app came along, I had an Instagram account where I'd post edited basketball games that I played
-            with my friends.
+            {
+              "Before this app came along, I had an Instagram account where I'd post edited basketball games that I played with my friends."
+            }
           </ContentText>
           <ContentText>
-            It got to a point where there'd be over 100 posts, which made it harder to go through the games and find
+            {"It got to a point where there'd be over 100 posts, which made it harder to go through the games and find"}
             specific clips or highlights.
           </ContentText>
           <ContentText>
@@ -56,8 +57,9 @@ export default function HoopArchivesPage() {
             ]}
           />
           <ContentText>
-            It was a simple workflow, but since iMovie was built to be multi-purposeful, I would often get dragged by
-            the extra set of options or buttons that I wouldn't ever touch during my editing sessions.
+            {
+              "It was a simple workflow, but since iMovie was built to be multi-purposeful, I would often get dragged by the extra set of options or buttons that I wouldn't ever touch during my editing sessions."
+            }
           </ContentText>
         </ContentSubsection>
 

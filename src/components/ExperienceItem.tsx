@@ -9,8 +9,8 @@ import BlurFade from './ui/blur-fade';
 export default function ExperienceItem({ experience }: { experience: ExperienceType }) {
   return (
     <div>
-      {experience.positions.map((position: PositionType) => (
-        <div className="space-y-4 py-4">
+      {experience.positions.map((position: PositionType, i) => (
+        <div className="space-y-4 py-4" key={i}>
           <BlurFade delay={0}>
             <Link href={experience.website} target="_blank" rel="noopener noreferrer">
               <BoxWrap>
@@ -40,19 +40,19 @@ export default function ExperienceItem({ experience }: { experience: ExperienceT
             {position.tasks.map((task: TaskType, i: number) => {
               if (task.externalLink) {
                 return (
-                  <BlurFade delay={0.1 * i}>
+                  <BlurFade delay={0.1 * i} key={i}>
                     <BoxWrap>
                       <Link href={task.externalLink} className="hover:cursor-pointer">
-                        <TaskItem task={task} key={i} />
+                        <TaskItem task={task} />
                       </Link>
                     </BoxWrap>
                   </BlurFade>
                 );
               }
               return (
-                <BlurFade delay={0.1 * i}>
+                <BlurFade delay={0.1 * i} key={i}>
                   <div className="p-2.5">
-                    <TaskItem task={task} key={i} />
+                    <TaskItem task={task} />
                   </div>
                 </BlurFade>
               );

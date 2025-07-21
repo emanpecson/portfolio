@@ -44,7 +44,7 @@ export function NavMenuButton() {
           </div>
         </div>
         <div className="py-4 space-y-3">
-          <h3 className="font-semibold text-neutral-700 dark:text-neutral-200">Let's get in touch!</h3>
+          <h3 className="font-semibold text-neutral-700 dark:text-neutral-200">{"Let's get in touch!"}</h3>
           <div className="space-y-3">
             <NavMenuItem href="mailto:emanpecson@gmail.com" icon={MailIcon} isActive={false}>
               emanpecson@gmail.com
