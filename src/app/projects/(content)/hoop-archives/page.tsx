@@ -112,8 +112,8 @@ export default function HoopArchivesPage() {
         <ContentSubsection subheader={headers[2].subheaders[1]}>
           <ContentText>Processing video clips and can be computation-intensive.</ContentText>
           <ContentText>
-            Instead of handling this through Next.js, all of the logic and resources are all packaged on a dedicated
-            Java-based Lambda.
+            Instead of handling this on a resource-limited browser, all of the logic and resources are all packaged on a
+            dedicated Java-based Lambda.
           </ContentText>
         </ContentSubsection>
 
