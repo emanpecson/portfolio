@@ -41,7 +41,7 @@ export const projects: ProjectType = {
     label: 'full-stack web app',
     path: '/projects/abilliti',
     description: 'All-in-one web app that offers solutions for common business operations',
-    coverImageSrc: '/cover/abilliti.png',
+    coverImageSrc: '/project/abilliti/mockup/invoice-builder.png',
     repoUrl: 'https://github.com/abilliti-dev',
     websiteUrl: 'https://abilliti.com',
     iconSrc: '/logo/abilliti.svg',
