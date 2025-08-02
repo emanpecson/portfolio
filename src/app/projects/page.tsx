@@ -8,8 +8,8 @@ export default function ProjectsPage() {
   return (
     <div className="space-y-16 max-w-[100rem] pt-20 pb-16">
       <div className="mx-auto text-center space-y-1">
-        <h1 className="font-extrabold text-3xl text-neutral-700 dark:text-neutral-200">Personal Projects</h1>
-        <p className="text-lg font-medium">Full-stack web apps, documentation websites, and more!</p>
+        <h1 className="font-extrabold text-3xl text-neutral-700 dark:text-neutral-200">Projects</h1>
+        <p className="text-lg font-medium">Explore my projects!</p>
         <GitHubButton href="https://github.com/emanpecson" />
       </div>
 
