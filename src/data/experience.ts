@@ -155,7 +155,7 @@ export const experiences: ExperienceType[] = [
             ],
           },
           {
-            header: 'Web-scraping',
+            header: 'Simple mobile app',
             description:
               'Built an interactive map app with **QML**, **JavaScript**, and **AppStudio**, displaying **70+** Clark County parks with selectable points and detailed park information',
             tags: [overallSkills.get('JavaScript') as SkillType],
