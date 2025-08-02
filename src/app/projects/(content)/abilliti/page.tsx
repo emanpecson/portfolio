@@ -65,6 +65,10 @@ export default function AbillitiPage() {
 
       <ContentSection header={headers[2]}>
         <ContentSubsection subheader={headers[2].subheaders[0]}>
+          <ContentText>
+            Take a quick look at the invoice form in action. Built with React Hook Form and Zod to ensure users enter
+            valid data every time, with smooth validation and a clean UX.
+          </ContentText>
           <ContentVideo src="/project/abilliti/demo/form-input.mp4" />
         </ContentSubsection>
 
