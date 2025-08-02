@@ -7,7 +7,7 @@ export const projects: ProjectType = {
     label: 'full-stack web app',
     path: '/projects/hoop-archives',
     description: 'Web app for previewing your own basketball highlights',
-    coverImageSrc: '/cover/hoop-archives.png',
+    coverImageSrc: '/project/hoop-archives/mockup/video-editor.png',
     tags: [
       overallSkills.get('React.js') as SkillType,
       overallSkills.get('Next') as SkillType,

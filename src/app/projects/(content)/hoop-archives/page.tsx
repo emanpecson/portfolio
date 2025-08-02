@@ -66,7 +66,7 @@ export default function HoopArchivesPage() {
 
         {/* Simplified video editor */}
         <ContentSubsection subheader={headers[1].subheaders[2]}>
-          <ContentImage src="/cover/hoop-archives.png" alt="Video editor" />
+          <ContentImage src="/project/hoop-archives/mockup/video-editor.png" alt="Video editor" />
 
           <ContentText>
             To overcome the shortcomings I had with iMovie, I developed a video editing workflow that simplified the
@@ -87,7 +87,7 @@ export default function HoopArchivesPage() {
       </ContentSection>
 
       <ContentSection header={headers[2]}>
-        <ContentImage src="/hoop-archives-architecture.png" alt="Architecture" />
+        <ContentImage src="/project/hoop-archives/architecture.png" alt="Architecture" />
 
         <ContentSubsection subheader={headers[2].subheaders[0]}>
           <ContentText>
