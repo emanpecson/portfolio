@@ -59,7 +59,7 @@ export const projects: ProjectType = {
     label: 'docs website',
     path: '/projects/quorum-bots',
     description: 'Documentation website so that users can learn how to use Quorum Studio to program their LEGO robot',
-    coverImageSrc: '/cover/quorum-bots.png',
+    coverImageSrc: '/project/quorum-bots/hero-section.png',
     repoUrl: 'https://github.com/emanpecson/quorum-bots-docs',
     websiteUrl: 'https://www.quorumbots.com',
     iconSrc: '/logo/quorum.svg',
