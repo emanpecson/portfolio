@@ -26,7 +26,7 @@ export const projects: ProjectType = {
     label: 'website',
     path: '/projects/portfolio',
     description: 'Website to display my experience, projects, and education ',
-    coverImageSrc: '/cover/portfolio.png',
+    coverImageSrc: '/project/portfolio/header-section.png',
     repoUrl: 'https://github.com/emanpecson/portfolio',
     websiteUrl: 'https://www.emanpecson.com',
     iconSrc: '/linkedin_pfp.jpeg',
@@ -89,27 +89,6 @@ export const projects: ProjectType = {
       overallSkills.get('Selenium') as SkillType,
     ],
   },
-  // Gatekeeper: {
-  //   label: 'full-stack web app',
-  //   path: '/projects/gatekeeper',
-  //   description:
-  //     'An event-planning and ticket-scanning web app in one, users are given the ability to create and manage events through QR-based invitations',
-  //   coverImageSrc: '/cover/gatekeeper.png',
-  //   repoUrl: 'https://github.com/UNLV-CS-GANG/gatekeeper',
-  //   websiteUrl: 'https://unlvgatekeeper.com',
-  //   tags: [
-  //     overallSkills.get('React.js') as SkillType,
-  //     overallSkills.get('Next') as SkillType,
-  //     overallSkills.get('TypeScript') as SkillType,
-  //     overallSkills.get('Node.js') as SkillType,
-  //     overallSkills.get('Prisma') as SkillType,
-  //     overallSkills.get('Tailwind CSS') as SkillType,
-  //     overallSkills.get('Resend') as SkillType,
-  //     overallSkills.get('Pusher') as SkillType,
-  //     overallSkills.get('MySQL') as SkillType,
-  //     // supabase
-  //   ],
-  // },
 };
 
 export type ProjectKey = typeof projects;
