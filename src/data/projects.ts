@@ -75,7 +75,7 @@ export const projects: ProjectType = {
     path: '/projects/matchup-metrics',
     description:
       'App for building custom NBA lineups and comparing player performance across key statistical metrics 🏀',
-    coverImageSrc: '/cover/matchup-metrics.png',
+    coverImageSrc: '/project/matchup-metrics/3v3.png',
     repoUrl: 'https://github.com/emanpecson/matchup-metrics',
     websiteUrl: 'https://matchupmetrics.vercel.app',
     tags: [
