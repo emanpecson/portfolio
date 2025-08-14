@@ -36,7 +36,7 @@ export const experiences: ExperienceType[] = [
             description:
               'Modernized a deprecated badge photo pipeline with a full-stack **Next.js** app, restoring **4,000+ employee photos** across **5+ enterprise apps** by oﬄoading media to **MinIO S3** to dynamically store and serve image assets as the company scales',
             label: 'full-stack web app',
-            externalLink: '/projects/employee-image',
+            // externalLink: '/projects/employee-image',
             tags: [
               overallSkills.get('Minio') as SkillType,
               overallSkills.get('Next') as SkillType,
@@ -60,7 +60,7 @@ export const experiences: ExperienceType[] = [
             description:
               'Delivered an internal file transfer app with **Nuxt.js** to mitigate the insecurities of a shared directory system, leveraging **Socket.IO** for real-time transfer status updates and ensuring secure migration of **~65 sensitive files monthly**', // 15 files/week -> 15 x 4.3 = ~65 files/month
             label: 'full-stack web app',
-            externalLink: '/projects/fileship',
+            // externalLink: '/projects/fileship',
             tags: [
               overallSkills.get('Nuxt') as SkillType,
               overallSkills.get('Vue.js') as SkillType,
@@ -79,7 +79,7 @@ export const experiences: ExperienceType[] = [
             description:
               'Built a full-stack **Nuxt.js** and **SQL Server** solution to replace a bottlenecked spreadsheet process, decentralizing data entry and slashing update delays from **~1 day to ~1 minute**',
             label: 'full-stack web app',
-            externalLink: '/projects/concur-travel-approver',
+            // externalLink: '/projects/concur-travel-approver',
             tags: [
               overallSkills.get('Nuxt') as SkillType,
               overallSkills.get('Vue.js') as SkillType,
