@@ -63,7 +63,7 @@ export default function Search() {
           </kbd>
         </Button>
       </DialogTrigger>
-      <DialogContent aria-describedby="search-docs" className="p-1">
+      <DialogContent aria-describedby="search-docs" className="p-1 sm:rounded-2xl">
         <DialogTitle className="hidden">Search</DialogTitle>
 
         <Command>
