@@ -38,7 +38,6 @@ const projectsRouteGroup: RouteGroupType = {
     { name: 'Hoop Archives', path: '/projects/hoop-archives', keywords: ['project', ...fs] },
     { name: 'Gatekeeper', path: '/projects/gatekeeper', keywords: ['project', ...fs] },
     { name: 'Portfolio', path: '/projects/portfolio', keywords: ['project', 'website'] },
-    { name: 'Quorum Bots', path: '/projects/quorum-bots', keywords: ['project', 'website', 'docs', 'documentation'] },
     {
       name: 'Matchup Metrics',
       path: '/projects/matchup-metrics',
